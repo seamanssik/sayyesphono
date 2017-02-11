@@ -22,6 +22,6 @@ var wishlist = {
         });
     },
     'remove': function() {
-
+        console.log(123);
     }
 }

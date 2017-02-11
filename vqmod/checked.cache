@@ -308,3 +308,11 @@ catalog\controller\error\not_found.php
 catalog\language\en-gb\account\wishlist.php
 catalog\language\ru-ru\account\wishlist.php
 catalog\view\theme\photodays\template\account\wishlist.tpl
+catalog\controller\news\ncategory.php
+catalog\language\en-gb\news\ncategory.php
+catalog\language\ru-ru\news\ncategory.php
+catalog\model\catalog\ncategory.php
+catalog\model\catalog\news.php
+catalog\model\catalog\ncomments.php
+catalog\view\theme\photodays\template\news\ncategory.tpl
+catalog\view\theme\photodays\template\news\layout.tpl
