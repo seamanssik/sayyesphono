@@ -166,7 +166,7 @@
                         <a href="/blog" class="n-menu__link">Блог</a>
                     </li>
                     <li class="dropdown n-dropdown">
-                        <button class="n-dropdown-button" id="dAbout" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">О компании</button>
+                        <button class="n-dropdown-button hvr-icon-hang" id="dAbout" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">О компании</button>
                         <ul class="dropdown-menu n-dropdown-menu" aria-labelledby="dLabel">
                             <li><a href="/legend">Легенда</a></li>
                             <li><a href="/about_us">О нас</a></li>
