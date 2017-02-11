@@ -1,3 +1,6 @@
 .idea
 image/cache/
 image/catalog/
+system/storage/cache
+system/storage/logs
+vqmod/vqcache

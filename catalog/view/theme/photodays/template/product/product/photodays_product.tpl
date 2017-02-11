@@ -46,7 +46,7 @@
                 <div class="photodaysItem-image js-animate -show-from-top o-animate-img -animate-gold c-parallax cd-inline">
                     <div class="photodaysItem-image__label hidden"><img src="/image/catalog/labels/label-finish.png" /></div>
                     <div class="c-wrap-img-anim">
-                        <button type="button" data-toggle="tooltip" class="btn btn-default wishlist_item" title="" onclick="wishlist.add(<?php echo $product_id; ?>);$(this).addClass('active');" data-original-title="Add to Wish List">
+                        <button type="button" data-toggle="tooltip" class="btn btn-default wishlist_item <?php echo $wishlist_active; ?>" title="" onclick="wishlist.add(<?php echo $product_id; ?>);$(this).addClass('active');" data-original-title="Add to Wish List">
                         </button>
                         <img class="photodaysItem-image__img" src="<?php echo $photodays['thumb']; ?>" alt="<?php echo $photodays['name']; ?>" />
                     </div>
@@ -251,7 +251,7 @@
     </div>
 <?php } ?>
 <?php if (!empty($history_title)) { ?>
-<div class="photoday-history">
+<div class="photoday-history" style="margin-top: -100px">
     <div class="container">
         <div class="photoday-history__title js-animate"><div class="c-text-masked"><span><?php echo $history_title; ?></span></div></div>
         <div class="photoday-history__container">
