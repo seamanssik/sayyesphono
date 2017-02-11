@@ -251,7 +251,7 @@
     </div>
 <?php } ?>
 <?php if (!empty($history_title)) { ?>
-<div class="photoday-history">
+<div class="photoday-history" style="margin-top: -100px">
     <div class="container">
         <div class="photoday-history__title js-animate"><div class="c-text-masked"><span><?php echo $history_title; ?></span></div></div>
         <div class="photoday-history__container">
