@@ -37,7 +37,7 @@
 <link href="<?php echo $link['href']; ?>" rel="<?php echo $link['rel']; ?>" />
 <?php } ?>
 <link href="/library/stylesheet.css?v=0.0.9" rel="stylesheet">
-<link href="/catalog/view/theme/default/stylesheet/hover.css" rel="stylesheet">
+<link href="/catalog/view/theme/default/stylesheet/additional_styles.css" rel="stylesheet">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
 <script src="/library/wishlist.js" type="text/javascript"></script>
 <?php foreach ($scripts as $script) { ?>

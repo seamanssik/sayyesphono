@@ -1,0 +1,108 @@
+/* Icon Hang */
+@-webkit-keyframes hvr-icon-hang {
+  0% {
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+  }
+  50% {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+  100% {
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+  }
+}
+@keyframes hvr-icon-hang {
+  0% {
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+  }
+  50% {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+  100% {
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+  }
+}
+@-webkit-keyframes hvr-icon-hang-sink {
+  100% {
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+  }
+}
+@keyframes hvr-icon-hang-sink {
+  100% {
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+  }
+}
+.hvr-icon-hang {
+  display: inline;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  padding-right: 2.2em;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-icon-hang:after {
+  content: "\f078";
+  position: absolute;
+  right: 1em;
+  padding: 0 1px;
+  font-family: FontAwesome;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.hvr-icon-hang:hover:after, .hvr-icon-hang:focus:after, .hvr-icon-hang:active:after {
+  -webkit-animation-name: hvr-icon-hang-sink, hvr-icon-hang;
+  animation-name: hvr-icon-hang-sink, hvr-icon-hang;
+  -webkit-animation-duration: .3s, 1.5s;
+  animation-duration: .3s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
+}
+/* button underline animation */
+.photoday-history__link {
+  transition: color .45s 0s cubic-bezier(.4, 0, .2, 1);
+  -moz-transition: color .45s 0s cubic-bezier(.4, 0, .2, 1);
+  -webkit-transition: color .45s 0s cubic-bezier(.4, 0, .2, 1);
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+}
+.photoday-history__link:before {
+  transition: opacity .2s 0s cubic-bezier(.4, 0, .2, 1), transform .45s 0s cubic-bezier(.4, 0, .2, 1);
+  -moz-transition: opacity .2s 0s cubic-bezier(.4, 0, .2, 1), transform .45s 0s cubic-bezier(.4, 0, .2, 1);
+  -webkit-transition: opacity .2s 0s cubic-bezier(.4, 0, .2, 1), transform .45s 0s cubic-bezier(.4, 0, .2, 1);
+  content: '';
+  position: absolute;
+  transform: translate(-100%, 0);
+  -ms-transform: translate(-100%, 0);
+  -moz-transform: translate(-100%, 0);
+  -webkit-transform: translate(-100%, 0);
+  height: 1px;
+  width: 60%;
+  bottom: 0;
+  left: 0;
+  background-color: #bd9d53;
+}
+.photoday-history__link:hover:before {
+  transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+}

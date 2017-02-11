@@ -3807,42 +3807,42 @@
 /* Icon Hang */
 @-webkit-keyframes hvr-icon-hang {
   0% {
-    -webkit-transform: translateY(6px);
-    transform: translateY(6px);
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
   }
   50% {
-    -webkit-transform: translateY(2px);
-    transform: translateY(2px);
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
   }
   100% {
-    -webkit-transform: translateY(6px);
-    transform: translateY(6px);
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
   }
 }
 @keyframes hvr-icon-hang {
   0% {
-    -webkit-transform: translateY(6px);
-    transform: translateY(6px);
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
   }
   50% {
-    -webkit-transform: translateY(2px);
-    transform: translateY(2px);
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
   }
   100% {
-    -webkit-transform: translateY(6px);
-    transform: translateY(6px);
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
   }
 }
 @-webkit-keyframes hvr-icon-hang-sink {
   100% {
-    -webkit-transform: translateY(6px);
-    transform: translateY(6px);
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
   }
 }
 @keyframes hvr-icon-hang-sink {
   100% {
-    -webkit-transform: translateY(6px);
-    transform: translateY(6px);
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
   }
 }
 .hvr-icon-hang {
@@ -3856,7 +3856,7 @@
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-.hvr-icon-hang:before {
+.hvr-icon-hang:after {
   content: "\f078";
   position: absolute;
   right: 1em;
@@ -3865,7 +3865,7 @@
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
-.hvr-icon-hang:hover:before, .hvr-icon-hang:focus:before, .hvr-icon-hang:active:before {
+.hvr-icon-hang:hover:after, .hvr-icon-hang:focus:after, .hvr-icon-hang:active:after {
   -webkit-animation-name: hvr-icon-hang-sink, hvr-icon-hang;
   animation-name: hvr-icon-hang-sink, hvr-icon-hang;
   -webkit-animation-duration: .3s, 1.5s;
