@@ -264,6 +264,8 @@ class ControllerProductProduct extends Controller {
 		} else {
 			$product_id = 0;
 		}
+		
+		$data['wishlist_active'] = $this->itemInWishlist($product_id);
 
 		$product_info = $this->model_catalog_product->getProduct($product_id);
 
@@ -1203,5 +1205,18 @@ class ControllerProductProduct extends Controller {
 
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
+	}
+
+	public function itemInWishlist($product_id)
+	{
+		$this->load->model('account/wishlist');
+		$results = $this->model_account_wishlist->getWishlist();
+		foreach ($results as $item){
+			if($item['product_id'] == $product_id){
+				return 'active';
+				break;
+			}
+		}
+		return false;
 	}
 }
