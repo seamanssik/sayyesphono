@@ -119,6 +119,8 @@
                 </div>
             </div>
             <div class="col-ed-5 col-ed-offset-1 col-lg-5 col-lg-offset-0 col-md-5 col-sm-5">
+                <button type="button" data-toggle="tooltip" class="btn btn-default wishlist_item <?php echo $wishlist_active; ?>" title="" onclick="wishlist.add(<?php echo $product_id; ?>);$(this).addClass('active');" data-original-title="Add to Wish List">
+                </button>
                 <div class="showroom-images" id="showroomImages">
                     <?php if ($thumb) { ?>
                         <div class="showroom-image"><a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>"><img src="<?php echo $thumb; ?>" data-echo="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></div>
