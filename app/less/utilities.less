@@ -1,0 +1,68 @@
+//
+// Utility classes
+// --------------------------------------------------
+
+
+// Sprite
+// -------------------------
+.sprite(@position-x: 0; @position-y: 0; @width: 0; @height: 0) {
+  content: '';
+  background: url("/image/theme/sprite.png") no-repeat -@position-x -@position-y;
+  width: @width;
+  height: @height;
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+    background: url("/image/theme/sprite-retina.png") no-repeat -@position-x -@position-y;
+    background-size: 600px 600px;
+  }
+}
+
+// Floats
+// -------------------------
+
+.clearfix {
+  .clearfix();
+}
+.center-block {
+  .center-block();
+}
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+
+
+// Toggling content
+// -------------------------
+
+// Note: Deprecated .hide in favor of .hidden or .sr-only (as appropriate) in v3.0.1
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+.text-hide {
+  .text-hide();
+}
+
+
+// Hide from screenreaders and browsers
+//
+// Credit: HTML5 Boilerplate
+
+.hidden {
+  display: none !important;
+}
+
+
+// For Affix plugin
+// -------------------------
+
+.affix {
+  position: fixed;
+}

@@ -1,0 +1,95 @@
+.categories {
+  padding: 0 0 0 58px;
+  margin: 0 0 35px;
+  &-title {
+    font-size: 25px;
+    line-height: 1;
+    margin-bottom: 15px;
+  }
+  &-children {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    &__item {
+      padding-left: 22px;
+      position: relative;
+      &:before {
+        content: '—';
+        color: #222;
+        font-size: 16px;
+        line-height: 1.2;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      &.active {
+        > a {
+          color: #bd9d53;
+        }
+      }
+    }
+  }
+  &-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    &__item {
+      margin: 6px 0 0 ;
+      &:first-child {
+        margin-top: 0;
+      }
+      &.active {
+        > a {
+          color: #bd9d53;
+        }
+      }
+      a {
+        color: @gray-darker;
+        font-size: 16px;
+        font-family: 'ttdrugs-light', sans-serif;
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        &:before {
+          content: '';
+          z-index: 1;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 1px;
+          width: 68px;
+          background: #bd9d53;
+          opacity: .7;
+          transition: opacity 0.2s 0s cubic-bezier(0.4, 0, 0.2, 1), transform 0.45s 0s cubic-bezier(0.4, 0, 0.2, 1);
+          -moz-transition: opacity 0.2s 0s cubic-bezier(0.4, 0, 0.2, 1), transform 0.45s 0s cubic-bezier(0.4, 0, 0.2, 1);
+          -webkit-transition: opacity 0.2s 0s cubic-bezier(0.4, 0, 0.2, 1), transform 0.45s 0s cubic-bezier(0.4, 0, 0.2, 1);
+          transform: translate(-100%, 0);
+          -moz-transform: translate(-100%, 0);
+          -webkit-transform: translate(-100%, 0);
+        }
+        &:hover, &:focus {
+          color: #bd9d53;
+          text-decoration: none;
+          transition: color 0.2s 0s cubic-bezier(0.4, 0, 0.2, 1);
+          -moz-transition: color 0.2s 0s cubic-bezier(0.4, 0, 0.2, 1);
+          -webkit-transition: color 0.2s 0s cubic-bezier(0.4, 0, 0.2, 1);
+          &:before {
+            opacity: 1;
+            transform: translate(0, 0);
+            -ms-transform: translate(0, 0);
+            -webkit-transform: translate(0, 0);
+            -moz-transform: translate(0, 0);
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    padding: 0;
+  }
+
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    padding: 0;
+  }
+}

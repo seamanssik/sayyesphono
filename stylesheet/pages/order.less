@@ -1,0 +1,339 @@
+.order-group {
+  padding-left: 58px;
+
+  @media (max-width: @screen-xs-max) {
+    padding-left: 0;
+  }
+
+  &__item {
+    margin: 0 0 20px;
+  }
+
+  &__heading {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      height: 1px;
+      background: #999999;
+    }
+
+    .icon {
+      z-index: 1;
+      float: right;
+      position: relative;
+      padding-left: 25px;
+      background: #fff;
+
+      span {
+        position: relative;
+        vertical-align: top;
+        display: inline-block;
+        width: 31px;
+        height: 31px;
+        border-radius: 50%;
+        border: 1px solid #eee;
+
+        &::before {
+          .sprite(140px, 72px, 13px, 7px);
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          margin: -4px 0 0 -6px;
+        }
+      }
+    }
+  }
+
+  &__button {
+    color: #bd9d53;
+    font-size: 18px;
+    line-height: 31px;
+    font-family: 'ttdrugs-light', sans-serif;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    z-index: 1;
+
+    &:hover, &:focus {
+      color: #bd9d53;
+      text-decoration: none;
+    }
+
+    span {
+      background: #fff;
+      padding-right: 25px;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    &.collapsed {
+      &+.icon {
+        span::before {
+          margin: -3px 0 0 -6px;
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__body {
+    padding: 50px 0 0;
+    @media (max-width: @screen-xs-max) {
+      padding: 15px 0 0;
+    }
+  }
+
+  &__title {
+    color: @gray-darker;
+    font-size: 24px;
+    line-height: 1.4;
+    font-family: 'bodonicregular', sans-serif;
+    position: relative;
+    margin: 0 0 40px;
+
+    &::before {
+      content: '—';
+      color: @gray-darker;
+      font-size: 24px;
+      font-family: 'bodonicregular', sans-serif;
+      position: absolute;
+      right: calc(~'100% + 10px');
+    }
+
+    @media (max-width: @screen-xs-max) {
+      margin: 0 0 15px;
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &__total {
+    border-top: 2px solid @gray-darker;
+    padding: 20px 0 0;
+    text-align: right;
+
+    @media (max-width: @screen-xs-max) {
+      padding: 10px 0 0;
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+
+      &.text {
+        font-size: 14px;
+        font-family: 'ttdrugs-light', sans-serif;
+        text-transform: uppercase;
+
+        @media (max-width: @screen-xs-max) {
+          display: block;
+        }
+      }
+
+      &.price {
+        font-size: 50px;
+        line-height: 46px;
+        padding: 0 5px 0 10px;
+        @media (max-width: @screen-xs-max) {
+          font-size: 40px;
+          line-height: 1.2;
+        }
+      }
+
+      &.symbol {
+        font-size: 20px;
+        font-family: 'ttdrugs-light', sans-serif;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.order-product {
+  margin: 0 0 60px;
+
+  @media (max-width: @screen-xs-max) {
+    margin: 0 0 30px;
+    img {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__title {
+    font-size: 28px;
+    line-height: 1.2;
+    font-family: 'bodonicregular', sans-serif;
+    margin: -5px 0 20px;
+    @media (max-width: @screen-xs-max) {
+      margin: 0 0 15px;
+    }
+  }
+
+  &__options {
+    padding-left: 1px;
+  }
+
+  &__option {
+    float: left;
+    margin: 0 0 40px -1px;
+
+    @media (max-width: @screen-xs-max) {
+      margin-bottom: 15px;
+    }
+
+    .text {
+      font-size: 14px;
+      font-family: 'ttdrugs-light', sans-serif;
+      text-transform: uppercase;
+      margin: 0 0 6px;
+    }
+
+    .value {
+      color: @gray-darker;
+      font-size: 22px;
+      line-height: 58px;
+      height: 60px;
+      min-width: 130px;
+      padding: 0 25px;
+      border: 1px solid #999;
+
+      @media (max-width: @screen-xs-max) {
+        font-size: 22px;
+        line-height: 48px;
+        height: 50px;
+        padding: 0 15px;
+      }
+    }
+
+    &-info {
+      margin: 0 0 30px;
+      img {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      @media (max-width: @screen-xs-max) {
+        margin: 0 0 15px;
+        img {
+          margin: 0;
+        }
+      }
+    }
+
+    &-image {
+      margin: 0 0 0 6px;
+      display: inline-block;
+      vertical-align: middle;
+
+      .text {
+        font-size: 14px;
+        line-height: 1.2;
+        font-family: 'ttdrugs-light', sans-serif;
+        text-transform: none;
+        margin: 0 0 6px;
+        display: block;
+      }
+
+      .price {
+        font-size: 14px;
+        text-transform: uppercase;
+        font-family: 'ttdrugs-light', sans-serif;
+        b {
+          font-size: 18px;
+          text-transform: none;
+          font-family: 'bodonicregular', sans-serif;
+        }
+      }
+    }
+  }
+
+  &__total {
+    .text {
+      font-size: 14px;
+      font-family: 'ttdrugs-light', sans-serif;
+      text-transform: uppercase;
+      margin: 0 0 6px;
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+
+      &.price {
+        font-size: 50px;
+        line-height: 46px;
+        padding: 0 5px 0 0;
+
+        @media (max-width: @screen-xs-max) {
+          font-size: 40px;
+          line-height: 40px;
+        }
+      }
+
+      &.symbol {
+        font-size: 20px;
+        font-family: 'ttdrugs-light', sans-serif;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+  .order-group {
+    &__body {
+      padding: 30px 0 0;
+    }
+
+    &__title {
+      font-size: 18px;
+      margin: 0 0 20px;
+      &::before {
+        font-size: 18px;
+      }
+    }
+
+    &__total {
+      span.price {
+        font-size: 40px;
+        line-height: 36px;
+      }
+      span.symbol {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .order-product {
+    &__title {
+      margin: -5px 0 15px;
+    }
+
+    &__option {
+      margin: 0 0 20px -1px;
+
+      .value {
+        font-size: 18px;
+        line-height: 50px;
+        height: 50px;
+      }
+    }
+
+    &__total {
+      span.price {
+        font-size: 40px;
+        line-height: 36px;
+        padding: 0 5px 0 0;
+      }
+      span.symbol {
+        font-size: 18px;
+      }
+    }
+  }
+}

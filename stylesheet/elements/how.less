@@ -1,0 +1,155 @@
+.how {
+  padding-top: 195px;
+  margin-bottom: 130px;
+  &-info {
+    padding-left: 70px;
+    margin-bottom: 110px;
+    &__title {
+      color: @gray-darker;
+      font-size: 70px;
+      line-height: 1;
+      text-transform: uppercase;
+      z-index: 9;
+      position: relative;
+      margin-bottom: 60px;
+      &:before {
+        content: '—';
+        color: @gray-darker;
+        font-size: 70px;
+        text-transform: uppercase;
+        position: absolute;
+        right: 100%;
+        top: 0;
+      }
+    }
+    &__description {
+      max-width: 400px;
+      p {
+        color: @gray-darker;
+        font-size: 16px;
+        line-height: 1.4;
+        font-family: 'ttdrugs-light', sans-serif;
+        margin: 20px 0 0;
+        &:first-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+  &-thumb {
+    padding-left: 70px;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    &__logo {
+      .sprite(0, 83px, 268px, 99px);
+    }
+    &__figure {
+      padding-left: 30px;
+      position: relative;
+      span {
+        color: @gray-darker;
+        font-size: 16px;
+        font-family: 'ttdrugs-light', sans-serif;
+        line-height: 30px;
+        transform: rotateZ(-90deg);
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 1px;
+        height: 1px;
+        white-space: nowrap;
+      }
+    }
+  }
+  &-main {
+    &__figure {
+      margin-bottom: 75px;
+    }
+    &__description {
+      max-width: 480px;
+      p {
+        color: @gray-darker;
+        font-size: 16px;
+        line-height: 1.4;
+        font-family: 'ttdrugs-light', sans-serif;
+        margin: 25px 0 0;
+        &:first-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+  .how {
+    padding-top: 115px;
+    margin-bottom: 140px;
+    &-info {
+      &__title {
+        font-size: 50px;
+      }
+    }
+  }
+}
+
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+  .how {
+    padding-top: 60px;
+    margin-bottom: 60px;
+    &-info {
+      padding-left: 70px;
+      margin-bottom: 60px;
+      &__title {
+        font-size: 34px;
+      }
+    }
+    &-thumb {
+      padding-left: 0;
+    }
+    .aboutZest-main__figure {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: @screen-xs-max) {
+  .how {
+    padding-top: 0;
+    margin-bottom: 60px;
+    &-info {
+      padding-left: 0;
+      margin-bottom: 30px;
+      &__title {
+        font-size: 36px;
+        margin: 0 0 25px;
+        &::before {
+          display: none;
+        }
+        span {
+          padding: 0;
+        }
+      }
+    }
+    &-thumb {
+      padding-left: 0;
+    }
+    .aboutZest-main__figure {
+      margin-bottom: 30px;
+    }
+  }
+}

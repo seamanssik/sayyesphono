@@ -1,0 +1,145 @@
+.not_found {
+  background: url("/image/theme/not_found-bg.png") no-repeat 0 0;
+  height: auto;
+  min-height: 400px;
+  padding: 220px 0 122px;
+  &-container {
+    & > * {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  &-text {
+    p {
+      color: #aaa;
+      font-size: 28px;
+      line-height: 1.2;
+      font-family: 'ttdrugs-light', sans-serif;
+      margin: 30px 0 15px;
+      position: relative;
+      &:before {
+        content: '—';
+        color: #aaa;
+        font-size: 28px;
+        text-transform: uppercase;
+        position: absolute;
+        right: calc(~'100% + 6px');
+        top: 0;
+      }
+    }
+    a {
+      color: #e3ca7e;
+      font-size: 32px;
+      line-height: 1.4;
+      font-family: 'bodonicregular', sans-serif;
+      border: none;
+      background: none;
+      .transition(color .2s 0s cubic-bezier(0.4, 0, 0.2, 1));
+      &:hover, &:focus {
+        color: #fff;
+        text-decoration: none;
+        outline: none;
+        span:before {
+          .translate(20px, 0);
+          background-position: 0 -33px;
+        }
+      }
+      span {
+        padding: 0 50px 0 0;
+        position: relative;
+        &:before {
+          .sprite(46px, 33px, 38px, 9px);
+          position: absolute;
+          right: 0;
+          top: 50%;
+          margin: -4px 0 0;
+          display: block;
+          .translate(0, 0);
+          .transition(transform 0.6s 0.15s cubic-bezier(0.4, 0, 0.2, 1));
+        }
+      }
+    }
+  }
+}
+body.error-not_found {
+  min-height: 860px;
+  background: url("/image/theme/not_found-bg.jpg") repeat 50% 100%;
+  header, .n-container {
+    background: transparent;
+    border-bottom-color: #2e2e2e;
+    * {
+      color: #d4d4d4;
+    }
+  }
+  .h {
+    &-logo {
+      width: 264px;
+      height: 101px;
+      position: relative;
+      &:before {
+        .sprite(0, 499px, 264px, 101px);
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+      }
+      img {
+        display: none;
+      }
+    }
+  }
+  .h-nav__button .line {
+    &:before, &:after {
+      background: #444;
+    }
+  }
+  .n {
+    &-menu {
+      .n-dropdown-button {
+        color: #6d6d6d;
+        &:focus, &:hover {
+          color: #bd9d53;
+        }
+      }
+      &__link {
+        color: #6d6d6d;
+        &:focus, &:hover {
+          color: #bd9d53;
+        }
+      }
+    }
+  }
+  .n-container {
+    border-bottom-color: #2e2e2e;
+  }
+  footer {
+    padding: 36px 0 15px;
+    border-top-color: #2e2e2e;
+    * {
+      color: #d4d4d4;
+    }
+  }
+  .f {
+    &-logo {
+      width: 177px;
+      height: 68px;
+      &:before {
+        .sprite(273px, 532px, 177px, 68px);
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+      }
+    }
+    &-contact {
+      &__item {
+        a {
+          color: #767676;
+        }
+      }
+    }
+    &-copy {
+      color: #767676;
+    }
+  }
+}

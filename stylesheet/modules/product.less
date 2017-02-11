@@ -1,0 +1,283 @@
+.product {
+  position: relative;
+  margin-bottom: 40px;
+  &:hover {
+    .product {
+      &-thumb {
+        img {
+          -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+        }
+        &__mask {
+          opacity: 1;
+          transform: translate(0, 0);
+          -moz-transform: translate(0, 0);
+          -webkit-transform: translate(0, 0);
+        }
+      }
+      &-title {
+        &__link {
+          span:after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  &-info {
+    padding: 15px 0 0;
+    margin: 0;
+    .clearfix;
+    & > div {
+      max-width: 33.3%;
+      float: left;
+    }
+    &__rent, &__price {
+      color: @gray-darker;
+      font-size: 40px;
+      line-height: 30px;
+      font-family: 'bodonicregular', sans-serif;
+      text-align: right;
+      span {
+        color: @gray-darker;
+        font-size: 16px;
+        line-height: 1;
+        font-family: 'ttdrugs-light', sans-serif;
+        display: block;
+      }
+    }
+    &__currency {
+      color: @gray-darker;
+      font-size: 14px;
+      line-height: 1;
+      font-family: 'ttdrugs-light', sans-serif;
+      position: relative;
+      text-align: center;
+      margin: 17px 20px 0;
+      padding: 6px 6px 0;
+      border-top: 1px solid #666;
+    }
+    &__price {
+      text-align: left;
+    }
+  }
+  &-promo {
+    z-index: 1;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  &-thumb {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 12px;
+    img {
+      width: 100%;
+      .img-responsive;
+      -webkit-filter: grayscale(0%);
+      filter: grayscale(0%);
+    }
+    &__slide {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      > a  {
+        display: block;
+        position: relative;
+        &:before {
+          content: '';
+          z-index: 99;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+        }
+      }
+    }
+    &__mask {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+      background: rgba(34, 34, 34, 0.8);
+      opacity: .4;
+
+      transform: translate(0, 100%);
+      -moz-transform: translate(0, 100%);
+      -webkit-transform: translate(0, 100%);
+
+      transition: opacity .2s 0s cubic-bezier(0.4, 0, 0.2, 1), transform 0.45s 0s cubic-bezier(0.4, 0, 0.2, 1);
+      -moz-transition: opacity .2s 0s cubic-bezier(0.4, 0, 0.2, 1), transform 0.45s 0s cubic-bezier(0.4, 0, 0.2, 1);
+      -webkit-transition: opacity .2s 0s cubic-bezier(0.4, 0, 0.2, 1), transform 0.45s 0s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &__info {
+      padding: 17px 20px;
+      margin: 0 -10px;
+      .clearfix;
+      & > div {
+        //width: 33.3%;
+        float: left;
+        padding: 0 10px;
+      }
+    }
+    &__rent, &__price {
+      color: #e3ca7e;
+      font-size: 40px;
+      line-height: 1;
+      font-family: 'bodonicregular', sans-serif;
+      text-align: right;
+      span {
+        color: #adadad;
+        font-size: 16px;
+        line-height: 1;
+        font-family: 'ttdrugs-light', sans-serif;
+        display: block;
+      }
+    }
+    &__currency {
+      color: #adadad;
+      font-size: 14px;
+      line-height: 1;
+      font-family: 'ttdrugs-light', sans-serif;
+      position: relative;
+      text-align: center;
+      margin-top: 17px;
+      padding-top: 6px !important;
+      border-top: 1px solid #666;
+    }
+    &__price {
+      text-align: left;
+    }
+  }
+  &-title {
+    height: 56px;
+    overflow: hidden;
+    &__link {
+      color: @gray-darker;
+      font-size: 24px;
+      line-height: 1.2;
+      font-family: 'bodonicregular', sans-serif;
+      text-decoration: none;
+      display: inline-block;
+      vertical-align: top;
+      transition: color .2s 0s cubic-bezier(0.4, 0, 0.2, 1);
+      -moz-transition: color .2s 0s cubic-bezier(0.4, 0, 0.2, 1);
+      -webkit-transition: color .2s 0s cubic-bezier(0.4, 0, 0.2, 1);
+      span {
+        /*padding-right: 30px;*/
+        display: inline-block;
+        position: relative;
+        /*&:after {
+          .sprite(92px, 33px, 34px, 9px);
+          display: inline-block;
+          position: relative;
+          top: -2px;
+          opacity: 0;
+          transform: translate(10px, 0);
+          -moz-transform: translate(10px, 0);
+          -webkit-transform: translate(10px, 0);
+          transition: opacity .45s 0.05s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+          -moz-transition: opacity .45s 0.05s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+          -webkit-transition: opacity .45s 0.05s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+        }*/
+      }
+      &:hover, &:focus {
+        color: @gray-darker;
+        text-decoration: none;
+        /*span:after {
+          transform: translate(20px, 0);
+          -moz-transform: translate(20px, 0);
+          -webkit-transform: translate(20px, 0);
+        }*/
+      }
+    }
+  }
+}
+
+@media (min-width: @screen-lg-min) and (max-width: @screen-lg-max) {
+  .product {
+    &-title {
+      &__link {
+        font-size: 20px;
+      }
+    }
+    &-thumb {
+      &__rent, &__price {
+        font-size: 28px;
+      }
+      &__info {
+        padding: 17px 20px;
+        margin: 0 -10px;
+        & > div {
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+  .product {
+    &-thumb {
+      &__rent, &__price {
+        font-size: 28px;
+      }
+    }
+    &-info {
+      &__rent, &__price {
+        font-size: 28px;
+      }
+    }
+    &-title {
+      height: 56px;
+      overflow: hidden;
+      &__link {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+  .product {
+    margin: 0;
+    &-thumb {
+      &__rent, &__price {
+        font-size: 28px;
+      }
+    }
+    &-info {
+      &__rent, &__price {
+        font-size: 28px;
+      }
+    }
+    &-title {
+      height: 56px;
+      overflow: hidden;
+      &__link {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: @screen-xs-max) {
+  .product {
+    &-thumb {
+      &__link {
+        display: block;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    &-info {
+      &__rent, &__price {
+        font-size: 34px;
+      }
+    }
+  }
+}

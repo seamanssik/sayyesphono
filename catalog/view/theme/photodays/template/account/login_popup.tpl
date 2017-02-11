@@ -1,0 +1,37 @@
+<div class="modal fade" id="modalSignIn" tabindex="-1" role="dialog" aria-labelledby="modalSignIn">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-title"><span>Вход</span></div>
+            </div>
+            <div class="modal-body">
+                <form id="form-loginPopUp" method="post" enctype="multipart/form-data" class="form-horizontal popup-form" autocomplete="off">
+                    <div class="form-group popup-group">
+                        <label class="popup-label" for="input-email"><?php echo $entry_email; ?>:</label>
+                        <div class="col-sm-12">
+                            <input class="popup-control" type="text" name="email" value="<?php echo $email; ?>" id="input-email" />
+                        </div>
+                    </div>
+                    <div class="form-group popup-group">
+                        <label class="popup-label" for="input-password"><?php echo $entry_password; ?>:</label>
+                        <div class="col-sm-12">
+                            <input class="popup-control" type="password" name="password" value="<?php // echo $password; ?>" id="input-password" />
+                        </div>
+                    </div>
+                    <div class="buttons popup-buttons">
+                        <button class="popup-button" type="submit"><span><?php echo $button_login; ?></span></button>
+                    </div>
+                    <div class="links clearfix">
+                        <div class="pull-left">
+                            <a href="<?php echo $forgotten; ?>" class="popup-link">Забыли пароль?</a>
+                        </div>
+                        <div class="pull-right">
+                            <a href="<?php echo $register; ?>" class="popup-link">Зарегистрироваться</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

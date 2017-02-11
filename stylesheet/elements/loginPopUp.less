@@ -1,0 +1,91 @@
+.popup {
+  &-label {
+    color: rgba(255,255,255,0.5);
+    font-size: 15px;
+    line-height: 1;
+    letter-spacing: 2px;
+    font-family: 'ttdrugs-light', sans-serif;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 0 15px;
+  }
+  &-control {
+    color: #fff;
+    font-size: 32px;
+    font-family: 'bodonicregular', sans-serif;
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.4);
+    border-width: 0 0 1px;
+    padding: 0 0 2px;
+    resize: none;
+    width: 100%;
+    outline: none;
+    &:focus {
+      color: #e3ca7e;
+      outline: none;
+      border-color: #e3ca7e;
+    }
+    +.error {
+      margin-top: 10px;
+      letter-spacing: 1px;
+      font-family: 'ttdrugs', sans-serif;
+    }
+  }
+  &-group {
+    margin-bottom: 30px;
+  }
+  &-buttons {
+    margin-bottom: 30px;
+  }
+  &-button {
+    color: #fff;
+    font-size: 40px;
+    line-height: 1;
+    font-family: 'bodonicregular', sans-serif;
+    border: none;
+    background: none;
+    .transition(color .2s 0s cubic-bezier(0.4, 0, 0.2, 1));
+    padding: 0;
+    outline: none;
+    &:hover {
+      color: #e3ca7e;
+      span:before {
+        .translate(20px, 0);
+        background-position: -54px -251px;
+      }
+    }
+    &:hover, &:focus {
+      text-decoration: none;
+      outline: none;
+    }
+    span {
+      padding: 0 10px 0 0;
+      position: relative;
+      &:before {
+        .sprite(54px, 234px, 60px, 14px);
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        margin: -4px 0 0;
+        display: block;
+        .translate(0, 0);
+        .transition(transform 0.6s 0.15s cubic-bezier(0.4, 0, 0.2, 1));
+      }
+    }
+  }
+  &-link {
+    color: #e3ca7e;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 1px;
+    font-family: 'ttdrugs-light', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: none;
+    &:hover, &:focus {
+      color: #fff;
+      text-decoration: none;
+      outline: none;
+    }
+  }
+}

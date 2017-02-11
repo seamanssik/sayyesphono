@@ -1,0 +1,89 @@
+.welcome {
+  padding: 100px 0 80px;
+  &-logo, &-alt {
+    margin-right: 40px;
+  }
+  &-logo {
+    float: right;
+    margin-bottom: 30px;
+  }
+  &-alt {
+    color: @gray-darker;
+    font-size: 22px;
+    font-family: 'ttdrugs-light', sans-serif;
+    display: block;
+    text-align: right;
+  }
+  &-text {
+    color: @gray-darker;
+    margin: 0 0 0 40px;
+    width: 496px;
+    &__title {
+      font-size: 24px;
+      font-family: 'bodonicregular', sans-serif;
+      text-transform: uppercase;
+      margin: 0 0 12px;
+    }
+    &__description {
+      font-size: 16px;
+      line-height: 1.4;
+      font-family: 'ttdrugs-light', sans-serif;
+      height: 150px;
+      overflow: hidden;
+      .jcf-scrollable {
+        padding: 0 15px 0 0;
+        height: 150px;
+      }
+    }
+  }
+
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    padding: 100px 0 100px;
+    &-logo {
+      .img-responsive;
+    }
+    &-logo, &-alt {
+      margin-right: 0;
+    }
+    &-text {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    padding: 100px 0 100px;
+    &-logo {
+      .img-responsive;
+    }
+    &-logo, &-alt {
+      float: none;
+      text-align: left;
+      margin-right: 0;
+    }
+    &-text {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: @screen-xs-max) {
+  .welcome {
+    padding: 30px 0;
+    &-logo {
+      margin: 0 0 30px;
+      float: none;
+      .img-responsive;
+    }
+    &-alt {
+      font-size: 18px;
+      text-align: left;
+      margin: 0 0 30px;
+    }
+    &-text {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}

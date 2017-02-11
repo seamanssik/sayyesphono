@@ -1,0 +1,336 @@
+header {
+  background: #fff;
+  padding: 24px 0;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.h-item() {
+  float: left;
+  display: block;
+}
+
+.h {
+  &-container {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  &-item {
+    &__nav {
+      .h-item;
+    }
+    &__phone {
+      .h-item;
+      margin: 0 0 0 46px;
+    }
+    &__logo {
+      text-align: center;
+    }
+    &__social {
+      .h-item;
+    }
+    &__menu {
+      float: right;
+      display: block;
+    }
+  }
+
+  &-nav {
+    &__button {
+      color: #bd9d53;
+      font-size: 16px;
+      line-height: 18px;
+      font-family: 'bodonicregular', sans-serif;
+      text-transform: uppercase;
+      background: transparent;
+      border: none;
+      padding: 2px 0 0;
+      margin: 0;
+      position: relative;
+      outline: none;
+      display: inline-block;
+      cursor: pointer;
+      .text {
+        padding: 0 0 0 22px;
+        display: block;
+      }
+      .line {
+        left: 0;
+        top: 50%;
+        position: absolute;
+        height: 8px;
+        width: 16px;
+        margin: -4px 0 0;
+        &:before, &:after {
+          content: '';
+          z-index: 1;
+          position: absolute;
+          background: #bd9d53;
+          //box-shadow: 0 3px 0 #fff;
+          left: 0;
+          right: 0;
+          height: 2px;
+          display: block;
+        }
+        &:before {
+          top: 0;
+        }
+        &:after {
+          bottom: 0;
+        }
+      }
+    }
+  }
+
+  &-phone {
+    list-style: none;
+    padding: 0;
+    li {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 15px;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+    &__item {
+      color: @gray-darker;
+      font-size: 16px;
+      font-family: 'ttdrugs-light', sans-serif;
+      &:hover, &:focus {
+        color: inherit;
+        outline: none;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &-logo {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &-social {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      float: left;
+      display: block;
+      margin: 0 0 0 25px;
+      &:first-child {
+        margin: 0;
+      }
+    }
+    &__item {
+      text-indent: -9999px;
+      width: 25px;
+      height: 25px;
+      display: block;
+      position: relative;
+      background: transparent;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 25px;
+        height: 25px;
+      }
+    }
+    &__int:before {
+      .sprite(0, 0, 25px, 25px);
+    }
+    &__int:hover:before {
+      .sprite(369px, 151px, 25px, 25px);
+    }
+    &__vk:before {
+      .sprite(31px, 0, 25px, 25px);
+    }
+    &__vk:hover:before {
+      .sprite(400px, 151px, 25px, 25px);
+    }
+    &__fb:before {
+      .sprite(64px, 0, 25px, 25px);
+    }
+    &__fb:hover:before {
+      .sprite(433px, 151px, 25px, 25px);
+    }
+    &__you:before {
+      .sprite(97px, 0, 25px, 25px);
+    }
+    &__you:hover:before {
+      .sprite(466px, 151px, 25px, 25px);
+    }
+  }
+
+  &-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 0 0 42px;
+      &:first-child {
+        margin: 0;
+      }
+      .cart-total {
+        color: #bd9d53;
+        font-size: 14px;
+        font-family: 'bodonicregular',sans-serif;
+        position: absolute;
+        right: 0;
+      }
+    }
+    &__item {
+      color: @gray-darker;
+      font-size: 16px;
+      font-family: 'ttdrugs-light', sans-serif;
+      text-transform: uppercase;
+      outline: none;
+      &:hover, &:focus {
+        color: inherit;
+        outline: none;
+      }
+    }
+  }
+
+}
+
+@media (min-width: @screen-lg-min) and (max-width: @screen-lg-max) {
+  .h-item {
+    &__phone {
+      margin: 10px 0 0;
+    }
+    &__social {
+      float: right;
+    }
+    &__menu {
+      width: 100%;
+      margin: 10px 0 0;
+      text-align: right;
+    }
+  }
+}
+
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+  .h-item {
+    &__phone {
+      margin: 10px 0 0;
+      li {
+        margin: 0;
+      }
+    }
+    &__social {
+      float: right;
+    }
+    &__menu {
+      width: 100%;
+      margin: 10px 0 0;
+      text-align: right;
+    }
+  }
+}
+
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+  .h-item {
+    &__phone {
+      margin: 10px 0 0;
+      li {
+        margin: 0;
+      }
+    }
+    &__social {
+      float: right;
+    }
+    &__menu {
+      width: 100%;
+      margin: 10px 0 0;
+      text-align: right;
+    }
+  }
+}
+
+@media (max-width: @screen-xs-max) {
+  .h-container {
+    display: block;
+  }
+  .h-nav {
+    &__button  {
+      width: 16px;
+      height: 8px;
+      &:before {
+        content: '';
+        position: absolute;
+        left: -15px;
+        right: -15px;
+        top: -15px;
+        bottom: -15px;
+      }
+      .line {
+        top: 0;
+        margin: 0;
+      }
+      .text {
+        display: none;
+      }
+    }
+  }
+  .h-item {
+    &__logo {
+      margin: 0 auto 24px;
+    }
+    &__social {
+      display: none;
+    }
+    &__menu {
+      float: none;
+      text-align: center;
+    }
+    &__nav {
+      z-index: 99;
+      position: fixed;
+      top: 10px;
+      left: 10px;
+    }
+  }
+
+  .modal-dialog {
+    margin-top: 30px;
+  }
+
+  .modal-body {
+    padding: 30px 25px 25px;
+  }
+
+  .popup-button {
+    font-size: 34px;
+  }
+
+  .popup-buttons {
+    margin-bottom: 25px;
+  }
+
+  .popup-link {
+    font-size: 12px;
+    line-height: 2;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+}

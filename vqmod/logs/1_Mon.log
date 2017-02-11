@@ -1,0 +1,26 @@
+---------- Date: 2017-01-16 21:10:05 ~ IP : 91.193.172.134 ----------
+REQUEST URI : /
+MOD DETAILS:
+   modFile   : /home/sayyesph/sayyesphoto.com/test/vqmod/xml/install.xml
+   id        : 
+   version   : 6.4.0.0
+   vqmver    : 
+   author    : Dreamvention
+VQModObject::parseMods - Could not resolve path for [system/library/tax.php] (SKIPPED)
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-01-16 21:21:29 ~ IP : 91.193.172.134 ----------
+REQUEST URI : /checkout
+MOD DETAILS:
+   modFile   : /home/sayyesph/sayyesphoto.com/test/vqmod/xml/install.xml
+   id        : 
+   version   : 6.4.0.0
+   vqmver    : 
+   author    : Dreamvention
+
+File Name    : catalog/controller/checkout/checkout.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/checkout/checkout.tpl')) {
+----------------------------------------------------------------------
+
+

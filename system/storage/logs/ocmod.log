@@ -1,0 +1,819 @@
+2016-12-15 0:15:44 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Local copy OCMOD by iSenseLabs
+
+FILE: admin/controller/extension/installer.php
+CODE: 'url'  => str_replace('&amp;', '&', $this->url->link('extension/installer/ftp', 'token=' . $this->session->data['token'],
+LINE: 131
+CODE: public function unzip() {
+LINE: 292
+----------------------------------------------------------------
+MOD: OCFilter Modification
+
+FILE: admin/controller/catalog/product.php
+CODE: function getForm() {
+LINE: 549
+CODE: $data['tab_general'] = $this->language->get('tab_general');
+LINE: 657
+
+FILE: admin/language/ru-ru/catalog/product.php
+CODE: 'Статус';
+LINE: 30
+LINE: 86
+
+FILE: admin/model/catalog/product.php
+CODE: if (isset($data['image'])) {
+LINE: 29
+LINE: 175
+CODE: $data['product_attribute'] = $this->getProductAttributes($product_id);
+LINE: 342
+CODE: $this->db->query("DELETE FROM " . DB_PREFIX . "product WHERE product_id = '" . (int)$product_id . "'");
+LINE: 367
+
+FILE: admin/view/template/catalog/product_form.tpl
+CODE: <script type="text/javascript"><!--
+LINE: 950
+
+FILE: catalog/controller/startup/maintenance.php
+CODE: index() {
+LINE: 7
+
+FILE: catalog/controller/common/maintenance.php
+CODE: index() {
+LINE: 7
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: $this->url->addRewrite($this);
+LINE: 12
+
+FILE: catalog/model/catalog/product.php
+CODE: if (!empty($data['filter_manufacturer_id'])) {
+LINE: 172
+LINE: 569
+
+FILE: catalog/controller/product/category.php
+CODE: $data['breadcrumbs'] = array();
+LINE: 50
+CODE: $product_total =
+LINE: 191
+CODE: if (isset($this->request->get['filter'])) {
+LINE: 249
+CODE: if (isset($this->request->get['filter'])) {
+LINE: 324
+CODE: if (isset($this->request->get['filter'])) {
+LINE: 359
+CODE: $data['limit'] = $limit;
+LINE: 477
+
+FILE: system/library/document.php
+CODE: private $keywords;
+LINE: 9
+CODE: public function setTitle($title) {
+LINE: 38
+
+FILE: catalog/controller/common/header.php
+CODE: $data['scripts'] = $this->document->getScripts();
+LINE: 38
+
+FILE: catalog/view/theme/default/template/common/header.tpl
+CODE: </title>
+LINE: 18
+
+FILE: catalog/view/theme/photodays/template/common/header.tpl
+CODE: </title>
+LINE: 18
+----------------------------------------------------------------
+2016-12-15 0:21:32 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Local copy OCMOD by iSenseLabs
+
+FILE: admin/controller/extension/installer.php
+CODE: 'url'  => str_replace('&amp;', '&', $this->url->link('extension/installer/ftp', 'token=' . $this->session->data['token'],
+LINE: 131
+CODE: public function unzip() {
+LINE: 292
+----------------------------------------------------------------
+MOD: OCFilter Modification
+
+FILE: admin/controller/catalog/product.php
+CODE: function getForm() {
+LINE: 549
+CODE: $data['tab_general'] = $this->language->get('tab_general');
+LINE: 657
+
+FILE: admin/language/ru-ru/catalog/product.php
+CODE: 'Статус';
+LINE: 30
+LINE: 86
+
+FILE: admin/model/catalog/product.php
+CODE: if (isset($data['image'])) {
+LINE: 29
+LINE: 175
+CODE: $data['product_attribute'] = $this->getProductAttributes($product_id);
+LINE: 342
+CODE: $this->db->query("DELETE FROM " . DB_PREFIX . "product WHERE product_id = '" . (int)$product_id . "'");
+LINE: 367
+
+FILE: admin/view/template/catalog/product_form.tpl
+CODE: <script type="text/javascript"><!--
+LINE: 950
+
+FILE: catalog/controller/startup/maintenance.php
+CODE: index() {
+LINE: 7
+
+FILE: catalog/controller/common/maintenance.php
+CODE: index() {
+LINE: 7
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: $this->url->addRewrite($this);
+LINE: 12
+
+FILE: catalog/model/catalog/product.php
+CODE: if (!empty($data['filter_manufacturer_id'])) {
+LINE: 172
+LINE: 569
+
+FILE: catalog/controller/product/category.php
+CODE: $data['breadcrumbs'] = array();
+LINE: 50
+CODE: $product_total =
+LINE: 191
+CODE: if (isset($this->request->get['filter'])) {
+LINE: 249
+CODE: if (isset($this->request->get['filter'])) {
+LINE: 324
+CODE: if (isset($this->request->get['filter'])) {
+LINE: 359
+CODE: $data['limit'] = $limit;
+LINE: 477
+
+FILE: system/library/document.php
+CODE: private $keywords;
+LINE: 9
+CODE: public function setTitle($title) {
+LINE: 38
+
+FILE: catalog/controller/common/header.php
+CODE: $data['scripts'] = $this->document->getScripts();
+LINE: 38
+
+FILE: catalog/view/theme/default/template/common/header.tpl
+CODE: </title>
+LINE: 18
+
+FILE: catalog/view/theme/photodays/template/common/header.tpl
+CODE: </title>
+LINE: 18
+----------------------------------------------------------------
+2016-12-15 0:22:26 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Local copy OCMOD by iSenseLabs
+
+FILE: admin/controller/extension/installer.php
+CODE: 'url'  => str_replace('&amp;', '&', $this->url->link('extension/installer/ftp', 'token=' . $this->session->data['token'],
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function unzip() {
+LINE: 368
+----------------------------------------------------------------
+MOD: OCFilter Modification
+
+FILE: admin/controller/catalog/product.php
+CODE: function getForm() {
+LINE: 549
+CODE: $data['tab_general'] = $this->language->get('tab_general');
+LINE: 663
+
+FILE: admin/language/ru-ru/catalog/product.php
+CODE: 'Статус';
+LINE: 30
+LINE: 93
+
+FILE: admin/model/catalog/product.php
+CODE: if (isset($data['image'])) {
+LINE: 51
+LINE: 219
+CODE: $data['product_attribute'] = $this->getProductAttributes($product_id);
+LINE: 386
+CODE: $this->db->query("DELETE FROM " . DB_PREFIX . "product WHERE product_id = '" . (int)$product_id . "'");
+LINE: 417
+
+FILE: admin/view/template/catalog/product_form.tpl
+CODE: <script type="text/javascript"><!--
+LINE: 952
+
+FILE: catalog/controller/startup/maintenance.php
+CODE: index() {
+LINE: 7
+
+FILE: catalog/controller/common/maintenance.php
+CODE: index() {
+LINE: 7
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: $this->url->addRewrite($this);
+LINE: 12
+
+FILE: catalog/model/catalog/product.php
+CODE: if (!empty($data['filter_manufacturer_id'])) {
+LINE: 185
+LINE: 595
+
+FILE: catalog/controller/product/category.php
+CODE: $data['breadcrumbs'] = array();
+LINE: 59
+CODE: $product_total =
+LINE: 205
+CODE: if (isset($this->request->get['filter'])) {
+LINE: 270
+CODE: if (isset($this->request->get['filter'])) {
+LINE: 352
+CODE: if (isset($this->request->get['filter'])) {
+LINE: 394
+CODE: $data['limit'] = $limit;
+LINE: 512
+
+FILE: system/library/document.php
+CODE: private $keywords;
+LINE: 9
+CODE: public function setTitle($title) {
+LINE: 54
+
+FILE: catalog/controller/common/header.php
+CODE: $data['scripts'] = $this->document->getScripts();
+LINE: 38
+
+FILE: catalog/view/theme/default/template/common/header.tpl
+CODE: </title>
+LINE: 18
+
+FILE: catalog/view/theme/photodays/template/common/header.tpl
+CODE: </title>
+LINE: 18
+----------------------------------------------------------------
+2016-12-15 1:10:34 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Local copy OCMOD by iSenseLabs
+
+FILE: admin/controller/extension/installer.php
+CODE: 'url'  => str_replace('&amp;', '&', $this->url->link('extension/installer/ftp', 'token=' . $this->session->data['token'],
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function unzip() {
+LINE: 368
+----------------------------------------------------------------
+MOD: OCFilter Modification
+
+FILE: admin/controller/catalog/product.php
+CODE: function getForm() {
+LINE: 549
+CODE: $data['tab_general'] = $this->language->get('tab_general');
+LINE: 663
+
+FILE: admin/language/ru-ru/catalog/product.php
+CODE: 'Статус';
+LINE: 30
+LINE: 93
+
+FILE: admin/model/catalog/product.php
+CODE: if (isset($data['image'])) {
+LINE: 51
+LINE: 219
+CODE: $data['product_attribute'] = $this->getProductAttributes($product_id);
+LINE: 386
+CODE: $this->db->query("DELETE FROM " . DB_PREFIX . "product WHERE product_id = '" . (int)$product_id . "'");
+LINE: 417
+
+FILE: admin/view/template/catalog/product_form.tpl
+CODE: <script type="text/javascript"><!--
+LINE: 952
+
+FILE: catalog/controller/startup/maintenance.php
+CODE: index() {
+LINE: 7
+
+FILE: catalog/controller/common/maintenance.php
+CODE: index() {
+LINE: 7
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: $this->url->addRewrite($this);
+LINE: 12
+
+FILE: catalog/model/catalog/product.php
+CODE: if (!empty($data['filter_manufacturer_id'])) {
+LINE: 185
+LINE: 595
+
+FILE: catalog/controller/product/category.php
+CODE: $data['breadcrumbs'] = array();
+LINE: 59
+CODE: $product_total =
+LINE: 205
+CODE: if (isset($this->request->get['filter'])) {
+LINE: 270
+CODE: if (isset($this->request->get['filter'])) {
+LINE: 352
+CODE: if (isset($this->request->get['filter'])) {
+LINE: 394
+CODE: $data['limit'] = $limit;
+LINE: 512
+
+FILE: system/library/document.php
+CODE: private $keywords;
+LINE: 9
+CODE: public function setTitle($title) {
+LINE: 54
+
+FILE: catalog/controller/common/header.php
+CODE: $data['scripts'] = $this->document->getScripts();
+LINE: 38
+
+FILE: catalog/view/theme/default/template/common/header.tpl
+CODE: </title>
+LINE: 18
+
+FILE: catalog/view/theme/photodays/template/common/header.tpl
+CODE: </title>
+LINE: 18
+----------------------------------------------------------------
+2017-01-05 2:15:15 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Local copy OCMOD by iSenseLabs
+
+FILE: admin/controller/extension/installer.php
+CODE: 'url'  => str_replace('&amp;', '&', $this->url->link('extension/installer/ftp', 'token=' . $this->session->data['token'],
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function unzip() {
+LINE: 368
+----------------------------------------------------------------
+MOD: OCFilter Modification
+
+FILE: admin/controller/catalog/product.php
+CODE: function getForm() {
+LINE: 551
+CODE: $data['tab_general'] = $this->language->get('tab_general');
+LINE: 668
+
+FILE: admin/language/ru-ru/catalog/product.php
+CODE: 'Статус';
+LINE: 32
+LINE: 95
+
+FILE: admin/model/catalog/product.php
+CODE: if (isset($data['image'])) {
+LINE: 51
+LINE: 244
+CODE: $data['product_attribute'] = $this->getProductAttributes($product_id);
+LINE: 494
+CODE: $this->db->query("DELETE FROM " . DB_PREFIX . "product WHERE product_id = '" . (int)$product_id . "'");
+LINE: 527
+
+FILE: admin/view/template/catalog/product_form.tpl
+CODE: <script type="text/javascript"><!--
+LINE: 1180
+
+FILE: catalog/controller/startup/maintenance.php
+CODE: index() {
+LINE: 7
+
+FILE: catalog/controller/common/maintenance.php
+CODE: index() {
+LINE: 7
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: $this->url->addRewrite($this);
+LINE: 12
+
+FILE: catalog/model/catalog/product.php
+CODE: if (!empty($data['filter_manufacturer_id'])) {
+LINE: 206
+LINE: 629
+
+FILE: catalog/controller/product/category.php
+CODE: $data['breadcrumbs'] = array();
+LINE: 68
+CODE: $product_total =
+LINE: 214
+CODE: if (isset($this->request->get['filter'])) {
+LINE: 388
+CODE: if (isset($this->request->get['filter'])) {
+LINE: 470
+CODE: if (isset($this->request->get['filter'])) {
+LINE: 512
+CODE: $data['limit'] = $limit;
+LINE: 630
+
+FILE: system/library/document.php
+CODE: private $keywords;
+LINE: 9
+CODE: public function setTitle($title) {
+LINE: 54
+
+FILE: catalog/controller/common/header.php
+CODE: $data['scripts'] = $this->document->getScripts();
+LINE: 38
+
+FILE: catalog/view/theme/default/template/common/header.tpl
+CODE: </title>
+LINE: 18
+
+FILE: catalog/view/theme/photodays/template/common/header.tpl
+CODE: </title>
+LINE: 18
+----------------------------------------------------------------
+2017-01-05 2:17:57 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Local copy OCMOD by iSenseLabs
+
+FILE: admin/controller/extension/installer.php
+CODE: 'url'  => str_replace('&amp;', '&', $this->url->link('extension/installer/ftp', 'token=' . $this->session->data['token'],
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function unzip() {
+LINE: 368
+----------------------------------------------------------------
+MOD: OCFilter Modification
+
+FILE: admin/controller/catalog/product.php
+CODE: function getForm() {
+LINE: 551
+CODE: $data['tab_general'] = $this->language->get('tab_general');
+LINE: 668
+
+FILE: admin/language/ru-ru/catalog/product.php
+CODE: 'Статус';
+LINE: 32
+LINE: 95
+
+FILE: admin/model/catalog/product.php
+CODE: if (isset($data['image'])) {
+LINE: 51
+LINE: 244
+CODE: $data['product_attribute'] = $this->getProductAttributes($product_id);
+LINE: 494
+CODE: $this->db->query("DELETE FROM " . DB_PREFIX . "product WHERE product_id = '" . (int)$product_id . "'");
+LINE: 527
+
+FILE: admin/view/template/catalog/product_form.tpl
+CODE: <script type="text/javascript"><!--
+LINE: 1180
+
+FILE: catalog/controller/startup/maintenance.php
+CODE: index() {
+LINE: 7
+
+FILE: catalog/controller/common/maintenance.php
+CODE: index() {
+LINE: 7
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: $this->url->addRewrite($this);
+LINE: 12
+
+FILE: catalog/model/catalog/product.php
+CODE: if (!empty($data['filter_manufacturer_id'])) {
+LINE: 206
+LINE: 629
+
+FILE: catalog/controller/product/category.php
+CODE: $data['breadcrumbs'] = array();
+LINE: 68
+CODE: $product_total =
+LINE: 214
+CODE: if (isset($this->request->get['filter'])) {
+LINE: 388
+CODE: if (isset($this->request->get['filter'])) {
+LINE: 470
+CODE: if (isset($this->request->get['filter'])) {
+LINE: 512
+CODE: $data['limit'] = $limit;
+LINE: 630
+
+FILE: system/library/document.php
+CODE: private $keywords;
+LINE: 9
+CODE: public function setTitle($title) {
+LINE: 54
+
+FILE: catalog/controller/common/header.php
+CODE: $data['scripts'] = $this->document->getScripts();
+LINE: 38
+
+FILE: catalog/view/theme/default/template/common/header.tpl
+CODE: </title>
+LINE: 18
+
+FILE: catalog/view/theme/photodays/template/common/header.tpl
+CODE: </title>
+LINE: 18
+----------------------------------------------------------------
+2017-01-05 2:18:19 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 49
+LINE: 108
+LINE: 120
+LINE: 165
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 38
+LINE: 40
+LINE: 49
+LINE: 51
+LINE: 60
+LINE: 62
+
+FILE: system/library/template/php.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/tiwg.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 24
+----------------------------------------------------------------
+MOD: Local copy OCMOD by iSenseLabs
+
+FILE: admin/controller/extension/installer.php
+CODE: 'url'  => str_replace('&amp;', '&', $this->url->link('extension/installer/ftp', 'token=' . $this->session->data['token'],
+NOT FOUND - OPERATION SKIPPED!
+CODE: public function unzip() {
+LINE: 368
+----------------------------------------------------------------
+MOD: OCFilter Modification
+
+FILE: admin/controller/catalog/product.php
+CODE: function getForm() {
+LINE: 551
+CODE: $data['tab_general'] = $this->language->get('tab_general');
+LINE: 668
+
+FILE: admin/language/ru-ru/catalog/product.php
+CODE: 'Статус';
+LINE: 32
+LINE: 95
+
+FILE: admin/model/catalog/product.php
+CODE: if (isset($data['image'])) {
+LINE: 51
+LINE: 244
+CODE: $data['product_attribute'] = $this->getProductAttributes($product_id);
+LINE: 494
+CODE: $this->db->query("DELETE FROM " . DB_PREFIX . "product WHERE product_id = '" . (int)$product_id . "'");
+LINE: 527
+
+FILE: admin/view/template/catalog/product_form.tpl
+CODE: <script type="text/javascript"><!--
+LINE: 1180
+
+FILE: catalog/controller/startup/maintenance.php
+CODE: index() {
+LINE: 7
+
+FILE: catalog/controller/common/maintenance.php
+CODE: index() {
+LINE: 7
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: $this->url->addRewrite($this);
+LINE: 12
+
+FILE: catalog/model/catalog/product.php
+CODE: if (!empty($data['filter_manufacturer_id'])) {
+LINE: 206
+LINE: 629
+
+FILE: catalog/controller/product/category.php
+CODE: $data['breadcrumbs'] = array();
+LINE: 68
+CODE: $product_total =
+LINE: 214
+CODE: if (isset($this->request->get['filter'])) {
+LINE: 388
+CODE: if (isset($this->request->get['filter'])) {
+LINE: 470
+CODE: if (isset($this->request->get['filter'])) {
+LINE: 512
+CODE: $data['limit'] = $limit;
+LINE: 630
+
+FILE: system/library/document.php
+CODE: private $keywords;
+LINE: 9
+CODE: public function setTitle($title) {
+LINE: 54
+
+FILE: catalog/controller/common/header.php
+CODE: $data['scripts'] = $this->document->getScripts();
+LINE: 38
+
+FILE: catalog/view/theme/default/template/common/header.tpl
+CODE: </title>
+LINE: 18
+
+FILE: catalog/view/theme/photodays/template/common/header.tpl
+CODE: </title>
+LINE: 18
+----------------------------------------------------------------

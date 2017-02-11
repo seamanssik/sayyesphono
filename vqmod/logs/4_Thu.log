@@ -1,0 +1,26 @@
+---------- Date: 2017-01-05 02:21:43 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=user/user_permission&token=zg0xC0qdT4ZWQYzZX7R8XQ3OVFgc4eFs
+MOD DETAILS:
+   modFile   : J:\OpenServer\domains\photodays.lc\vqmod/xml/install.xml
+   id        : 
+   version   : 6.4.0.0
+   vqmver    : 
+   author    : Dreamvention
+VQModObject::parseMods - Could not resolve path for [system/library/tax.php] (SKIPPED)
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-01-05 02:22:44 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /checkout
+MOD DETAILS:
+   modFile   : J:\OpenServer\domains\photodays.lc\vqmod/xml/install.xml
+   id        : 
+   version   : 6.4.0.0
+   vqmver    : 
+   author    : Dreamvention
+
+File Name    : catalog/controller/checkout/checkout.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/checkout/checkout.tpl')) {
+----------------------------------------------------------------------
+
+

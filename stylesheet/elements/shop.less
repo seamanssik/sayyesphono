@@ -1,0 +1,100 @@
+.shop {
+  margin-bottom: 140px;
+  &-title {
+    color: @gray-darker;
+    font-size: 70px;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 40px;
+  }
+  &-description {
+    left: 15px;
+    right: 15px;
+    z-index: 9;
+    position: absolute;
+    color: @gray-darker;
+    font-size: 16px;
+    line-height: 1.4;
+    font-family: 'ttdrugs-light', sans-serif;
+    margin-bottom: 90px;
+    background: #fff;
+    p {
+      margin-top: 10px;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+  &-col {
+    &:nth-child(3n+1) {
+      padding-top: 148px;
+    }
+  }
+}
+
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+  .shop {
+    &-title {
+      font-size: 50px;
+    }
+    &-col {
+      &:nth-child(3n+1) {
+        padding-top: 60px;
+      }
+    }
+  }
+}
+
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+  .shop {
+    margin-bottom: 60px;
+    &-title {
+      font-size: 34px;
+      margin-bottom: 30px;
+    }
+    &-description {
+      top: 0;
+      left: 0;
+      margin-bottom: 0;
+      position: relative;
+    }
+    &-col {
+      &:nth-child(3n+1) {
+        padding-top: 60px;
+      }
+      &:nth-child(1) {
+        padding-top: 0;
+      }
+      &:nth-child(2) {
+        padding-top: 60px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: @screen-xs-max) {
+  .shop {
+    margin-bottom: 30px;
+    &-title {
+      font-size: 34px;
+      margin-bottom: 25px;
+    }
+    &-description {
+      top: 0;
+      left: 0;
+      margin-bottom: 0;
+      position: relative;
+    }
+    &-col {
+      &:nth-child(3n+1) {
+        padding-top: 0;
+      }
+      &:nth-child(1) {
+        padding-top: 0;
+      }
+      &:nth-child(2) {
+        padding-top: 0 !important;
+      }
+    }
+  }
+}

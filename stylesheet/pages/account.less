@@ -1,0 +1,130 @@
+.row-account {
+  margin-bottom: 140px;
+  @media (max-width: @screen-md-max) {
+    margin-bottom: 60px;
+  }
+  @media (max-width: @screen-xs-max) {
+    margin-bottom: 30px;
+  }
+}
+
+.account {
+
+  &-heading {
+    padding-top: 60px;
+  }
+
+  &-breadcrumb {
+    margin-bottom: 60px;
+  }
+
+  &-list {
+    margin: 0 0 40px 58px;
+    @media (max-width: @screen-xs-max) {
+      margin-left: 0;
+    }
+    &__item {
+      padding: 5px 0 0;
+      &:first-child {
+        padding-top: 0;
+      }
+    }
+    &__link {
+      color: #999;
+      font-size: 24px;
+      line-height: 1;
+      font-family: 'bodonicregular', sans-serif;
+      text-decoration: none;
+      transition: color .2s 0s cubic-bezier(0.4, 0, 0.2, 1);
+      -moz-transition: color .2s 0s cubic-bezier(0.4, 0, 0.2, 1);
+      -webkit-transition: color .2s 0s cubic-bezier(0.4, 0, 0.2, 1);
+      &:hover, &:focus {
+        color: #bd9d53;
+        text-decoration: inherit;
+      }
+    }
+  }
+
+  &-nav {
+    a&__link {
+      color: #444;
+      font-size: 14px;
+      font-family: 'ttdrugs-regular', sans-serif;
+      text-transform: uppercase;
+      border-color: #999;
+      padding: 11px 15px 10px;
+      transition: color .2s 0s cubic-bezier(0.4, 0, 0.2, 1);
+      -moz-transition: color .2s 0s cubic-bezier(0.4, 0, 0.2, 1);
+      -webkit-transition: color .2s 0s cubic-bezier(0.4, 0, 0.2, 1);
+      &:first-child, &:last-child {
+        border-radius: 0;
+      }
+      &:hover, &:focus {
+        color: #bd9d53;
+        text-decoration: inherit;
+      }
+    }
+    a&__active {
+      color: #fff;
+      background: #e3ca7e;
+      padding: 12px 15px 11px;
+      margin: 0 0 -1px;
+      border-width: 0 1px;
+      position: relative;
+      z-index: 9;
+      &:first-child {
+        border-top-width: 1px;
+        padding: 11px 15px;
+      }
+      &:hover, &:focus {
+        color: #fff;
+        background: #e3ca7e;
+      }
+    }
+  }
+
+  &-form {
+    width: 100%;
+    max-width: 800px;
+    margin-left: 58px;
+    @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+      max-width: calc(~'100% - 58px');
+    }
+    @media (max-width: @screen-xs-max) {
+      margin-left: 0;
+    }
+    &__label {
+      color: #444;
+      font-size: 16px;
+      font-family: 'ttdrugs-regular', sans-serif;
+      text-align: left !important;
+      text-transform: uppercase;
+      padding: 0 0 3px !important;
+      margin: 0 !important;
+      display: block;
+    }
+    &__group {
+      margin-bottom: 30px;
+    }
+    input[type="text"]&__control, input[type="password"]&__control, input[type="tel"]&__control, input[type="email"]&__control {
+      color: @gray-darker;
+      font-size: 18px;
+      font-family: 'bodonicregular', sans-serif;
+      border-radius: 0;
+      border-width: 0 0 1px;
+      border-color: #666;
+      padding: 6px 0 8px;
+      height: auto;
+      outline: none;
+      box-shadow: none;
+      background: #fff;
+      &:focus {
+        color: #bd9d53;
+        border-color: #bd9d53;
+        box-shadow: none;
+        outline: inherit;
+      }
+    }
+  }
+
+}

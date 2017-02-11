@@ -1,0 +1,211 @@
+.photodays {
+  position: relative;
+  margin-bottom: 140px;
+  &-title {
+    color: @gray-darker;
+    font-size: 70px;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 40px;
+  }
+  &-container {
+    top: 100%;
+    z-index: 9;
+    position: absolute;
+    left: 15px;
+    right: 15px;
+  }
+  &-description {
+    padding: 0 80px 70px;
+    background: #fff;
+    margin-bottom: 55px;
+    p {
+      color: @gray-darker;
+      font-size: 16px;
+      font-family: 'ttdrugs-light', sans-serif;
+      margin-top: 10px;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+    b {
+      color: @gray-darker;
+      font-size: 24px;
+      font-weight: normal;
+      font-family: 'bodonicregular', sans-serif;
+    }
+  }
+  &-controls {
+    z-index: 12;
+    bottom: 96px;
+    position: absolute;
+    text-align: center;
+    width: 600px;
+    margin: 0 0 0 -15px;
+  }
+  .owl-pagination {
+    text-align: center;
+    position: relative;
+    height: 12px;
+  }
+  .owl-controls {
+    position: relative;
+    padding-right: 43px;
+    display: inline-block;
+    .owl-page {
+      cursor: pointer;
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 7px;
+      span {
+        display: block;
+        width: 12px;
+        height: 12px;
+        background: #fff;
+        border-radius: 50%;
+      }
+      &.active span {
+        background: #ab834b;
+        .scale(0.66);
+      }
+    }
+    .owl-buttons {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      margin: -16px 0 0;
+      & > div {
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: top;
+        width: 33px;
+        height: 33px;
+        text-indent: -9999px;
+        &.owl-prev {
+          display: none;
+        }
+        &.owl-next {
+          border: 2px solid #fff;
+          border-radius: 50%;
+          &:before {
+            .sprite(0, 50px, 10px, 14px);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -7px 0 0 -3px;
+          }
+          &:hover {
+            border-color: #e3ca7e;
+            &:before {
+              background-position: -15px -50px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-item {
+    position: relative;
+    &__controls {
+      text-align: center;
+    }
+    &__container {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: absolute;
+      & > div {
+        height: 100%;
+      }
+    }
+    &__row, &__col {
+      height: 100%;
+    }
+    &__thumb {
+      background: no-repeat 50% 0;
+      img {
+        opacity: 0;
+      }
+    }
+    &__description {
+      padding: 0 80px 70px;
+      background: #fff;
+      margin-bottom: 55px;
+      p {
+        color: @gray-darker;
+        font-size: 16px;
+        font-family: 'ttdrugs-light', sans-serif;
+        margin-top: 10px;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+      b {
+        color: @gray-darker;
+        font-size: 24px;
+        font-weight: normal;
+        font-family: 'bodonicregular', sans-serif;
+      }
+    }
+    &__title {
+      color: #fff;
+      font-size: 112px;
+      line-height: 75px;
+      font-family: 'bodonicregular', sans-serif;
+      text-align: center;
+      margin-bottom: 50px;
+      span {
+        display: block;
+      }
+    }
+    &__info {
+      color: @gray-darker;
+      font-size: 30px;
+      font-family: 'bodonicregular', sans-serif;
+      margin: 0 -15px;
+      padding: 12px 80px;
+      background: #fff;
+      bottom: 0;
+      left: 15px;
+      right: 15px;
+      position: absolute;
+      &--item {
+        position: relative;
+        .clearfix;
+        .day, .city {
+          text-transform: uppercase;
+          background: #fff;
+          position: relative;
+          z-index: 1;
+        }
+        .day {
+          float: left;
+          padding-right: 20px;
+        }
+        .city {
+          float: right;
+          padding-left: 20px;
+        }
+        .separator {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 50%;
+          height: 1px;
+          background: #bcbcbc;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+  .photodays {
+    margin-bottom: 70px;
+    &-title {
+      font-size: 50px;
+    }
+  }
+}

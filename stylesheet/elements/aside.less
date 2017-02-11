@@ -1,0 +1,166 @@
+.aside {
+  width: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  position: fixed;
+
+  &.show {
+    .aside-overflow {
+      opacity: 1;
+      transform: translate(0, 0);
+      -moz-transform: translate(0, 0);
+      -webkit-transform: translate(0, 0);
+    }
+    .aside-backdrop {
+      opacity: .6;
+      transform: translate(0, 0);
+      -moz-transform: translate(0, 0);
+      -webkit-transform: translate(0, 0);
+    }
+  }
+
+  &-backdrop {
+    cursor: pointer;
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: @gray-darker;
+
+    opacity: 0;
+    transition: opacity 0.2s 0s cubic-bezier(0.4, 0, 0.2, 1), transform 0.45s 0s cubic-bezier(0.4, 0, 0.2, 1);
+    -moz-transition: opacity 0.2s 0s cubic-bezier(0.4, 0, 0.2, 1), transform 0.45s 0s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition: opacity 0.2s 0s cubic-bezier(0.4, 0, 0.2, 1), transform 0.45s 0s cubic-bezier(0.4, 0, 0.2, 1);
+
+    transform: translate(-100%, 0);
+    -moz-transform: translate(-100%, 0);
+    -webkit-transform: translate(-100%, 0);
+  }
+
+  &-overflow {
+    width: 320px;
+    height: 100%;
+    z-index: 1041;
+    position: relative;
+    padding: 73px 58px 0 0;
+    background: @gray-darker;
+
+    opacity: .7;
+    transition: opacity 0.2s 0s cubic-bezier(0.4, 0, 0.2, 1), transform 0.45s 0s cubic-bezier(0.4, 0, 0.2, 1);
+    -moz-transition: opacity 0.2s 0s cubic-bezier(0.4, 0, 0.2, 1), transform 0.45s 0s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition: opacity 0.2s 0s cubic-bezier(0.4, 0, 0.2, 1), transform 0.45s 0s cubic-bezier(0.4, 0, 0.2, 1);
+
+    transform: translate(-100%, 0);
+    -moz-transform: translate(-100%, 0);
+    -webkit-transform: translate(-100%, 0);
+  }
+
+  &-close {
+    margin: 0 0 94px;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      height: 1px;
+      background: #585858;
+    }
+    span {
+      cursor: pointer;
+      display: inline-block;
+      width: 23px;
+      height: 13px;
+      right: 0;
+      top: 50%;
+      margin-top: -5px;
+      position: absolute;
+      background: @gray-darker;
+      padding-left: 10px;
+      &:before {
+        opacity: .6;
+        .sprite(113px, 47px, 13px, 13px);
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      &:hover, &:focus {
+        &:before {
+          opacity: 1;
+          transition: opacity 0.2s 0s cubic-bezier(0.4, 0, 0.2, 1);
+          -moz-transition: opacity 0.2s 0s cubic-bezier(0.4, 0, 0.2, 1);
+          -webkit-transition: opacity 0.2s 0s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+      }
+    }
+  }
+  &-list {
+    padding: 0 0 0 50px;
+    &__item {
+      padding: 10px 0;
+      &:first-child {
+        padding-top: 0;
+      }
+    }
+    &__link {
+      color: #fff;
+      font-size: 18px;
+      font-family: 'bodonicregular', sans-serif;
+      text-transform: uppercase;
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      overflow: hidden;
+      &:before {
+        content: '';
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        width: 68px;
+        background: #bd9d53;
+        opacity: .7;
+        transition: opacity 0.2s 0s cubic-bezier(0.4, 0, 0.2, 1), transform 0.45s 0s cubic-bezier(0.4, 0, 0.2, 1);
+        -moz-transition: opacity 0.2s 0s cubic-bezier(0.4, 0, 0.2, 1), transform 0.45s 0s cubic-bezier(0.4, 0, 0.2, 1);
+        -webkit-transition: opacity 0.2s 0s cubic-bezier(0.4, 0, 0.2, 1), transform 0.45s 0s cubic-bezier(0.4, 0, 0.2, 1);
+        transform: translate(-100%, 0);
+        -moz-transform: translate(-100%, 0);
+        -webkit-transform: translate(-100%, 0);
+      }
+      &:hover, &:focus {
+        color: #bd9d53;
+        text-decoration: none;
+        transition: color 0.2s 0s cubic-bezier(0.4, 0, 0.2, 1);
+        -moz-transition: color 0.2s 0s cubic-bezier(0.4, 0, 0.2, 1);
+        -webkit-transition: color 0.2s 0s cubic-bezier(0.4, 0, 0.2, 1);
+        &:before {
+          opacity: 1;
+          transform: translate(0, 0);
+          -ms-transform: translate(0, 0);
+          -webkit-transform: translate(0, 0);
+          -moz-transform: translate(0, 0);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @screen-xs-max) {
+  .aside {
+
+    &-overflow {
+      overflow: auto;
+      padding: 35px 58px 0 0;
+    }
+    &-close {
+      margin: 0 0 35px;
+    }
+  }
+}

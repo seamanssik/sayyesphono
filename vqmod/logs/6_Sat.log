@@ -1,0 +1,12 @@
+---------- Date: 2017-02-11 10:38:30 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /
+MOD DETAILS:
+   modFile   : D:\OpenServer\OpenServer\domains\sayyesphoto.lc\vqmod/xml/install.xml
+   id        : 
+   version   : 6.4.0.0
+   vqmver    : 
+   author    : Dreamvention
+VQModObject::parseMods - Could not resolve path for [system/library/tax.php] (SKIPPED)
+----------------------------------------------------------------------
+
+
