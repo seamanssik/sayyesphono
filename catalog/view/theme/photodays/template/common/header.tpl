@@ -234,7 +234,20 @@
                     <?php } ?>
                 </li>
                 <li class="h-fixed-menu__item">
-                    <a href="<?php echo $checkout; ?>">Корзина</a>
+                    <?php if ($logged) { ?>
+                    <a href="<?php echo $wishlist; ?>" id="wishlist-total" class="h-menu__item">
+                        <?php } else { ?>
+                        <a href="account/login" class="h-menu__item">
+                            <?php } ?>
+                            <img src="image/catalog/icons/wishlist.png" alt="" width="40px" height="40px">
+                            <?php if($wishlist_total_count > 0 ){;?>
+                                <span class="wish-count"><?php echo $wishlist_total_count; ?></span>
+                            <?php };?>
+                        </a>
+                </li>
+                <li class="h-fixed-menu__item">
+                    <a href="<?php echo $checkout; ?>"><img src="image/catalog/icons/cart.png" alt="" width="40px" height="40px"></a>
+<!--                    <a href="--><?php //echo $checkout; ?><!--">Корзина</a>-->
                     <span class="cart-total" data-toggle="cart-total"><?php echo $total_cart; ?></span>
                 </li>
             </ul>
