@@ -132,15 +132,15 @@
                                 <a href="account/login" class="h-menu__item">
                             <?php } ?>
                                 <img src="image/catalog/icons/wishlist.png" alt="" width="40px" height="40px">
-                                <span><?php echo $wishlist_total_count; ?></span>
+                                <span class="wish-count"><?php echo $wishlist_total_count; ?></span>
                             </a>
                         </li>
                         <li>
                             <a href="<?php echo $checkout; ?>" class="h-menu__item">
                                 <img src="image/catalog/icons/cart.png" alt="" width="40px" height="40px">
+                                <span class="<?php if (!$total_cart_count) { ?>hidden<?php } ?> cart-count" data-toggle="cart-total-count"><?php echo $total_cart_count; ?></span>
                             </a>
-                            <span class="<?php if (!$total_cart_count) { ?>hidden<?php } ?>" data-toggle="cart-total-count"><?php echo $total_cart_count; ?></span>
-                            <span class="cart-total <?php if (!$total_cart) { ?>hidden<?php } ?>" data-toggle="cart-total"><?php echo $total_cart; ?></span>
+                            <span class="cart-total<?php if (!$total_cart) { ?>hidden<?php } ?>" data-toggle="cart-total"><?php echo $total_cart; ?></span>
                         </li>
 
 <!--                        <li>-->
