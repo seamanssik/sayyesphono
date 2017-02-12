@@ -22,9 +22,21 @@
         <div class="row">
           <div class="col-sm-6">
             <div class="form-group js-animate">
-              <label class="col-sm-12 control-label" for="input-email"><?php echo $entry_email; ?>:</label>
+              <label class="col-sm-12 control-label" for="input-email">Телефон:</label>
               <div class="col-sm-12">
-                <input type="text" name="email" value="<?php echo $email; ?>" placeholder="<?php // echo $entry_email; ?>" id="input-email" />
+                <input type="text" name="email" value="<?php echo $email; ?>" placeholder="+7XXXXXXXXX" id="input-email" onkeypress='validate(event)'/>
+                <script>
+                  function validate(evt) {
+                    var theEvent = evt || window.event;
+                    var key = theEvent.keyCode || theEvent.which;
+                    key = String.fromCharCode( key );
+                    var regex = /[-+()0-9]|\./;
+                    if( !regex.test(key) ) {
+                      theEvent.returnValue = false;
+                      if(theEvent.preventDefault) theEvent.preventDefault();
+                    }
+                  }
+                </script>
               </div>
             </div>
           </div>

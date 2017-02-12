@@ -1,4 +1,5 @@
 <?php echo $header; ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.9/jquery.mask.min.js"></script>
 <div class="heading-background no_margin">
   <div class="container">
     <div class="h1"><?php echo $heading_title; ?></div>
@@ -49,7 +50,7 @@
             </div>
           </div>
           <div class="form-group required">
-            <label class="col-sm-12 control-label" for="input-telephone">*<?php echo $entry_telephone; ?>:</label>
+            <label class="col-sm-12 control-label" for="input-telephone">*<?php echo $entry_telephone; ?>: (логин)</label>
             <div class="col-sm-12">
               <input type="tel" name="telephone" value="<?php echo $telephone; ?>" placeholder="<?php // echo $entry_telephone; ?>" id="input-telephone" class="form-control" />
               <?php if ($error_telephone) { ?>
@@ -57,6 +58,12 @@
               <?php } ?>
             </div>
           </div>
+          <script>
+            $('#input-telephone').mask('+7 (999) 999-99-99');
+            $(document).ready(function(){
+              $('#input-telephone').mask('+7 (999) 999-99-99');
+            });
+          </script>
         </div>
       </div>
       <div class="row">
