@@ -89,7 +89,7 @@
     <header>
         <div class="container">
             <div class="row h-container">
-                <div class="col-md-4 hidden-xs">
+                <div class="col-sm-4 hidden-xs">
                     <div class="h-item__nav h-nav">
                         <button class="h-nav__button" id="showAside">
                             <span class="line"></span>
@@ -105,12 +105,12 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-4">
+                <div class="col-sm-4">
                     <div class="h-item__logo">
                         <a href="/" class="h-logo"><img src="/image/catalog/logo.png" data-rjs="/image/theme/2x/logo.png" alt="Photodays" width="264" height="101"></a>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-sm-4">
 <!--                    <ul class="h-item__social h-social">-->
 <!--                        --><?php //if ($link_in) { ?><!--<li><a href="--><?php //echo $link_in; ?><!--" rel="nofollow" target="_blank" class="h-social__item h-social__int">Photodays в Instagram</a></li>--><?php //} ?>
 <!--                        --><?php //if ($link_vk) { ?><!--<li><a href="--><?php //echo $link_vk; ?><!--" rel="nofollow" target="_blank" class="h-social__item h-social__vk">Photodays Вконтакте</a></li>--><?php //} ?>
@@ -198,7 +198,7 @@
             </nav>
         </div>
     </div>
-    <div class="h-fixed visible-lg visible-ed visible-md visible-sm">
+    <div class="h-fixed visible-lg visible-ed visible-md">
         <div class="container">
             <button class="h-nav__button h-fixed-button" id="showAside">
                 <span class="line"></span>
