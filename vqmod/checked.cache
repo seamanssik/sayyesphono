@@ -253,3 +253,7 @@ catalog\controller\account\wishlist.php
 catalog\language\en-gb\account\wishlist.php
 catalog\language\ru-ru\account\wishlist.php
 catalog\view\theme\photodays\template\account\wishlist.tpl
+catalog\controller\error\not_found.php
+catalog\language\en-gb\error\not_found.php
+catalog\language\ru-ru\error\not_found.php
+catalog\view\theme\photodays\template\error\not_found.tpl

@@ -106,3 +106,18 @@
   -moz-transform: translate(0, 0);
   -webkit-transform: translate(0, 0);
 }
+
+.wishlist_item {
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  z-index: 2;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.c-wrap-img-anim .wishlist_item {
+  left: 10px;
+}
