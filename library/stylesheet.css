@@ -8493,29 +8493,6 @@ header {
         display: block
     }
 
-    .h-nav__button {
-        width: 16px;
-        height: 8px
-    }
-
-    .h-nav__button:before {
-        content: '';
-        position: absolute;
-        left: -15px;
-        right: -15px;
-        top: -15px;
-        bottom: -15px
-    }
-
-    .h-nav__button .line {
-        top: 0;
-        margin: 0
-    }
-
-    .h-nav__button .text {
-        display: none
-    }
-
     .h-item__logo {
         margin: 0 auto 24px
     }
@@ -8527,13 +8504,6 @@ header {
     .h-item__menu {
         float: none;
         text-align: center
-    }
-
-    .h-item__nav {
-        z-index: 99;
-        position: fixed;
-        top: 10px;
-        left: 10px
     }
 
     .modal-dialog {
@@ -8557,6 +8527,19 @@ header {
         line-height: 2;
         display: inline-block;
         vertical-align: top
+    }
+}
+
+@media (max-width: 991px) {
+    .h-item__nav {
+        z-index: 99;
+        position: fixed;
+        top: 10px;
+        left: 10px
+    }
+
+    .h-nav__button .text {
+        display: none
     }
 }
 
@@ -9117,21 +9100,74 @@ body:not(.common-home) .n-container {
 
 .h-fixed-button {
     float: left;
-    margin: 14px 40px 0 0
+    margin: 0 25px 0 0
 }
 
-@media (max-width: 991px) and (min-width: 768px) {
+@media (min-width: 991px) {
     .h-fixed-button {
-        float: left;
-        top: 80px;
+        background-color: #bd9d53;
+        padding: 15px 20px;
+    }
+
+    .h-fixed-button:before,
+    .h-fixed-button:after {
+        box-sizing: border-box;
+        content: "";
         position: absolute;
-        margin: 0
+        border: 2px solid transparent;
+        width: 0;
+        height: 0;
+    }
+
+    .h-fixed-button:before {
+        top: 5px;
+        left: 5px;
+    }
+
+    .h-fixed-button:after {
+        bottom: 5px;
+        right: 5px;
+    }
+
+    .h-fixed-button:hover:before,
+    .h-fixed-button:hover:after {
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+    }
+
+    .h-fixed-button:hover:before {
+        -webkit-transition: width .25s ease-out, height .25s ease-out .25s;
+        transition: width .25s ease-out, height .25s ease-out .25s;
+        border-top-color: #fff;
+        border-right-color: #fff;
+    }
+
+    .h-fixed-button:hover:after {
+        -webkit-transition: border-color 0s ease-out .5s, width .25s ease-out .5s, height .25s ease-out .75s;
+        transition: border-color 0s ease-out .5s, width .25s ease-out .5s, height .25s ease-out .75s;
+        border-bottom-color: #fff;
+        border-left-color: #fff;
+    }
+
+    .h-fixed-button .text {
+        color: #fff;
+    }
+
+    .h-fixed-button .line {
+        left: 20px;
+    }
+
+    .h-fixed-button .line:before {
+        background: #fff !important;
+    }
+
+    .h-fixed-button .line:after {
+        background: #fff !important;
     }
 }
 
 .h-fixed-menu {
-    margin: 0 114px 0 0;
-    padding: 0;
+    padding: 0 114px 0 0;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -9323,10 +9359,6 @@ body:not(.common-home) .n-container {
 
 .n-menu__item:first-child {
     text-align: left
-}
-
-.n-menu__item:nth-child(3) {
-    min-width: 190px
 }
 
 .n-menu__item:last-child {
