@@ -126,7 +126,11 @@
                             <?php } ?>
                         </li>
                         <li>
-                            <a href="<?php echo $wishlist; ?>" id="wishlist-total" class="h-menu__item">
+                            <?php if ($logged) { ?>
+                                <a href="<?php echo $wishlist; ?>" id="wishlist-total" class="h-menu__item">
+                            <?php } else { ?>
+                                <a href="account/login" class="h-menu__item">
+                            <?php } ?>
                                 <img src="image/catalog/icons/wishlist.png" alt="" width="40px" height="40px">
                                 <span><?php echo $wishlist_total_count; ?></span>
                             </a>
