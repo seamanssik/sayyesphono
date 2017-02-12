@@ -140,12 +140,7 @@
                                 <img src="image/catalog/icons/cart.png" alt="" width="40px" height="40px">
                                 <span class="<?php if (!$total_cart_count) { ?>hidden<?php } ?> cart-count" data-toggle="cart-total-count"><?php echo $total_cart_count; ?></span>
                             </a>
-<<<<<<< HEAD
                             <span class="cart-total<?php if (!$total_cart) { ?>hidden<?php } ?>" data-toggle="cart-total"><?php echo $total_cart; ?></span>
-=======
-                            <span class="<?php if (!$total_cart_count) { ?>hidden<?php } ?>" data-toggle="cart-total-count"><?php echo $total_cart_count; ?></span>
-                            <span class="cart-total <?php if (!$total_cart) { ?>hidden<?php } ?>" data-toggle="cart-total"><?php echo $total_cart; ?></span>
->>>>>>> ed752a160856ac0c7da184588152ff442b965880
                         </li>
 
 <!--                        <li>-->
