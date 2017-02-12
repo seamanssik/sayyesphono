@@ -328,12 +328,13 @@
                             $('body').animate({scrollTop: _body.find('.has-error').first().offset().top}, 'slow');
                         }
                     }
-
+                    console.log(json);
                     if (json['success']) {
                         _body.find('#modalSuccess .modalSuccess-text').html('Ваш заказ добавлен в <a href="/checkout">корзину покупок</a>.');
                         _body.find('#modalSuccess').modal('show');
 
                         _body.find('*[data-toggle="cart-total"]').removeClass('hidden').text(json['total']);
+                        _body.find('*[data-toggle="cart-total-count"]').removeClass('hidden').text(json['total_items_count']);
                     }
                 }
             });

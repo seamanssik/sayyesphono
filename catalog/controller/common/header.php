@@ -108,6 +108,12 @@ class ControllerCommonHeader extends Controller {
 			$data['total_cart'] = false;
 		}
 
+		if ($this->cart->countProducts()) {
+			$data['total_cart_count'] = $this->cart->countProducts();
+		} else {
+			$data['total_cart_count'] = false;
+		}
+
 		$data['title'] = $this->document->getTitle();
 
 		$data['base'] = $server;
@@ -167,12 +173,19 @@ class ControllerCommonHeader extends Controller {
 		$data['text_home'] = $this->language->get('text_home');
 
 		// Wishlist
+		$this->load->model('account/wishlist');
 		if ($this->customer->isLogged()) {
-			$this->load->model('account/wishlist');
 
 			$data['text_wishlist'] = sprintf($this->language->get('text_wishlist'), $this->model_account_wishlist->getTotalWishlist());
 		} else {
 			$data['text_wishlist'] = sprintf($this->language->get('text_wishlist'), (isset($this->session->data['wishlist']) ? count($this->session->data['wishlist']) : 0));
+		}
+		
+		$wishlist_total_count = $this->model_account_wishlist->getTotalWishlist();
+		if($wishlist_total_count > 0){
+			$data['wishlist_total_count'] = $wishlist_total_count;
+		}else{
+			$data['wishlist_total_count'] = '';
 		}
 
 		$data['text_shopping_cart'] = $this->language->get('text_shopping_cart');
