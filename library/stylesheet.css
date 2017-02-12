@@ -3207,10 +3207,6 @@ pre code {
     }
 }
 
-.ulogin-button-vkontakte {
-    width: 100px !important;
-}
-
 @media (min-width: 1200px) {
     .container {
         width: 1170px
@@ -3219,7 +3215,7 @@ pre code {
 
 @media (min-width: 1400px) {
     .container {
-        width: 1380px
+        width: 1400px
     }
 }
 
@@ -8154,8 +8150,10 @@ header {
 .h-item__phone {
     float: left;
     display: block;
-    margin: 0 0 0 46px
+    margin: 0 0 0 25px
 }
+
+
 
 .h-item__logo {
     text-align: center
@@ -8245,6 +8243,12 @@ header {
     color: inherit;
     outline: none;
     text-decoration: none
+}
+
+@media (max-width: 1399px) {
+    .h-phone li {
+        margin-left: 10px
+    }
 }
 
 .h-logo {
@@ -8490,7 +8494,8 @@ header {
 
 @media (min-width: 1200px) and (max-width: 1399px) {
     .h-item__phone {
-        margin: 10px 0 0
+        margin: 0 0 0 10px;
+        letter-spacing: -1px;
     }
 
     .h-item__social {
