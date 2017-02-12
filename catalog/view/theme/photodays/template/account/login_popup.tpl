@@ -8,10 +8,22 @@
             <div class="modal-body">
                 <form id="form-loginPopUp" method="post" enctype="multipart/form-data" class="form-horizontal popup-form" autocomplete="off">
                     <div class="form-group popup-group">
-                        <label class="popup-label" for="input-email"><?php echo $entry_email; ?>:</label>
+                        <label class="popup-label" for="input-email">Телефон:</label>
                         <div class="col-sm-12">
-                            <input class="popup-control" type="text" name="email" value="<?php echo $email; ?>" id="input-email" />
+                            <input class="popup-control" type="text" name="email" value="<?php echo $email; ?>" id="input-email" onkeypress='validate(event)'/>
                         </div>
+                        <script>
+                            function validate(evt) {
+                                var theEvent = evt || window.event;
+                                var key = theEvent.keyCode || theEvent.which;
+                                key = String.fromCharCode( key );
+                                var regex = /[-+()0-9]|\./;
+                                if( !regex.test(key) ) {
+                                    theEvent.returnValue = false;
+                                    if(theEvent.preventDefault) theEvent.preventDefault();
+                                }
+                            }
+                        </script>
                     </div>
                     <div class="form-group popup-group">
                         <label class="popup-label" for="input-password"><?php echo $entry_password; ?>:</label>
