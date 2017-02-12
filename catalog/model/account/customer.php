@@ -35,6 +35,8 @@ class ModelAccountCustomer extends Model {
 
 		$message .= $this->url->link('account/login', '', true) . "\n\n";
 		$message .= $this->language->get('text_services') . "\n\n";
+		$message .= 'Ваш логин - ' . $data['email'] . "\n";
+		$message .= 'Ваш пароль - ' . $data['password'] . "\n";
 		$message .= $this->language->get('text_thanks') . "\n";
 		$message .= html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8');
 
@@ -114,6 +116,12 @@ class ModelAccountCustomer extends Model {
 
 	public function getCustomer($customer_id) {
 		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "customer WHERE customer_id = '" . (int)$customer_id . "'");
+
+		return $query->row;
+	}
+	
+	public function getCustomerSocialData($customer_id) {
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "customer_social_data WHERE customer_id = '" . (int)$customer_id . "'");
 
 		return $query->row;
 	}

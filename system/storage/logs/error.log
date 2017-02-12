@@ -237,3 +237,59 @@
 2017-02-12 0:30:20 - PHP Notice:  Undefined variable: wishlist_active in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\view\theme\photodays\template\product\product\photodays_product.tpl on line 49
 2017-02-12 0:30:51 - PHP Notice:  Undefined variable: wishlist_active in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\view\theme\photodays\template\product\product\photodays_product.tpl on line 49
 2017-02-12 0:31:32 - PHP Notice:  Undefined variable: wishlist_active in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\view\theme\photodays\template\product\product\photodays_product.tpl on line 49
+2017-02-12 12:19:49 - PHP Notice:  Undefined index: firstname in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 14
+2017-02-12 12:19:49 - PHP Notice:  Undefined index: lastname in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 14
+2017-02-12 12:19:49 - PHP Notice:  Undefined index: fax in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 14
+2017-02-12 12:19:49 - PHP Notice:  Undefined index: password in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 14
+2017-02-12 12:19:49 - PHP Notice:  Undefined index: firstname in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 26
+2017-02-12 12:19:49 - PHP Notice:  Undefined index: lastname in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 26
+2017-02-12 12:19:49 - PHP Notice:  Undefined index: company in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 26
+2017-02-12 12:19:49 - PHP Notice:  Undefined index: address_1 in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 26
+2017-02-12 12:19:49 - PHP Notice:  Undefined index: address_2 in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 26
+2017-02-12 12:19:49 - PHP Notice:  Undefined index: postcode in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 26
+2017-02-12 12:19:49 - PHP Notice:  Undefined index: country_id in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 26
+2017-02-12 12:19:49 - PHP Notice:  Undefined index: zone_id in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 26
+2017-02-12 12:25:09 - PHP Notice:  Undefined index: firstname in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 14
+2017-02-12 12:25:09 - PHP Notice:  Undefined index: lastname in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 14
+2017-02-12 12:25:09 - PHP Notice:  Undefined index: telephone in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 14
+2017-02-12 12:25:09 - PHP Notice:  Undefined index: fax in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 14
+2017-02-12 12:25:09 - PHP Notice:  Undefined index: password in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 14
+2017-02-12 12:25:09 - PHP Notice:  Undefined index: firstname in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 26
+2017-02-12 12:25:09 - PHP Notice:  Undefined index: lastname in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 26
+2017-02-12 12:25:09 - PHP Notice:  Undefined index: company in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 26
+2017-02-12 12:25:09 - PHP Notice:  Undefined index: address_1 in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 26
+2017-02-12 12:25:09 - PHP Notice:  Undefined index: address_2 in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 26
+2017-02-12 12:25:09 - PHP Notice:  Undefined index: postcode in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 26
+2017-02-12 12:25:09 - PHP Notice:  Undefined index: country_id in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 26
+2017-02-12 12:25:09 - PHP Notice:  Undefined index: zone_id in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 26
+2017-02-12 12:25:36 - PHP Notice:  Undefined index: fax in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 14
+2017-02-12 12:25:36 - PHP Notice:  Undefined index: company in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 26
+2017-02-12 12:25:36 - PHP Notice:  Undefined index: address_1 in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 26
+2017-02-12 12:25:36 - PHP Notice:  Undefined index: address_2 in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 26
+2017-02-12 12:25:36 - PHP Notice:  Undefined index: city in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 26
+2017-02-12 12:25:36 - PHP Notice:  Undefined index: postcode in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 26
+2017-02-12 12:25:36 - PHP Notice:  Undefined index: country_id in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 26
+2017-02-12 12:25:36 - PHP Notice:  Undefined index: zone_id in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 26
+2017-02-12 12:27:18 - PHP Notice:  Undefined index: fax in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 14
+2017-02-12 12:27:21 - PHP Notice:  Undefined index: fax in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\model\account\customer.php on line 14
+2017-02-12 13:44:27 - PHP Notice:  Undefined index: first_name in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\controller\account\check_social.php on line 10
+2017-02-12 13:44:27 - PHP Notice:  Undefined index: last_name in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\controller\account\check_social.php on line 11
+2017-02-12 13:44:27 - PHP Notice:  Undefined index: email in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\controller\account\check_social.php on line 12
+2017-02-12 13:44:27 - PHP Notice:  Undefined index: phone in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\controller\account\check_social.php on line 13
+2017-02-12 13:44:27 - PHP Notice:  Undefined index: city in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\controller\account\check_social.php on line 15
+2017-02-12 13:44:29 - PHP Notice:  Undefined index: first_name in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\controller\account\check_social.php on line 10
+2017-02-12 13:44:29 - PHP Notice:  Undefined index: last_name in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\controller\account\check_social.php on line 11
+2017-02-12 13:44:29 - PHP Notice:  Undefined index: email in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\controller\account\check_social.php on line 12
+2017-02-12 13:44:29 - PHP Notice:  Undefined index: phone in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\controller\account\check_social.php on line 13
+2017-02-12 13:44:29 - PHP Notice:  Undefined index: city in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\controller\account\check_social.php on line 15
+2017-02-12 14:38:57 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\OpenServer\domains\sayyesphono.lc\system\library\db\mpdo.php:9) in D:\OpenServer\OpenServer\domains\sayyesphono.lc\system\library\response.php on line 12
+2017-02-12 14:40:41 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\OpenServer\domains\sayyesphono.lc\system\library\db\mpdo.php:9) in D:\OpenServer\OpenServer\domains\sayyesphono.lc\system\library\response.php on line 12
+2017-02-12 14:41:32 - PHP Notice:  Undefined index: customer_id in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\controller\account\check_social.php on line 88
+2017-02-12 14:41:32 - PHP Notice:  Undefined index: email in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\controller\account\check_social.php on line 92
+2017-02-12 14:41:32 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\controller\startup\error.php:34) in D:\OpenServer\OpenServer\domains\sayyesphono.lc\system\library\response.php on line 12
+2017-02-12 14:41:35 - PHP Notice:  Undefined index: customer_id in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\controller\account\check_social.php on line 88
+2017-02-12 14:41:35 - PHP Notice:  Undefined index: email in D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\controller\account\check_social.php on line 92
+2017-02-12 14:41:35 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\OpenServer\domains\sayyesphono.lc\catalog\controller\startup\error.php:34) in D:\OpenServer\OpenServer\domains\sayyesphono.lc\system\library\response.php on line 12
+2017-02-12 14:55:19 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\OpenServer\domains\sayyesphono.lc\system\library\db\mpdo.php:9) in D:\OpenServer\OpenServer\domains\sayyesphono.lc\system\library\response.php on line 12
+2017-02-12 15:12:56 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\OpenServer\domains\sayyesphono.lc\system\library\db\mpdo.php:9) in D:\OpenServer\OpenServer\domains\sayyesphono.lc\system\library\response.php on line 12
+2017-02-12 15:13:23 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\OpenServer\OpenServer\domains\sayyesphono.lc\system\library\db\mpdo.php:9) in D:\OpenServer\OpenServer\domains\sayyesphono.lc\system\library\response.php on line 12

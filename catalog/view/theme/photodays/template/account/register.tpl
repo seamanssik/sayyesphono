@@ -152,6 +152,7 @@
         <button type="submit" class="btn__primary"><span>Зарегистрироваться</span></button>
       </div>
     </form>
+    <script src="//ulogin.ru/js/ulogin.js"></script><div id="uLogin_41f9c13f" data-uloginid="41f9c13f"></div>
   </div>
 </div>
 <?php echo $footer; ?>
