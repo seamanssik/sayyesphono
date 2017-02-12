@@ -41,7 +41,7 @@
                                         </div>
                                         <div class="product-thumb__mask">
                                             <div class="product-thumb__info">
-                                                <div class="product-thumb__rent"><?php echo $product['price']; ?><span>аренда</span></div>
+                                                <div class="product-thumb__rent"><?php echo $product['price']; ?></div>
                                                 <div class="product-thumb__currency"><span style="text-transform: uppercase"><?php echo $product['symbol']; ?></span></div>
                                                 <?php if ($product['price_buy']) { ?><div class="product-thumb__price"><?php echo $product['price_buy']; ?><span>выкуп</span></div><?php } ?>
                                             </div>

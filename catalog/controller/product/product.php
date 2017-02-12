@@ -92,6 +92,12 @@ class ControllerProductProduct extends Controller {
 		$this->load->model('catalog/product');
 
 		$data['detect'] = new Detect;
+		
+		if($this->customer->isLogged()){
+			$data['logged'] = true;
+		}else{
+			$data['logged'] = false;
+		}
 
 		$path = '';
 
