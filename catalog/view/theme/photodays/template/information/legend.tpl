@@ -36,7 +36,11 @@
                 <div class="col-ed-7 col-lg-12">
                   <div class="cd-legend-images" id="legend-images-<?php echo $legend['legend_id']; ?>">
                     <?php foreach ($legend['image'] as $image) { ?>
-                      <a href="<?php echo $image['popup']; ?>"><img src="<?php echo $image['thumb']; ?>"></a>
+                      <a href="<?php echo $image['popup']; ?>">
+                        <div class="image-wrapper-legend">
+                          <img src="<?php echo $image['thumb']; ?>">
+                        </div>
+                      </a>
                     <?php } ?>
                   </div>
                 </div>
