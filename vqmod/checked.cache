@@ -449,3 +449,8 @@ catalog\model\catalog\photodays\category.php
 catalog\view\theme\photodays\template\product\photodays\photodays_archive.tpl
 catalog\controller\product\photodays_product.php
 catalog\view\theme\photodays\template\product\photodays\photodays_product.tpl
+catalog\controller\information\contact.php
+catalog\language\en-gb\information\contact.php
+catalog\language\ru-ru\information\contact.php
+catalog\model\localisation\location.php
+catalog\view\theme\photodays\template\information\contact.tpl
