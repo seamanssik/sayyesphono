@@ -48,6 +48,8 @@
                                                 <?php } ?>
                                             </div>
                                             </a>
+                                            <button type="button" data-toggle="tooltip" class="btn btn-default wishlist_item " title="" onclick="window.location.href = 'account/login'" data-original-title="Add to Wish List">
+                                                            </button>
                                         </div>
                                     </div>
                                     <div class="product-title">

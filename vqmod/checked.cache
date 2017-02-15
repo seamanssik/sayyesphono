@@ -454,3 +454,11 @@ catalog\language\en-gb\information\contact.php
 catalog\language\ru-ru\information\contact.php
 catalog\model\localisation\location.php
 catalog\view\theme\photodays\template\information\contact.tpl
+catalog\controller\news\ncategory.php
+catalog\language\en-gb\news\ncategory.php
+catalog\language\ru-ru\news\ncategory.php
+catalog\model\catalog\ncategory.php
+catalog\model\catalog\news.php
+catalog\model\catalog\ncomments.php
+catalog\view\theme\photodays\template\news\ncategory.tpl
+catalog\view\theme\photodays\template\news\layout.tpl

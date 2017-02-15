@@ -34,7 +34,11 @@
   }
 }
 @keyframes hvr-icon-hang-sink {
-  100% {
+  100% {@media (min-width: 768px) and (max-width: 1399px) {
+    .cd-legend-images {
+        margin: -7px -7px 23px 51px;
+    }
+}
     -webkit-transform: translateY(3px);
     transform: translateY(3px);
   }
@@ -75,36 +79,52 @@
   -webkit-animation-direction: normal, alternate;
   animation-direction: normal, alternate;
 }
+
 /* button underline animation */
 .photoday-history__link {
   transition: color .45s 0s cubic-bezier(.4, 0, .2, 1);
   -moz-transition: color .45s 0s cubic-bezier(.4, 0, .2, 1);
   -webkit-transition: color .45s 0s cubic-bezier(.4, 0, .2, 1);
   position: relative;
-  overflow: hidden;
   margin-top: 20px;
 }
+
 .photoday-history__link:before {
-  transition: opacity .2s 0s cubic-bezier(.4, 0, .2, 1), transform .45s 0s cubic-bezier(.4, 0, .2, 1);
-  -moz-transition: opacity .2s 0s cubic-bezier(.4, 0, .2, 1), transform .45s 0s cubic-bezier(.4, 0, .2, 1);
-  -webkit-transition: opacity .2s 0s cubic-bezier(.4, 0, .2, 1), transform .45s 0s cubic-bezier(.4, 0, .2, 1);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+          transition: transform 0.3s ease-in-out;
   content: '';
   position: absolute;
-  transform: translate(-100%, 0);
-  -ms-transform: translate(-100%, 0);
-  -moz-transform: translate(-100%, 0);
-  -webkit-transform: translate(-100%, 0);
+  -webkit-transform: scale(0, 1);
+      -ms-transform: scale(0, 1);
+          transform: scale(0, 1);
   height: 1px;
   width: 60%;
   bottom: 0;
   left: 0;
   background-color: #bd9d53;
+  -webkit-transform-origin: 0 100%;
+      -ms-transform-origin: 0 100%;
+          transform-origin: 0 100%;
 }
+
 .photoday-history__link:hover:before {
-  transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  -moz-transform: translate(0, 0);
-  -webkit-transform: translate(0, 0);
+  -webkit-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+.photoday-history__link:after {
+  content: '';
+  position: absolute;
+  right: calc(100% + 10px);
+  height: 1px;
+  width: 30px;
+  background-color: #222;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
+  backface-visibility: hidden;
 }
 
 .wishlist_item {
@@ -116,6 +136,11 @@
   background-color: transparent;
   border: none;
   padding: 0;
+}
+
+.product-thumb__slide .wishlist_item {
+    left: 10px;
+    z-index: 99;
 }
 
 .c-wrap-img-anim .wishlist_item {

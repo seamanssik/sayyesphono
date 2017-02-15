@@ -6503,13 +6503,13 @@ select.form-control, textarea.form-control, input[type="text"].form-control, inp
 }
 
 .heading-background.transparent {
-    height: 200px;
+    height: 120px;
     background: transparent
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
     .heading-background.transparent {
-        height: 160px
+        height: 95px
     }
 }
 
@@ -7033,7 +7033,7 @@ select.form-control, textarea.form-control, input[type="text"].form-control, inp
 
     .heading-background.transparent {
         height: auto;
-        padding: 30px 0;
+        padding: 20px 0;
         margin: 0 0 15px
     }
 
@@ -8420,6 +8420,7 @@ header {
 }
 
 .h-menu li .cart-total {
+    display: none;
     color: #bd9d53;
     font-size: 14px;
     font-family: 'bodonicregular', sans-serif;
@@ -8456,7 +8457,7 @@ header {
 .h-menu__item {
     display: inline-block;
     position: relative;
-    color: #222;
+    color: #4c4c4c;
     font-size: 16px;
     font-family: 'ttdrugs-light', sans-serif;
     text-transform: uppercase;
@@ -9229,6 +9230,7 @@ body:not(.common-home) .n-container {
 
 .h-fixed-menu {
     padding: 0;
+    margin-bottom: 0;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -9264,6 +9266,7 @@ body:not(.common-home) .n-container {
 }
 
 .h-fixed-menu li .cart-total {
+    display: none;
     color: #bd9d53;
     font-size: 14px;
     font-family: 'bodonicregular', sans-serif;
@@ -10833,7 +10836,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 }
 
 .shop {
-    margin-bottom: 140px
+    margin-bottom: 70px
 }
 
 .shop-title {
@@ -11824,7 +11827,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 }
 
 .best {
-    margin-bottom: 140px
+    margin-bottom: 70px
 }
 
 @media (min-width: 1400px) {
@@ -12456,7 +12459,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 }
 
 .product-title {
-    height: 56px;
+    height: 35px;
     overflow: hidden
 }
 
@@ -16394,17 +16397,7 @@ body.news-article .h1, body.news-article h1 {
     }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
-    .heading-background.transparent {
-        height: 160px
-    }
-}
-
 @media (min-width: 768px) and (max-width: 991px) {
-    .heading-background.transparent {
-        height: 160px
-    }
-
     .heading-background.transparent .breadcrumb {
         margin: 0
     }
@@ -21839,7 +21832,7 @@ body.error-not_found .f-copy {
 }
 
 .photodays-category {
-    margin: -40px 0 48px 58px
+    margin: -20px 0 48px 58px
 }
 
 .photodays-category:before, .photodays-category:after {
@@ -22583,7 +22576,7 @@ body.error-not_found .f-copy {
 }
 
 .photodaysItems {
-    margin-bottom: 90px
+    margin-bottom: 45px
 }
 
 .photodaysItems:before, .photodaysItems:after {
@@ -22616,7 +22609,7 @@ body.error-not_found .f-copy {
 
 .photodaysItems-pagination {
     text-align: center;
-    margin-bottom: 180px
+    margin-bottom: 90px
 }
 
 .photodaysItems-item {
