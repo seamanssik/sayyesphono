@@ -6476,6 +6476,10 @@ select.form-control, textarea.form-control, input[type="text"].form-control, inp
     margin-bottom: 70px
 }
 
+.heading-background.low-case {
+    height: 265px;
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
     .heading-background {
         height: 230px

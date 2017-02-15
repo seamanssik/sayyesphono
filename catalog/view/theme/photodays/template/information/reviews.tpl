@@ -1,5 +1,5 @@
 <?php echo $header; ?>
-  <div class="heading-background">
+  <div class="heading-background low-case">
     <div class="container">
       <div class="h1 js-animate"><div class="c-text-masked"><span><?php echo $heading_title; ?></span></div></div>
       <ul class="breadcrumb h1-after">
