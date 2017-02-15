@@ -55,7 +55,7 @@
                                     <div class="product-title">
                                         <a href="<?php echo $product['href']; ?>" class="product-title__link"><span><?php echo $product['name']; ?></span></a>
                                     </div>
-                                    <div class="product-info">
+                                    <div class="product-info hidden">
                                         <div class="product-info__rent"><?php echo $product['price']; ?><span>аренда</span></div>
                                         <div class="product-info__currency"><span style="text-transform: uppercase"><?php echo $product['symbol']; ?></span></div>
                                         <?php if ($product['price_buy']) { ?><div class="product-info__price"><?php echo $product['price_buy']; ?><span>выкуп</span></div><?php } ?>
