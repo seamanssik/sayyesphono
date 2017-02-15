@@ -22,7 +22,7 @@
     </div>
 <?php endif; ?>
 <div id="content">
-<div class="showroom-heading heading-background transparent no_margin">
+<div class="showroom-heading short-heading heading-background transparent no_margin">
     <div class="container">
         <div class="h1 js-animate"><div class="c-text-masked"><span><?php echo $heading_title; ?></span></div></div>
         <ul class="breadcrumb h1-after">
@@ -145,7 +145,7 @@
 </div>
 <?php } ?>
 <?php if ($options) { ?>
-    <div class="container" id="product">
+    <div class="container photodays-product-block-margin" id="product">
         <div class="photoday-order">
             <div class="photoday-form">
                 <div class="photoday-order__title js-animate">
