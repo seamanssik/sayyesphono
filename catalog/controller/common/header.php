@@ -114,6 +114,11 @@ class ControllerCommonHeader extends Controller {
 			$data['total_cart_count'] = false;
 		}
 
+
+		if(isset($this->request->get['route']) && $this->request->get['route'] != 'account/check_phone'){
+			unset($this->session->data['already_send']);
+		}
+
 		$data['title'] = $this->document->getTitle();
 
 		$data['base'] = $server;
@@ -171,6 +176,20 @@ class ControllerCommonHeader extends Controller {
 		$this->load->language('common/header');
 
 		$data['text_home'] = $this->language->get('text_home');
+
+		if ($this->customer->isLogged()) {
+			$this->load->model('account/customer');
+			$customer_info = $this->model_account_customer->getCustomer($this->customer->getId());
+			if($customer_info['phone_approved'] == 1){
+				$data['already_approve'] = true;
+			}else{
+				$data['already_approve'] = false;
+			}
+		}
+
+		$data['action_phone'] = $this->url->link('account/check_phone', '', true);
+
+
 
 		// Wishlist
 		$this->load->model('account/wishlist');

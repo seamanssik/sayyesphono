@@ -39,7 +39,7 @@ class ControllerAccountRegister extends Controller {
 				$this->model_account_activity->addActivity('register', $activity_data);
 			}
 
-			$this->response->redirect($this->url->link('account/success'));
+			$this->response->redirect($this->url->link('account/check_phone'));
 		}
 
 		$data['breadcrumbs'] = array();
