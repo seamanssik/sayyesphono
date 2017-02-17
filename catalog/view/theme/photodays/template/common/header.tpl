@@ -211,7 +211,7 @@
                 <span class="line"></span>
                 <span class="text">Меню</span>
             </button>
-            <ul class="h-fixed-menu">
+            <ul class="h-fixed-menu left">
                 <li class="h-fixed-menu__item">
                     <button class="n-dropdown-button hvr-icon-hang" id="dPhotodays" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Photodays</button>
                     <ul class="dropdown-menu n-dropdown-menu" aria-labelledby="dLabel">
@@ -223,9 +223,11 @@
                 <li class="h-fixed-menu__item">
                     <a href="/showroom">Showroom</a>
                 </li>
-                <li class="h-fixed-menu__logo">
-                    <a href="/"><img src="/image/catalog/logo.png" data-rjs="/image/theme/2x/logo.png" alt="Photodays" width="132" height="auto"></a>
-                </li>
+            </ul>
+            <div class="h-fixed-menu__logo">
+                <a href="/"><img src="/image/catalog/logo.png" data-rjs="/image/theme/2x/logo.png" alt="Photodays" width="132" height="auto"></a>
+            </div>
+            <ul class="h-fixed-menu right">
                 <li class="h-fixed-menu__item">
                     <?php if ($logged) { ?>
                         <a href="<?php echo $account; ?>">Мой кабинет</a>

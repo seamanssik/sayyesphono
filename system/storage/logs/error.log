@@ -374,3 +374,5 @@
 2017-02-15 3:46:04 - PHP Notice:  Undefined variable: logged in C:\OpenServer\OpenServer\domains\sayyesphono\catalog\view\theme\photodays\template\product\category\photodays_category.tpl on line 41
 2017-02-15 3:46:04 - PHP Notice:  Undefined variable: wishlist_active in C:\OpenServer\OpenServer\domains\sayyesphono\catalog\view\theme\photodays\template\product\category\photodays_category.tpl on line 40
 2017-02-15 3:46:04 - PHP Notice:  Undefined variable: logged in C:\OpenServer\OpenServer\domains\sayyesphono\catalog\view\theme\photodays\template\product\category\photodays_category.tpl on line 41
+2017-02-17 3:28:03 - PHP Warning:  PDOStatement::execute(): MySQL server has gone away in C:\OpenServer\OpenServer\domains\sayyesphono\system\library\db\mpdo.php on line 57
+2017-02-17 3:28:03 - PHP Warning:  PDOStatement::execute(): Error reading result set's header in C:\OpenServer\OpenServer\domains\sayyesphono\system\library\db\mpdo.php on line 57

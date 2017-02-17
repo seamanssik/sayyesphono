@@ -9162,7 +9162,14 @@ body:not(.common-home) .n-container {
 
 .h-fixed-button {
     float: left;
-    margin: 0 25px 0 0
+    width: 114px;
+    margin: 0 15px 0 0
+}
+
+@media (min-width: 1200px) {
+    .h-fixed-button {
+        margin: 0 25px 0 0
+    }
 }
 
 @media (min-width: 991px) {
@@ -9245,17 +9252,24 @@ body:not(.common-home) .n-container {
     justify-content: space-between;
     -webkit-align-items: center;
     -ms-flex-align: center;
-    align-items: center
+    align-items: center;
+    float: left;
 }
 
-.h-fixed-menu > li:nth-child(4) {
-    margin-left: 114px;
+.h-fixed-menu.left {
+  float: left;
+  width: calc(50% - 129px);
+  padding-right: 70px;
+  padding-top: 12px;
+  text-align: center;
 }
 
-@media (max-width: 991px) and (min-width: 768px) {
-    .h-fixed-menu {
-        margin: 0
-    }
+.h-fixed-menu.right {
+  float: left;
+  text-align: right;
+  width: 50%;
+  padding-left: 70px;
+  padding-top: 5px;
 }
 
 .h-fixed-menu li {
@@ -9263,6 +9277,14 @@ body:not(.common-home) .n-container {
     padding: 0;
     list-style: none;
     position: relative
+}
+
+.h-fixed-menu.left li {
+    width: 50%;
+}
+
+.h-fixed-menu.right li {
+    width: 33.3333%;
 }
 
 .h-fixed-menu li .cart-total {
@@ -9275,16 +9297,12 @@ body:not(.common-home) .n-container {
     top: calc(100% - 3px)
 }
 
-.h-fixed-menu > li {
-    width: 20%
-}
-
-.h-fixed-menu > li:nth-child(2), .h-fixed-menu > li:nth-child(3), .h-fixed-menu > li:nth-child(4) {
-    text-align: center
-}
-
-.h-fixed-menu > li:last-child {
-    text-align: right
+.h-fixed-menu__logo {
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  left: 50%;
 }
 
 .h-fixed-menu__item > a {
@@ -9332,6 +9350,17 @@ body:not(.common-home) .n-container {
     transform: translate(-100%, 0);
     -moz-transform: translate(-100%, 0);
     -webkit-transform: translate(-100%, 0)
+}
+
+@media (min-width: 1200px) {
+    .h-fixed-menu.left {
+        width: calc(50% - 139px);
+        padding-right: 85px;
+        text-align: left;
+    }
+    .h-fixed-menu.right {
+         padding-left: 85px;
+    }
 }
 
 .n-dropdown-button {
