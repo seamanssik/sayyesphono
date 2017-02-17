@@ -3195,6 +3195,10 @@ pre code {
     padding-right: 15px
 }
 
+.container.photodays-product-block-margin {
+    margin-top: -60px;
+}
+
 @media (min-width: 768px) {
     .container {
         width: 750px
@@ -6474,6 +6478,10 @@ select.form-control, textarea.form-control, input[type="text"].form-control, inp
     background: #222 url("/image/theme/heading-bg.jpg") no-repeat 50% 50%;
     height: 330px;
     margin-bottom: 70px
+}
+
+.heading-background.low-case {
+    height: 265px;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -18489,7 +18497,7 @@ body.error-not_found .f-copy {
 }
 
 .contact-heading {
-    padding-top: 60px
+    padding-top: 15px
 }
 
 .contacts {
@@ -19185,7 +19193,7 @@ body.error-not_found .f-copy {
 }
 
 .cd-showroom {
-    margin-bottom: 110px
+    margin-bottom: 55px
 }
 
 .cd-showroom-column {
@@ -19477,6 +19485,11 @@ body.error-not_found .f-copy {
     padding: 60px 0 0
 }
 
+.showroom-heading.short-heading {
+    height: auto !important;
+    min-height: 50px !important;
+    padding: 15px 0 25px;
+}
 .showroom-images {
     margin-bottom: 20px
 }

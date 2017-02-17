@@ -723,8 +723,11 @@ $(window).load(function () {
 
         var searchMap = function searchMap() {
             var map = $('#contactMap'),
-                lat = 49.9999114,
-                long = 36.2346487;
+                lat  = 55.787424,
+                long = 37.582885;
+
+                // lat = 49.9999114,
+                // long = 36.2346487;
 
             if (map.length >= 1) {
                 var markerPosition = new google.maps.LatLng(lat, long);

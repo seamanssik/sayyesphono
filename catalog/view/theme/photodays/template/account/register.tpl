@@ -59,10 +59,10 @@
             </div>
           </div>
           <script>
-            $('#input-telephone').mask('+7 (999) 999-99-99');
-            $(document).ready(function(){
-              $('#input-telephone').mask('+7 (999) 999-99-99');
-            });
+//            $('#input-telephone').mask('+7 (999) 999-99-99');
+//            $(document).ready(function(){
+//              $('#input-telephone').mask('+7 (999) 999-99-99');
+//            });
           </script>
         </div>
       </div>

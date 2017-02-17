@@ -38,7 +38,6 @@ class ControllerAccountEdit extends Controller {
 
 			$this->response->redirect($this->url->link('account/account', '', true));
 		}
-
 		$data['breadcrumbs'] = array();
 
 		$data['breadcrumbs'][] = array(
@@ -110,11 +109,19 @@ class ControllerAccountEdit extends Controller {
 		}
 
 		$data['action'] = $this->url->link('account/edit', '', true);
+		$data['action_phone'] = $this->url->link('account/check_phone', '', true);
 
 		if ($this->request->server['REQUEST_METHOD'] != 'POST') {
 			$customer_info = $this->model_account_customer->getCustomer($this->customer->getId());
+			
+			if($customer_info['phone_approved'] == 1){
+				$data['already_approve'] = true;
+			}else{
+				$data['already_approve'] = false;
+			}
 		}
 
+	
 		if (isset($this->request->post['firstname'])) {
 			$data['firstname'] = $this->request->post['firstname'];
 		} elseif (!empty($customer_info)) {
