@@ -50,7 +50,7 @@
                                 <?php if($logged == true) {?>
                                 onclick="wishlist.add(<?php echo $product_id; ?>);$(this).addClass('active');"
                                 <?php }else{ ?>
-                                onclick="window.location.href = 'account/login'"
+                                onclick="$('#modalSignIn').modal('show')"
                                 <?php };?>
                                 data-original-title="Add to Wish List">
                         </button>
