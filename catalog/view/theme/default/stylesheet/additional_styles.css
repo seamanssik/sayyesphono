@@ -285,6 +285,11 @@
           transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   position: absolute;
   text-align: left;
+<<<<<<< HEAD
+=======
+  /*opacity: 0;*/
+  /*visibility: hidden;*/
+>>>>>>> ab52a3ad18eba135441c0ec92596bd454a943b5f
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   margin: 0;
   padding: 0;

@@ -121,17 +121,21 @@
 <!--                        --><?php //if ($link_you) { ?><!--<li><a href="--><?php //echo $link_you; ?><!--" rel="nofollow" target="_blank" class="h-social__item h-social__you">Смотрите Photodays на youtube</a></li>--><?php //} ?>
 <!--                    </ul>-->
                     <ul class="h-item__menu h-menu">
-                        <li style="margin-top: 10px">
+                        <li class="dropdown" style="margin-top: 10px">
                             <?php if ($logged) { ?>
-                                <a href="javascript: void(0);" class="h-menu__item account-dropdown-init"><?php echo $customer_name;?></a>
+                                <button class="dropdown-toggle n-dropdown-button" type="button" data-toggle="dropdown"><?php echo $customer_name;?></button>
                             <?php } else { ?>
                                 <a href="javascript: void(0);" data-toggle="modal" data-target="#modalSignIn" class="h-menu__item">Вход</a>
                             <?php } ?>
-                            <ul class="dropdown-wrap">
-                                <li><a href="#">Asd</a></li>
-                                <li><a href="#">Qwe</a></li>
-                                <li><a href="#">Zxc</a></li>
+                            <ul class="dropdown-menu dropdown-wrap">
+                                <li><a href="index.php?route=account/edit">Изменить данные</a></li>
+                                <li><a href="index.php?route=account/password">Изменить пароль</a></li>
+                                <li><a href="index.php?route=account/order">Мои заказы</a></li>
+                                <li><a href="index.php?route=account/download">Мои фото</a></li>
+                                <li><a href="index.php?route=account/logout">Выход</a></li>
                             </ul>
+                        </li>
+
                         </li>
                         <li>
                             <?php if ($logged) { ?>
@@ -146,12 +150,25 @@
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo $checkout; ?>" class="h-menu__item">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
                                 <img src="image/catalog/icons/cart.png" alt="" width="40px" height="40px">
                                 <span class="<?php if (!$total_cart_count) { ?> hidden<?php } ?> cart-count" data-toggle="cart-total-count"><?php echo $total_cart_count; ?></span>
-                            </a>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">HTML</a></li>
+                                <li><a href="#">CSS</a></li>
+                                <li><a href="#">JavaScript</a></li>
+                            </ul>
                             <span class="cart-total<?php if (!$total_cart) { ?>hidden<?php } ?>" data-toggle="cart-total"><?php echo $total_cart; ?></span>
                         </li>
+
+<!--                        <li>-->
+<!--                            <a href="--><?php //echo $checkout; ?><!--" class="h-menu__item">-->
+<!--                                <img src="image/catalog/icons/cart.png" alt="" width="40px" height="40px">-->
+<!--                                <span class="--><?php //if (!$total_cart_count) { ?><!-- hidden--><?php //} ?><!-- cart-count" data-toggle="cart-total-count">--><?php //echo $total_cart_count; ?><!--</span>-->
+<!--                            </a>-->
+<!--                            <span class="cart-total--><?php //if (!$total_cart) { ?><!--hidden--><?php //} ?><!--" data-toggle="cart-total">--><?php //echo $total_cart; ?><!--</span>-->
+<!--                        </li>-->
 
 <!--                        <li>-->
 <!--                            <a href="--><?php //echo $checkout; ?><!--" class="h-menu__item">Корзина</a>-->
@@ -256,10 +273,8 @@
                         </a>
                 </li>
                 <li class="h-fixed-menu__item">
-                    <a href="<?php echo $checkout; ?>" class="h-menu__item"><img src="image/catalog/icons/cart.png" alt="" width="40px" height="40px"></a>
-<!--                    <a href="--><?php //echo $checkout; ?><!--">Корзина</a>-->
-<!--                    <span class="cart-total" data-toggle="cart-total">--><?php //echo $total_cart; ?><!--</span>-->
-                    <span class="<?php if (!$total_cart_count) { ?>hidden<?php } ?> cart-count" data-toggle="cart-total-count-2"><?php echo $total_cart_count; ?></span>
+                    <a href="<?php echo $checkout; ?>"><img src="image/catalog/icons/cart.png" alt="" width="40px" height="40px">
+                        <span class="<?php if (!$total_cart_count) { ?>hidden<?php } ?> cart-count" data-toggle="cart-total-count-2"><?php echo $total_cart_count; ?></span></a>
                 </li>
             </ul>
         </div>
