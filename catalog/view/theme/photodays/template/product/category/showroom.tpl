@@ -48,8 +48,14 @@
                                                 <?php } ?>
                                             </div>
                                             </a>
-                                            <button type="button" data-toggle="tooltip" class="btn btn-default wishlist_item " title="" onclick="window.location.href = 'account/login'" data-original-title="Add to Wish List">
-                                                            </button>
+                                            <button type="button" data-toggle="tooltip" class="btn btn-default wishlist_item <?php echo $product['wishlist_cative']; ?>" title=""
+                                                <?php if($logged == true) {?>
+                                                    onclick="wishlist.add(<?php echo $product['product_id']; ?>);$(this).addClass('active');"
+                                                <?php }else{ ?>
+                                                    onclick="window.location.href = 'account/login'"
+                                                <?php };?>
+                                                    data-original-title="Add to Wish List">
+                                            </button>
                                         </div>
                                     </div>
                                     <div class="product-title">

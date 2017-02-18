@@ -238,7 +238,7 @@
             <ul class="h-fixed-menu right">
                 <li class="h-fixed-menu__item">
                     <?php if ($logged) { ?>
-                        <a href="<?php echo $account; ?>">Мой кабинет</a>
+                        <a href="<?php echo $account; ?>"><?php echo $customer_name;?></a>
                     <?php } else { ?>
                         <a href="javascript: void(0);" data-toggle="modal" data-target="#modalSignIn">Вход</a>
                     <?php } ?>
@@ -258,7 +258,8 @@
                 <li class="h-fixed-menu__item">
                     <a href="<?php echo $checkout; ?>"><img src="image/catalog/icons/cart.png" alt="" width="40px" height="40px"></a>
 <!--                    <a href="--><?php //echo $checkout; ?><!--">Корзина</a>-->
-                    <span class="cart-total" data-toggle="cart-total"><?php echo $total_cart; ?></span>
+<!--                    <span class="cart-total" data-toggle="cart-total">--><?php //echo $total_cart; ?><!--</span>-->
+                    <span class="<?php if (!$total_cart_count) { ?>hidden<?php } ?> cart-count" data-toggle="cart-total-count-2"><?php echo $total_cart_count; ?></span>
                 </li>
             </ul>
         </div>

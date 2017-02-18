@@ -38,8 +38,14 @@
                                         <div class="photodaysItem-image__label hidden"><img src="/image/catalog/labels/label-finish.png" /></div>
                                         <div class="c-wrap-img-anim">
                                             <a href="<?php echo $product['href']; ?>"><img class="photodaysItem-image__img" src="<?php echo $product['thumb_photodays']; ?>" alt="<?php echo $product['name']; ?>" /></a>
-                                            <button type="button" data-toggle="tooltip" class="btn btn-default wishlist_item " title="" onclick="window.location.href = 'account/login'" data-original-title="Add to Wish List">
-                                                            </button>
+                                            <button type="button" data-toggle="tooltip" class="btn btn-default wishlist_item <?php echo $product['wishlist_cative']; ?>" title=""
+                                                <?php if($logged == true) {?>
+                                                    onclick="wishlist.add(<?php echo $product['product_id']; ?>);$(this).addClass('active');"
+                                                <?php }else{ ?>
+                                                    onclick="$('#modalSignIn').modal('show')"
+                                                <?php };?>
+                                                    data-original-title="Add to Wish List">
+                                            </button>
                                         </div>
                                         <div class="product-thumb__mask">
                                             <div class="product-thumb__info">
