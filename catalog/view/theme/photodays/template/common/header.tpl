@@ -150,12 +150,25 @@
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo $checkout; ?>" class="h-menu__item">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
                                 <img src="image/catalog/icons/cart.png" alt="" width="40px" height="40px">
                                 <span class="<?php if (!$total_cart_count) { ?> hidden<?php } ?> cart-count" data-toggle="cart-total-count"><?php echo $total_cart_count; ?></span>
-                            </a>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">HTML</a></li>
+                                <li><a href="#">CSS</a></li>
+                                <li><a href="#">JavaScript</a></li>
+                            </ul>
                             <span class="cart-total<?php if (!$total_cart) { ?>hidden<?php } ?>" data-toggle="cart-total"><?php echo $total_cart; ?></span>
                         </li>
+
+<!--                        <li>-->
+<!--                            <a href="--><?php //echo $checkout; ?><!--" class="h-menu__item">-->
+<!--                                <img src="image/catalog/icons/cart.png" alt="" width="40px" height="40px">-->
+<!--                                <span class="--><?php //if (!$total_cart_count) { ?><!-- hidden--><?php //} ?><!-- cart-count" data-toggle="cart-total-count">--><?php //echo $total_cart_count; ?><!--</span>-->
+<!--                            </a>-->
+<!--                            <span class="cart-total--><?php //if (!$total_cart) { ?><!--hidden--><?php //} ?><!--" data-toggle="cart-total">--><?php //echo $total_cart; ?><!--</span>-->
+<!--                        </li>-->
 
 <!--                        <li>-->
 <!--                            <a href="--><?php //echo $checkout; ?><!--" class="h-menu__item">Корзина</a>-->
