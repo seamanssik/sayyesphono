@@ -19,8 +19,8 @@ class ControllerAccountCheckPhone extends Controller
         $data['short_code'] = $short_code;
 
         if(!isset($this->session->data['already_send'])){
-//            $sms = new SMS();
-//            $sms->send($customer_data['telephone'], $short_code);
+            $sms = new SMS();
+            $sms->send($customer_data['telephone'], $short_code);
         }
         $this->session->data['already_send'] = true;
 
