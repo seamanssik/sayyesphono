@@ -364,5 +364,85 @@
 }
 
 .checkout-drop {
-  
+  left: auto;
+  right: 0;
+  padding: 5px;
+  margin: 0;
+  min-width: 250px;
+  top: calc(100% + 10px);
+  font-family: 'ttdrugs-light', sans-serif;
+}
+
+.checkout-drop li {
+  display: block;
+  max-width: initial !important;
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+.checkout-drop li:nth-child(n+3) {
+  padding: 0;
+}
+
+.checkout-drop a {
+  padding: 0 !important;
+}
+
+.checkout-drop .result {
+  padding: 15px 0 !important;
+}
+
+.checkout-drop .confirm .btn {
+  -webkit-transition: background 0.3s ease-in-out;
+          transition: background 0.3s ease-in-out;
+  background-color: #222;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  outline: none;
+}
+
+.checkout-drop .confirm .btn:hover, .checkout-drop .confirm .btn:focus {
+  background-color: #bd9d53;
+}
+
+.cart-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.cart-item .img-holder {
+    width: 30%;
+}
+
+.cart-item .img-holder img {
+      width: 100%;
+}
+
+.cart-item .text-wrap {
+    width: 70%;
+    padding-left: 10px;
+}
+
+.cart-item .text-wrap span, .cart-item .text-wrap strong {
+    display: block;
+}
+
+.cart-item .text-wrap strong {
+    font-weight: bold !important;
+}
+
+.cart-item .text-wrap span {
+    padding-bottom: 10px;
 }

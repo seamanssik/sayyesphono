@@ -155,9 +155,50 @@
                                 <span class="<?php if (!$total_cart_count) { ?> hidden<?php } ?> cart-count" data-toggle="cart-total-count"><?php echo $total_cart_count; ?></span>
                             </button>
                             <ul class="dropdown-menu checkout-drop">
-                                <li><a href="#">HTML</a></li>
-                                <li><a href="#">CSS</a></li>
-                                <li><a href="#">JavaScript</a></li>
+                                <li>
+                                    <a href="#">
+                                        <div class="cart-item">
+                                            <div class="img-holder">
+                                                <img src="/image/cache/catalog/showroom/bloomy/LEO_4638-cr-195x280.jpg" alt="image description">
+                                            </div>
+                                            <div class="text-wrap">
+                                                <strong>Item name</strong>
+                                                <span>Description</span>
+                                                <div class="price text-right">1 item 999uah</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="cart-item">
+                                            <div class="img-holder">
+                                                <img src="/image/cache/catalog/showroom/bloomy/LEO_4638-cr-195x280.jpg" alt="image description">
+                                            </div>
+                                            <div class="text-wrap">
+                                                <strong>Item name</strong>
+                                                <span>Description</span>
+                                                <div class="price text-right">1 item 999uah</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="cart-item">
+                                            <div class="img-holder">
+                                                <img src="/image/cache/catalog/showroom/bloomy/LEO_4638-cr-195x280.jpg" alt="image description">
+                                            </div>
+                                            <div class="text-wrap">
+                                                <strong>Item name</strong>
+                                                <span>Description</span>
+                                                <div class="price text-right">1 item 999uah</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="result text-right"><span>Итого: 12345uah</span></li>
+                                <li class="confirm"><button class="btn">Оформить заказ</button></li>
                             </ul>
                             <span class="cart-total<?php if (!$total_cart) { ?>hidden<?php } ?>" data-toggle="cart-total"><?php echo $total_cart; ?></span>
                         </li>
