@@ -376,3 +376,7 @@
 2017-02-15 3:46:04 - PHP Notice:  Undefined variable: logged in C:\OpenServer\OpenServer\domains\sayyesphono\catalog\view\theme\photodays\template\product\category\photodays_category.tpl on line 41
 2017-02-17 3:28:03 - PHP Warning:  PDOStatement::execute(): MySQL server has gone away in C:\OpenServer\OpenServer\domains\sayyesphono\system\library\db\mpdo.php on line 57
 2017-02-17 3:28:03 - PHP Warning:  PDOStatement::execute(): Error reading result set's header in C:\OpenServer\OpenServer\domains\sayyesphono\system\library\db\mpdo.php on line 57
+2017-02-18 15:35:45 - PHP Notice:  Undefined index: middlename in C:\OpenServer\OpenServer\domains\sayyesphono\catalog\controller\account\edit.php on line 158
+2017-02-18 15:35:45 - PHP Notice:  Undefined index: vk_profile in C:\OpenServer\OpenServer\domains\sayyesphono\catalog\controller\account\edit.php on line 166
+2017-02-18 15:35:45 - PHP Notice:  Undefined index: facebook_profile in C:\OpenServer\OpenServer\domains\sayyesphono\catalog\controller\account\edit.php on line 174
+2017-02-18 15:35:45 - PHP Notice:  Undefined index: insta_profile in C:\OpenServer\OpenServer\domains\sayyesphono\catalog\controller\account\edit.php on line 182

@@ -8492,6 +8492,7 @@ header {
     font-family: 'ttdrugs-light', sans-serif;
     text-transform: uppercase;
     outline: none;
+    text-decoration: none !important;
 }
 
 .h-menu__item:hover, .h-menu__item:focus {
@@ -9157,9 +9158,13 @@ body:not(.common-home) .n-container {
 
 @media (min-width: 1200px) {
     header, .n-container {
-        z-index: 912;
+        z-index: 913;
         background: #fff;
         position: relative
+    }
+
+    .n-container {
+        z-index: 912;
     }
 }
 
