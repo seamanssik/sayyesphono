@@ -16,7 +16,7 @@
 		</script>
 		<form action="<?php echo $action;?>" method="post" id="process-phone-form">
 		    <input type="text" name="validation_code" id="check-phone-input">
-		    <input type="submit" value="GO" id="submit_button" class="btn btn-success" disabled>
+		    <input type="submit" value="Подтвердить" id="submit_button" class="btn btn-success" disabled>
 		</form>
 	</div>
 </div>

@@ -159,7 +159,7 @@
                                 <li><a href="#">CSS</a></li>
                                 <li><a href="#">JavaScript</a></li>
                             </ul>
-                            <span class="cart-total<?php if (!$total_cart) { ?>hidden<?php } ?>" data-toggle="cart-total"><?php echo $total_cart; ?></span>
+                            <span class="cart-total<?php if (!$total_cart) { ?> hidden<?php } ?>" data-toggle="cart-total"><?php echo $total_cart; ?></span>
                         </li>
 
 <!--                        <li>-->
@@ -274,7 +274,7 @@
                 </li>
                 <li class="h-fixed-menu__item">
                     <a href="<?php echo $checkout; ?>"  class="h-menu__item"><img src="image/catalog/icons/cart.png" alt="" width="40px" height="40px">
-                        <span class="<?php if (!$total_cart_count) { ?>hidden<?php } ?> cart-count" data-toggle="cart-total-count-2"><?php echo $total_cart_count; ?></span></a>
+                        <span class="<?php if (!$total_cart_count) { ?> hidden<?php } ?> cart-count" data-toggle="cart-total-count-2"><?php echo $total_cart_count; ?></span></a>
                 </li>
             </ul>
         </div>
