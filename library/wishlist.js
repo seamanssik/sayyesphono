@@ -25,3 +25,13 @@ var wishlist = {
         console.log(123);
     }
 }
+
+$( document ).ready(function() {
+   $( ".account-dropdown-init" ).on( "click", function() {
+        $( ".account-dropdown-init" ).parent().toggleClass('active');
+    });
+});
+
+
+
+

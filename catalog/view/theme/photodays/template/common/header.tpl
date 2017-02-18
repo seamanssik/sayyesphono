@@ -123,10 +123,15 @@
                     <ul class="h-item__menu h-menu">
                         <li style="margin-top: 10px">
                             <?php if ($logged) { ?>
-                                <a href="<?php echo $account; ?>" class="h-menu__item"><?php echo $customer_name;?></a>
+                                <a href="javascript: void(0);" class="h-menu__item account-dropdown-init"><?php echo $customer_name;?></a>
                             <?php } else { ?>
                                 <a href="javascript: void(0);" data-toggle="modal" data-target="#modalSignIn" class="h-menu__item">Вход</a>
                             <?php } ?>
+                            <ul class="dropdown-wrap">
+                                <li><a href="#">Asd</a></li>
+                                <li><a href="#">Qwe</a></li>
+                                <li><a href="#">Zxc</a></li>
+                            </ul>
                         </li>
                         <li>
                             <?php if ($logged) { ?>
