@@ -8493,6 +8493,9 @@ header {
     text-transform: uppercase;
     outline: none;
     text-decoration: none !important;
+    padding: 0;
+    background-color: transparent;
+    border: none;
 }
 
 .h-menu__item:hover, .h-menu__item:focus {

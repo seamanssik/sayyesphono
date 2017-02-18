@@ -150,11 +150,11 @@
                             </a>
                         </li>
                         <li>
-                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                            <button class="btn btn-primary dropdown-toggle h-menu__item" type="button" data-toggle="dropdown">
                                 <img src="image/catalog/icons/cart.png" alt="" width="40px" height="40px">
                                 <span class="<?php if (!$total_cart_count) { ?> hidden<?php } ?> cart-count" data-toggle="cart-total-count"><?php echo $total_cart_count; ?></span>
                             </button>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu checkout-drop">
                                 <li><a href="#">HTML</a></li>
                                 <li><a href="#">CSS</a></li>
                                 <li><a href="#">JavaScript</a></li>
@@ -273,7 +273,7 @@
                         </a>
                 </li>
                 <li class="h-fixed-menu__item">
-                    <a href="<?php echo $checkout; ?>"><img src="image/catalog/icons/cart.png" alt="" width="40px" height="40px">
+                    <a href="<?php echo $checkout; ?>"  class="h-menu__item"><img src="image/catalog/icons/cart.png" alt="" width="40px" height="40px">
                         <span class="<?php if (!$total_cart_count) { ?>hidden<?php } ?> cart-count" data-toggle="cart-total-count-2"><?php echo $total_cart_count; ?></span></a>
                 </li>
             </ul>
