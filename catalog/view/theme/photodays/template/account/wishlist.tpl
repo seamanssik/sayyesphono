@@ -25,7 +25,7 @@
       <h3 class="h3"><span><?php echo $heading_title; ?></span></h3>
       <?php if ($products) { ?>
       <div class="table-responsive">
-        <table class="table table-bordered table-hover">
+        <table class="table table-bordered table-hover wishlist-table">
           <thead>
             <tr>
               <td class="text-center"><?php echo $column_image; ?></td>
@@ -54,8 +54,8 @@
                   <?php } ?>
                 </div>
                 <?php } ?></td>
-              <td class="text-right"><button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>');" data-toggle="tooltip" title="<?php echo $button_cart; ?>" class="btn btn-primary"><i class="fa fa-shopping-cart"></i></button>
-                <a href="<?php echo $product['remove']; ?>" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger"><i class="fa fa-times"></i></a></td>
+              <td class="text-center"><button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>');" data-toggle="tooltip" title="<?php echo $button_cart; ?>" class="btn btn-primary"><i class="fa fa-shopping-cart"></i></button>
+                <a href="<?php echo $product['remove']; ?>" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger remove"><i class="fa fa-times"></i></a></td>
             </tr>
             <?php } ?>
           </tbody>
