@@ -57,6 +57,13 @@ class ControllerProductCategory extends Controller {
 		}
 		// OCFilter end
 
+		
+		if($this->customer->isLogged()){
+			$data['logged'] = true;
+		}else{
+			$data['logged'] = false;
+		}
+		
 		$data['breadcrumbs'] = array();
 
 		$data['breadcrumbs'][] = array(
@@ -233,7 +240,7 @@ class ControllerProductCategory extends Controller {
 
 			foreach ($results as $result) {
 				$price_buy = false;
-				
+				$wishlist_active = $this->itemInWishlist($result['product_id']);
 				foreach ($this->model_catalog_product->getProductOptions($result['product_id']) as $option) {
 					foreach ($option['product_option_value'] as $option_value) {
 						if ($option_value['name'] == 'выкуп') {
@@ -303,6 +310,7 @@ class ControllerProductCategory extends Controller {
 					'thumbs'      => $images,
 					'thumb_photodays' => $image_photodays,
 					'logo'        => $logo,
+					'wishlist_cative' => $wishlist_active,
 					'city'        => $result['city'],
 					'name'        => $result['name'],
 					'date' 		  => date('d', strtotime($result['date_action'])) . '<br> ' . date('m', strtotime($result['date_action'])),
@@ -758,5 +766,18 @@ class ControllerProductCategory extends Controller {
 
 			$this->response->setOutput($this->load->view('error/not_found', $data));
 		}
+	}
+
+	public function itemInWishlist($product_id)
+	{
+		$this->load->model('account/wishlist');
+		$results = $this->model_account_wishlist->getWishlist();
+		foreach ($results as $item){
+			if($item['product_id'] == $product_id){
+				return 'active';
+				break;
+			}
+		}
+		return false;
 	}
 }
