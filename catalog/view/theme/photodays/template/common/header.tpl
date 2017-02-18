@@ -121,17 +121,21 @@
 <!--                        --><?php //if ($link_you) { ?><!--<li><a href="--><?php //echo $link_you; ?><!--" rel="nofollow" target="_blank" class="h-social__item h-social__you">Смотрите Photodays на youtube</a></li>--><?php //} ?>
 <!--                    </ul>-->
                     <ul class="h-item__menu h-menu">
-                        <li style="margin-top: 10px">
+                        <li class="dropdown" style="margin-top: 10px">
                             <?php if ($logged) { ?>
-                                <a href="javascript: void(0);" class="h-menu__item account-dropdown-init"><?php echo $customer_name;?></a>
+                                <button class="dropdown-toggle n-dropdown-button" type="button" data-toggle="dropdown"><?php echo $customer_name;?></button>
                             <?php } else { ?>
                                 <a href="javascript: void(0);" data-toggle="modal" data-target="#modalSignIn" class="h-menu__item">Вход</a>
                             <?php } ?>
-                            <ul class="dropdown-wrap">
-                                <li><a href="#">Asd</a></li>
-                                <li><a href="#">Qwe</a></li>
-                                <li><a href="#">Zxc</a></li>
+                            <ul class="dropdown-menu dropdown-wrap">
+                                <li><a href="index.php?route=account/edit">Изменить данные</a></li>
+                                <li><a href="index.php?route=account/password">Изменить пароль</a></li>
+                                <li><a href="index.php?route=account/order">Мои заказы</a></li>
+                                <li><a href="index.php?route=account/download">Мои фото</a></li>
+                                <li><a href="index.php?route=account/logout">Выход</a></li>
                             </ul>
+                        </li>
+
                         </li>
                         <li>
                             <?php if ($logged) { ?>
