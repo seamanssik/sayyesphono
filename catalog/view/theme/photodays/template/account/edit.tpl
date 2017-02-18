@@ -11,7 +11,7 @@
     <div class="row row-account">
       <div class="col-ed-8 col-lg-9 col-md-9 col-sm-9">
         <?php if($already_approve == false) {?>
-        <div>Внимание, <a href="<?php echo $action_phone;?>">подтвердите Ваш номер телефона.</a></div>
+        <div class="account-mobile-confirm">Внимание, <a href="<?php echo $action_phone;?>">подтвердите Ваш номер телефона.</a></div>
         <?php };?>
         <div class="h3"><span>Изменить персональные данные</span></div>
         <br>

@@ -23,7 +23,7 @@
 .owl-carousel .owl-wrapper-outer {
     overflow: hidden;
     position: relative;
-    width: 100%
+    width: 100%;
 }
 
 .owl-carousel .owl-wrapper-outer.autoHeight {
@@ -37,6 +37,10 @@
 .owl-carousel .owl-item {
     float: left;
     background: #fff
+}
+
+.owl-carousel .owl-item img {
+    max-height: 710px;
 }
 
 .grabbing {
@@ -3199,6 +3203,12 @@ pre code {
     margin-top: -60px;
 }
 
+@media (max-width: 767px) {
+    .container.photodays-product-block-margin {
+        margin-top: 0;
+    }
+}
+
 @media (min-width: 768px) {
     .container {
         width: 750px
@@ -3218,6 +3228,12 @@ pre code {
 }
 
 @media (min-width: 1400px) {
+    .container {
+        width: 1380px
+    }
+}
+
+@media (min-width: 1430px) {
     .container {
         width: 1400px
     }
@@ -5008,6 +5024,12 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
     padding-left: 0
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+   .list-group {
+        margin: 0 -15px 20px;
+    }
+}
+
 .list-group-item {
     position: relative;
     display: block;
@@ -6481,7 +6503,7 @@ select.form-control, textarea.form-control, input[type="text"].form-control, inp
 }
 
 .heading-background.low-case {
-    height: 265px;
+    height: 130px;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -9752,7 +9774,7 @@ body:not(.common-home) .n-container {
     vertical-align: top;
     background: #fff;
     margin: 0 0 12px;
-    min-width: 150px;
+    min-width: 130px;
     width: 100%;
     height: 60px;
     position: relative;
@@ -10535,8 +10557,8 @@ body > .jcf-select-drop.jcf-drop-flipped {
 
 @media (max-width: 767px) {
     .beauty {
-        padding: 30px 0 0;
-        margin-bottom: 60px
+        padding: 15px 0 0;
+        margin-bottom: 10px
     }
 
     .beauty-title {
@@ -10576,7 +10598,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
     }
 
     .beauty-col:nth-child(3) {
-        margin-top: 30px
+        margin-top: 5px
     }
 
     .beauty-figure .cd-inline {
@@ -10589,11 +10611,15 @@ body > .jcf-select-drop.jcf-drop-flipped {
         max-width: 100%;
         height: auto
     }
+
+    .beauty-description {
+        display: none;
+    }
 }
 
 .photodays {
     position: relative;
-    margin-bottom: 140px
+    margin-bottom: 95px
 }
 
 .photodays-title {
@@ -10873,7 +10899,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 }
 
 .shop {
-    margin-bottom: 70px
+    margin-bottom: 50px
 }
 
 .shop-title {
@@ -10951,7 +10977,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 
 @media (max-width: 767px) {
     .shop {
-        margin-bottom: 30px
+        margin-bottom: 15px
     }
 
     .shop-title {
@@ -12296,7 +12322,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 
 .product {
     position: relative;
-    margin-bottom: 40px
+    margin-bottom: 10px
 }
 
 .product:hover .product-thumb img {
@@ -12496,7 +12522,6 @@ body > .jcf-select-drop.jcf-drop-flipped {
 }
 
 .product-title {
-    height: 35px;
     overflow: hidden
 }
 
@@ -14284,7 +14309,7 @@ a.account-nav__active:hover, a.account-nav__active:focus {
     margin-left: 58px
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1199px) {
     .account-form {
         max-width: calc(100% - 58px)
     }
@@ -16543,7 +16568,7 @@ body.news-article .h1, body.news-article h1 {
 
 .category-product {
     position: relative;
-    margin-bottom: 70px
+    margin-bottom: 30px
 }
 
 .category-product:before {
@@ -19196,6 +19221,36 @@ body.error-not_found .f-copy {
     margin-bottom: 55px
 }
 
+@media (max-width: 767px) {
+    .cd-showroom {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+    }
+    .cd-showroom > div:first-child {
+      -webkit-box-ordinal-group: 3;
+      -webkit-order: 2;
+          -ms-flex-order: 2;
+        order: 2;
+        width: 100%;
+    }
+    .cd-showroom > div:last-child {
+      -webkit-box-ordinal-group: 2;
+      -webkit-order: 1;
+          -ms-flex-order: 1;
+        order: 1;
+        width: 100%;
+        padding-bottom: 15px;
+    }
+    .showroom-total {
+        margin: 0;
+    }
+}
+
 .cd-showroom-column {
     padding-left: 58px
 }
@@ -19319,6 +19374,12 @@ body.error-not_found .f-copy {
     margin: 0 0 8px
 }
 
+@media (max-width: 480px) {
+    .showroom-options .form-group .control-label {
+        font-size: 12px;
+    }
+}
+
 .showroom-options__radio {
     margin: 0 0 30px;
     border: solid #dadada;
@@ -19391,6 +19452,12 @@ body.error-not_found .f-copy {
     right: 20px
 }
 
+@media (max-width: 480px) {
+    .showroom-options__radio .radio label {
+        min-width: 130px;
+    }
+}
+
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
     .showroom-options__date .date:before, .showroom-options__date .datetime:before {
         background: url("/image/theme/sprite-retina.png") no-repeat -113px -70px;
@@ -19453,6 +19520,25 @@ body.error-not_found .f-copy {
     right: 20px
 }
 
+@media (max-width: 480px) {
+    .showroom-options__date {
+        margin: 0 !important;
+    }
+    .showroom-options__date .control-label {
+         font-size: 12px !important;
+    }
+    .showroom-options__date input {
+        font-size: 18px;
+        padding: 0 40px 0 10px;
+        margin: 0;
+    }
+
+    .showroom-options__select .jcf-select-text {
+        padding: 0 40px 0 10px;
+        font-size: 18px;
+    }
+}
+
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
     .showroom-options__select .jcf-select-opener:before {
         background: url("/image/theme/sprite-retina.png") no-repeat -113px -70px;
@@ -19491,7 +19577,7 @@ body.error-not_found .f-copy {
     padding: 15px 0 25px;
 }
 .showroom-images {
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
 
 .showroom-images .owl-pagination {
@@ -20173,6 +20259,10 @@ body.error-not_found .f-copy {
 }
 
 @media (max-width: 767px) {
+    .showroom-related {
+        display: none;
+    }
+
     .showroom-heading {
         height: auto !important;
         min-height: initial !important;
@@ -20235,8 +20325,8 @@ body.error-not_found .f-copy {
     }
 
     .showroom-options .form-group.float {
-        margin: 0 15px 15px 0;
-        max-width: 250px
+        margin: 0 5px 15px 0;
+        max-width: 220px
     }
 
     .showroom-fashion {
@@ -20351,6 +20441,12 @@ body.error-not_found .f-copy {
 
     .showroom-related .product-promo {
         right: 10px
+    }
+}
+
+@media (max-width: 480px) {
+    .showroom-options .form-group.float {
+        max-width: 145px
     }
 }
 
@@ -21276,6 +21372,12 @@ body.error-not_found .f-copy {
     }
 }
 
+@media (max-width: 767px) {
+    .photoday-history {
+        margin-top: 0 !important;
+    }
+}
+
 .photoday-history__link:hover {
     color: #222
 }
@@ -22172,10 +22274,9 @@ body.error-not_found .f-copy {
     margin: 0 7px 7px 0
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 767px) {
     .photodays-images__item {
         width: 100%;
-        margin: 0 0 15px
     }
 }
 
@@ -22213,9 +22314,10 @@ body.error-not_found .f-copy {
 .photodays-images__item:not(.socialList) img {
     max-width: 345px;
     opacity: 1;
-    -webkit-transition: opacity .9s .7s cubic-bezier(.4, 0, .2, 1), transform .9s .7s cubic-bezier(.4, 0, .2, 1);
-    transition: opacity .9s .7s cubic-bezier(.4, 0, .2, 1), transform .9s .7s cubic-bezier(.4, 0, .2, 1);
-    -moz-transition: opacity .9s .7s cubic-bezier(.4, 0, .2, 1), transform .9s .7s cubic-bezier(.4, 0, .2, 1)
+    width: 100%;
+    -webkit-transition: opacity .9s cubic-bezier(.4, 0, .2, 1), transform .9s ease;
+    -o-transition: opacity .9s cubic-bezier(.4, 0, .2, 1), transform .9s ease;
+    transition: opacity .9s cubic-bezier(.4, 0, .2, 1), transform .9s ease
 }
 
 @media (max-width: 767px) {
@@ -22230,9 +22332,6 @@ body.error-not_found .f-copy {
     -webkit-transform: scale(1.05);
     -o-transform: scale(1.05);
     transform: scale(1.05);
-    -webkit-transition: opacity .9s cubic-bezier(.4, 0, .2, 1), transform .9s ease;
-    -o-transition: opacity .9s cubic-bezier(.4, 0, .2, 1), transform .9s ease;
-    transition: opacity .9s cubic-bezier(.4, 0, .2, 1), transform .9s ease
 }
 
 .photodays-pagination {
@@ -23265,7 +23364,7 @@ body.error-not_found .f-copy {
     }
 
     .photodaysItem {
-        margin: 0 0 30px
+        margin: 0 0 15px
     }
 
     .photodaysItem:nth-child(even) {
@@ -23393,7 +23492,7 @@ body.error-not_found .f-copy {
     }
 
     .photodaysItem-description__description {
-        margin: 0 0 15px
+        margin: 0
     }
 
     .photodaysItem-description__description + .photodaysTotal .showroom-total__price {
@@ -23501,7 +23600,7 @@ body.error-not_found .f-copy {
 
     .photodaysItem-overlay {
         display: block;
-        margin: 0 0 30px
+        margin: 0 0 5px
     }
 
     .photodays-images {

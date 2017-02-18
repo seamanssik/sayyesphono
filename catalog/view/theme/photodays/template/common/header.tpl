@@ -81,7 +81,7 @@
 </div>
 <div class="wrapper">
     <?php if(isset($already_approve) && $already_approve == false) {?>
-    <div style="width: 100%"><a href="<?php echo $action_phone;?>">ПОДТВЕРДИТЕ ТЕЛЕФОН</a></div>
+    <div class="head-mobile-confirm"><a href="<?php echo $action_phone;?>">ПОДТВЕРДИТЕ ТЕЛЕФОН</a></div>
     <?php };?>
     <div class="h-item__nav h-nav visible-xs">
         <button class="h-nav__button" id="showAside">

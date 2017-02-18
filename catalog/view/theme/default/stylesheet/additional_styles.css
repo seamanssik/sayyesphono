@@ -153,3 +153,101 @@
         height: 100%;
     }
 }
+
+.account-mobile-confirm {
+    font-size: 18px;
+    font-family: 'ttdrugs-light', sans-serif;
+    padding-bottom: 10px;
+}
+
+.account-mobile-confirm a {
+    color: #bd9d53;
+    text-decoration: none;
+    -webkit-transition: color 0.3s ease-in-out;
+            transition: color 0.3s ease-in-out;
+}
+
+.account-mobile-confirm a:hover {
+    color: #d9bc7b
+}
+
+@media (min-width: 768px) {
+    .account-mobile-confirm {
+      padding-left: 58px;
+  }
+}
+
+.head-mobile-confirm {
+    background-color: #bd9d53;
+    padding: 3px 0 2px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'ttdrugs-light', sans-serif;
+}
+
+.head-mobile-confirm a {
+    color: #fff;
+    -webkit-transition: color 0.3s ease-in-out;
+            transition: color 0.3s ease-in-out;
+}
+
+.head-mobile-confirm a:hover {
+    color: #333;
+}
+
+.mobile-confirm-wrap {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.mobile-confirm-wrap span {
+    display: block;
+    font-size: 18px;
+    font-family: 'ttdrugs-light', sans-serif;
+    padding-bottom: 10px;
+}
+
+.mobile-confirm-wrap input[type="text"] {
+    width: 200px;
+    outline: none;
+}
+
+.mobile-confirm-wrap input[type="submit"] {
+    -webkit-transition: background 0.3s ease-in-out;
+            transition: background 0.3s ease-in-out;
+    background-color: #bd9d53;
+    border: none;
+    padding: 3px 6px;
+    width: 50px;
+    outline: none;
+    color: #fff;
+    font-family: 'ttdrugs-light', sans-serif;
+}
+
+.mobile-confirm-wrap input[type="submit"][disabled] {
+    background-color: #333;
+    cursor: not-allowed;
+}
+
+@media (min-width: 992px) {
+    .mobile-confirm-wrap {
+      padding: 80px 0;
+    }
+}
+
+.account-continue {
+    -webkit-transition: color 0.3s ease-in-out;
+            transition: color 0.3s ease-in-out;
+    color: #bd9d53;
+    text-decoration: none;
+    font-family: 'ttdrugs-light', sans-serif;
+    font-size: 18px;
+}
+
+.account-continue:hover {
+    color: #d9bc7b
+}
+
+.account-form td {
+    font-family: 'ttdrugs-light', sans-serif;
+}

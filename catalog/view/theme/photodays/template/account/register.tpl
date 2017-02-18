@@ -1,15 +1,5 @@
 <?php echo $header; ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.9/jquery.mask.min.js"></script>
-<div class="heading-background no_margin">
-  <div class="container">
-    <div class="h1"><?php echo $heading_title; ?></div>
-    <ul class="breadcrumb h1-after">
-      <?php foreach ($breadcrumbs as $i=> $breadcrumb) { ?>
-        <?php if($i+1<count($breadcrumbs)) { ?><li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a><l/i> <?php } else { ?><li class="active"><span><?php echo $breadcrumb['text']; ?></span></li><?php } ?>
-      <?php } ?>
-    </ul>
-  </div>
-</div>
 <div class="heading-form">
   <div class="container heading-form__container">
     <?php if ($error_warning) { ?>

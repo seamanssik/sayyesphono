@@ -143,6 +143,33 @@
                 </div>
             </div>
         </div>
+        <?php if ($products) { ?>
+            <div class="showroom-related">
+                <div class="showroom-related__title js-animate"><div class="c-text-masked"><span>Тебе также понравится</span></div></div>
+                <div class="row">
+                    <div id="showroom-related">
+                        <?php foreach ($products as $product) { ?>
+                            <div class="product category-product">
+                                <div class="product-promo"><?php echo $product['promotag']; ?></div>
+                                <div class="product-thumb">
+                                    <a href="<?php echo $product['href']; ?>" class="product-thumb__link">
+                                        <img width="330" height="510" src="image/catalog/blank.gif" data-echo="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>">
+                                    </a>
+                                </div>
+                                <div class="product-title">
+                                    <a href="<?php echo $product['href']; ?>" class="product-title__link"><span class="small"><?php echo $product['name']; ?></span></a>
+                                </div>
+                                <div class="product-info hidden">
+                                    <div class="product-info__rent"><?php echo $product['price']; ?><span>аренда</span></div>
+                                    <div class="product-info__currency"><span style="text-transform: uppercase"><?php echo $product['symbol']; ?></span></div>
+                                    <div class="product-info__price">3500<span>выкуп</span></div>
+                                </div>
+                            </div>
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
         <?php if ($product_reviews) { ?>
             <div class="showroom-experts">
                 <div class="showroom-carousels" id="showroomCarousels">
@@ -169,33 +196,6 @@
                 <div class="showroom-controls row">
                     <div class="col-ed-4 col-ed-offset-2 col-lg-5 col-lg-offset-1 col-md-6">
                         <div class="showroom-expert__controls"></div>
-                    </div>
-                </div>
-            </div>
-        <?php } ?>
-        <?php if ($products) { ?>
-            <div class="showroom-related">
-                <div class="showroom-related__title js-animate"><div class="c-text-masked"><span>Тебе также понравится</span></div></div>
-                <div class="row">
-                    <div id="showroom-related">
-                        <?php foreach ($products as $product) { ?>
-                            <div class="product category-product">
-                                <div class="product-promo"><?php echo $product['promotag']; ?></div>
-                                <div class="product-thumb">
-                                    <a href="<?php echo $product['href']; ?>" class="product-thumb__link">
-                                        <img width="330" height="510" src="image/catalog/blank.gif" data-echo="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>">
-                                    </a>
-                                </div>
-                                <div class="product-title">
-                                    <a href="<?php echo $product['href']; ?>" class="product-title__link"><span class="small"><?php echo $product['name']; ?></span></a>
-                                </div>
-                                <div class="product-info hidden">
-                                    <div class="product-info__rent"><?php echo $product['price']; ?><span>аренда</span></div>
-                                    <div class="product-info__currency"><span style="text-transform: uppercase"><?php echo $product['symbol']; ?></span></div>
-                                    <div class="product-info__price">3500<span>выкуп</span></div>
-                                </div>
-                            </div>
-                        <?php } ?>
                     </div>
                 </div>
             </div>
