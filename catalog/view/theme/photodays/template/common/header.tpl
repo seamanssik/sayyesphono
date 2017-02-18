@@ -148,7 +148,7 @@
                         <li>
                             <a href="<?php echo $checkout; ?>" class="h-menu__item">
                                 <img src="image/catalog/icons/cart.png" alt="" width="40px" height="40px">
-                                <span class="<?php if (!$total_cart_count) { ?> hidden<?php } ?> cart-count" data-toggle="cart-total-count" style="display:none"><?php echo $total_cart_count; ?></span>
+                                <span class="<?php if (!$total_cart_count) { ?> hidden<?php } ?> cart-count" data-toggle="cart-total-count"><?php echo $total_cart_count; ?></span>
                             </a>
                             <span class="cart-total<?php if (!$total_cart) { ?>hidden<?php } ?>" data-toggle="cart-total"><?php echo $total_cart; ?></span>
                         </li>
