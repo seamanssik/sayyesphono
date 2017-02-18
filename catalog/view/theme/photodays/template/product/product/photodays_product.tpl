@@ -334,7 +334,6 @@
                             $('body').animate({scrollTop: _body.find('.has-error').first().offset().top}, 'slow');
                         }
                     }
-                    console.log(json);
                     if (json['success']) {
                         _body.find('#modalSuccess .modalSuccess-text').html('Ваш заказ добавлен в <a href="/checkout">корзину покупок</a>.');
                         _body.find('#modalSuccess').modal('show');
