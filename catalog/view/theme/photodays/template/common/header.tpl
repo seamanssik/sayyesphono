@@ -273,10 +273,10 @@
                         </a>
                 </li>
                 <li class="h-fixed-menu__item">
-                    <a href="<?php echo $checkout; ?>"><img src="image/catalog/icons/cart.png" alt="" width="40px" height="40px"></a>
+                    <a href="<?php echo $checkout; ?>"><img src="image/catalog/icons/cart.png" alt="" width="40px" height="40px">
+                        <span class="<?php if (!$total_cart_count) { ?>hidden<?php } ?> cart-count" data-toggle="cart-total-count-2"><?php echo $total_cart_count; ?></span></a>
 <!--                    <a href="--><?php //echo $checkout; ?><!--">Корзина</a>-->
 <!--                    <span class="cart-total" data-toggle="cart-total">--><?php //echo $total_cart; ?><!--</span>-->
-                    <span class="<?php if (!$total_cart_count) { ?>hidden<?php } ?> cart-count" data-toggle="cart-total-count-2"><?php echo $total_cart_count; ?></span>
                 </li>
             </ul>
         </div>
