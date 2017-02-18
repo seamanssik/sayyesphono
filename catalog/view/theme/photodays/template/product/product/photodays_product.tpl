@@ -340,6 +340,7 @@
 
                         _body.find('*[data-toggle="cart-total"]').removeClass('hidden').text(json['total']);
                         _body.find('*[data-toggle="cart-total-count"]').removeClass('hidden').text(json['total_items_count']);
+                        _body.find('*[data-toggle="cart-total-count-2"]').removeClass('hidden').text(json['total_items_count']);
                     }
                 }
             });
