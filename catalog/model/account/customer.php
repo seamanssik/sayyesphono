@@ -101,6 +101,22 @@ class ModelAccountCustomer extends Model {
 	public function editCustomer($data) {
 		$customer_id = $this->customer->getId();
 
+		if(!empty($data['middlename'])){
+			$this->db->query("UPDATE " . DB_PREFIX . "customer SET middlename = '" . $data['middlename'] . "' WHERE customer_id = '" . (int)$customer_id . "'");
+		}
+
+		if(!empty($data['vk'])){
+			$this->db->query("UPDATE " . DB_PREFIX . "customer SET vk_profile = '" . $data['vk'] . "' WHERE customer_id = '" . (int)$customer_id . "'");
+		}
+
+		if(!empty($data['fb'])){
+			$this->db->query("UPDATE " . DB_PREFIX . "customer SET facebook_profile = '" . $data['fb'] . "' WHERE customer_id = '" . (int)$customer_id . "'");
+		}
+
+		if(!empty($data['insta'])){
+			$this->db->query("UPDATE " . DB_PREFIX . "customer SET insta_profile = '" . $data['insta'] . "' WHERE customer_id = '" . (int)$customer_id . "'");
+		}
+
 		$this->db->query("UPDATE " . DB_PREFIX . "customer SET firstname = '" . $this->db->escape($data['firstname']) . "', lastname = '" . $this->db->escape($data['lastname']) . "', email = '" . $this->db->escape($data['email']) . "', telephone = '" . $this->db->escape($data['telephone']) . "', fax = '" . $this->db->escape($data['fax']) . "', custom_field = '" . $this->db->escape(isset($data['custom_field']) ? json_encode($data['custom_field']) : '') . "' WHERE customer_id = '" . (int)$customer_id . "'");
 	}
 

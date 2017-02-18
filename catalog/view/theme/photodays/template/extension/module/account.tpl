@@ -5,7 +5,7 @@
     <a href="<?php echo $forgotten; ?>" class="list-group-item account-nav__link"><?php echo $text_forgotten; ?></a>
   <?php } ?>
   <?php if ($logged) { ?>
-    <a href="<?php echo $account; ?>" class="list-group-item account-nav__link <?php echo $nav['account']; ?>"><?php echo $text_account; ?></a>
+<!--    <a href="--><?php //echo $account; ?><!--" class="list-group-item account-nav__link --><?php //echo $nav['account']; ?><!--">--><?php //echo $text_account; ?><!--</a>-->
     <a href="<?php echo $edit; ?>" class="list-group-item account-nav__link <?php echo $nav['edit']; ?>"><?php echo $text_edit; ?></a>
     <a href="<?php echo $password; ?>" class="list-group-item account-nav__link <?php echo $nav['password']; ?>"><?php echo $text_password; ?></a>
     <a href="<?php echo $address; ?>" class="list-group-item account-nav__link <?php echo $nav['address']; ?>"><?php echo $text_address; ?></a>

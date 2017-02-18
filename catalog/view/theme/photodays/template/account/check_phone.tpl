@@ -8,7 +8,9 @@
 		    $("#check-phone-input").keyup(function() {
 		        if($("#check-phone-input").val() == '<?php echo $short_code?>'){
 		            $("#submit_button").attr("disabled", false);
-		        }
+		        }else{
+					$("#submit_button").attr("disabled", true);
+				}
 		    });
 		});
 		</script>

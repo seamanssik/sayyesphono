@@ -19,6 +19,14 @@ class ControllerAccountEdit extends Controller {
 
 		$this->load->model('account/customer');
 
+		$customer_info_first = $this->model_account_customer->getCustomer($this->customer->getId());
+
+		if($customer_info_first['phone_approved'] == 1){
+			$data['already_approve'] = true;
+		}else{
+			$data['already_approve'] = false;
+		}
+
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validate()) {
 			$this->model_account_customer->editCustomer($this->request->post);
 
@@ -90,6 +98,12 @@ class ControllerAccountEdit extends Controller {
 			$data['error_lastname'] = '';
 		}
 
+		if (isset($this->error['middlename'])) {
+			$data['error_middlename'] = $this->error['middlename'];
+		} else {
+			$data['error_middlename'] = '';
+		}
+
 		if (isset($this->error['email'])) {
 			$data['error_email'] = $this->error['email'];
 		} else {
@@ -136,6 +150,38 @@ class ControllerAccountEdit extends Controller {
 			$data['lastname'] = $customer_info['lastname'];
 		} else {
 			$data['lastname'] = '';
+		}
+
+		if (isset($this->request->post['middlename'])) {
+			$data['middlename'] = $this->request->post['middlename'];
+		} elseif (!empty($customer_info)) {
+			$data['middlename'] = $customer_info['middlename'];
+		} else {
+			$data['middlename'] = '';
+		}
+
+		if (isset($this->request->post['vk'])) {
+			$data['vk'] = $this->request->post['vk'];
+		} elseif (!empty($customer_info)) {
+			$data['vk'] = $customer_info['vk_profile'];
+		} else {
+			$data['vk'] = '';
+		}
+
+		if (isset($this->request->post['fb'])) {
+			$data['fb'] = $this->request->post['fb'];
+		} elseif (!empty($customer_info)) {
+			$data['fb'] = $customer_info['facebook_profile'];
+		} else {
+			$data['fb'] = '';
+		}
+
+		if (isset($this->request->post['insta'])) {
+			$data['insta'] = $this->request->post['insta'];
+		} elseif (!empty($customer_info)) {
+			$data['insta'] = $customer_info['insta_profile'];
+		} else {
+			$data['insta'] = '';
 		}
 
 		if (isset($this->request->post['email'])) {
@@ -195,6 +241,10 @@ class ControllerAccountEdit extends Controller {
 		if ((utf8_strlen(trim($this->request->post['lastname'])) < 2) || (utf8_strlen(trim($this->request->post['lastname'])) > 32)) {
 			$this->error['lastname'] = $this->language->get('error_lastname');
 		}
+
+//		if ((utf8_strlen(trim($this->request->post['middlename'])) < 2) || (utf8_strlen(trim($this->request->post['middlename'])) > 32)) {
+//			$this->error['middlename'] = 'Отчество должно быть от 2 до 32 символов!';
+//		}
 
 		if ((utf8_strlen($this->request->post['email']) > 96) || !filter_var($this->request->post['email'], FILTER_VALIDATE_EMAIL)) {
 			$this->error['email'] = $this->language->get('error_email');
