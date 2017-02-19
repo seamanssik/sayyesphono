@@ -1,4 +1,5 @@
 <?php echo $header; ?>
+<?php echo $column_right; ?>
 <div class="container">
   <div class="account-heading">
     <div class="h1"><?php echo $heading_title; ?></div>
@@ -68,6 +69,5 @@
         <div class="pull-right"><a href="<?php echo $continue; ?>" class="btn btn-primary account-continue hidden"><?php echo $button_continue; ?></a></div>
       </div>
       <?php echo $content_bottom; ?></div>
-    <?php echo $column_right; ?></div>
 </div>
 <?php echo $footer; ?>

@@ -1,4 +1,5 @@
 <?php echo $header; ?>
+<?php echo $column_right; ?>
 <div class="container">
     <div class="account-heading">
         <div class="h1"><?php echo $heading_title; ?></div>
@@ -252,7 +253,6 @@
             </form>
         </div>
         <div class="col-ed-2 visible-ed"></div>
-        <?php echo $column_right; ?>
     </div>
 </div>
 <?php echo $footer; ?>
