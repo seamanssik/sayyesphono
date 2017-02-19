@@ -1,5 +1,5 @@
 <?php echo $header; ?>
-<?php echo $column_right; ?>
+
 <div class="container">
   <div class="account-heading">
     <div class="h1"><?php echo $heading_title; ?></div>
@@ -8,6 +8,9 @@
       <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
       <?php } ?>
     </ul>
+  </div>
+  <div class="row">
+    <?php echo $column_right; ?>
   </div>
   <?php if ($success) { ?>
   <div class="alert alert-success"><i class="fa fa-check-circle"></i> <?php echo $success; ?>

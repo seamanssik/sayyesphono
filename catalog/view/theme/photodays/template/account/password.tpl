@@ -1,5 +1,4 @@
 <?php echo $header; ?>
-<?php echo $column_right; ?>
   <div class="container">
     <div class="account-heading">
       <div class="h1"><?php echo $heading_title; ?></div>
@@ -8,6 +7,9 @@
           <?php if($i+1<count($breadcrumbs)) { ?><li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a><l/i> <?php } else { ?><li class="active"><span><?php echo $breadcrumb['text']; ?></span></li><?php } ?>
         <?php } ?>
       </ul>
+    </div>
+    <div class="row">
+      <?php echo $column_right; ?>
     </div>
     <div class="row row-account">
       <div class="col-ed-8 col-lg-9 col-md-9 col-sm-9">
