@@ -21993,7 +21993,7 @@ body.error-not_found .f-copy {
 }
 
 .photodays-category {
-    margin: -20px 0 48px 58px
+    margin: -20px 0 18px 58px
 }
 
 .photodays-category:before, .photodays-category:after {
@@ -22734,7 +22734,7 @@ body.error-not_found .f-copy {
 }
 
 .photodaysItems {
-    margin-bottom: 45px
+    margin-bottom: 20px
 }
 
 .photodaysItems:before, .photodaysItems:after {
@@ -22767,7 +22767,7 @@ body.error-not_found .f-copy {
 
 .photodaysItems-pagination {
     text-align: center;
-    margin-bottom: 90px
+    margin-bottom: 40px
 }
 
 .photodaysItems-item {
