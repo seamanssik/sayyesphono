@@ -3909,13 +3909,14 @@ table td[class*="col-"], table th[class*="col-"] {
 
 .table-responsive {
     overflow-x: auto;
-    min-height: .01%
+    min-height: .01%;
+    margin-bottom: 70px;
 }
 
 @media screen and (max-width: 767px) {
     .table-responsive {
         width: 100%;
-        margin-bottom: 15px;
+        margin-bottom: 50px;
         overflow-y: hidden;
         -ms-overflow-style: -ms-autohiding-scrollbar;
         border: 1px solid #ddd
@@ -5020,14 +5021,7 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
 }
 
 .list-group {
-    margin-bottom: 20px;
-    padding-left: 0
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-   .list-group {
-        margin: 0 -15px 20px;
-    }
+    padding: 60px 0 0;
 }
 
 .list-group-item {
@@ -5036,7 +5030,15 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
     padding: 10px 15px;
     margin-bottom: -1px;
     background-color: #fff;
-    border: 1px solid #ddd
+    border: 1px solid #ddd;
+    max-width: 200px;
+}
+
+@media (min-width: 992px) {
+    .list-group-item {
+        display: inline-block;
+        max-width: initial;
+    }
 }
 
 .list-group-item:first-child {
@@ -18541,7 +18543,7 @@ body.error-not_found .f-copy {
 }
 
 .contact-breadcrumb {
-    margin-bottom: 60px
+    margin-bottom: 30px
 }
 
 .contact-heading {
@@ -18554,7 +18556,7 @@ body.error-not_found .f-copy {
 
 .contact-item {
     padding-left: 40px;
-    margin-bottom: 35px
+    margin-bottom: 20px
 }
 
 .contact-item__title {
@@ -18572,14 +18574,14 @@ body.error-not_found .f-copy {
 
 .contact-item__list li {
     color: #222;
-    font-size: 30px;
+    font-size: 24px;
     line-height: 1;
     font-family: 'bodonicregular', sans-serif
 }
 
 .contact-item__address, .contact-item__link {
     color: #222;
-    font-size: 30px;
+    font-size: 24px;
     line-height: 1;
     font-family: 'bodonicregular', sans-serif;
     padding: 0 0 0 20px

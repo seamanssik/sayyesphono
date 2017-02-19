@@ -480,3 +480,7 @@
 .cart-item .text-wrap span {
     padding-bottom: 10px;
 }
+
+#column-right {
+  width: 100%;
+}
