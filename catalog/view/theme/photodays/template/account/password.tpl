@@ -1,4 +1,5 @@
 <?php echo $header; ?>
+<?php echo $column_right; ?>
   <div class="container">
     <div class="account-heading">
       <div class="h1"><?php echo $heading_title; ?></div>
@@ -10,7 +11,7 @@
     </div>
     <div class="row row-account">
       <div class="col-ed-8 col-lg-9 col-md-9 col-sm-9">
-        <div class="h3"><span>Изменить пароль</span></div>
+<!--        <div class="h3"><span>Изменить пароль</span></div>-->
         <br>
         <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" class="account-form form-horizontal" autocomplete="off">
           <div class="form-group account-form__group required">
@@ -42,7 +43,6 @@
         </form>
       </div>
       <div class="col-ed-2 visible-ed"></div>
-      <?php echo $column_right; ?>
     </div>
   </div>
 <?php echo $footer; ?>

@@ -10,7 +10,7 @@
     </div>
     <div class="row row-account">
       <div class="col-ed-8 col-lg-9 col-md-9 col-sm-9">
-        <div class="h3"><span>Фотосессии</span></div>
+<!--        <div class="h3"><span>Фотосессии</span></div>-->
         <br>
         <table class="table table-bordered account-form">
           <thead>

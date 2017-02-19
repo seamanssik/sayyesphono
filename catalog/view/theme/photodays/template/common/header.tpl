@@ -136,7 +136,6 @@
                             </ul>
                         </li>
 
-                        </li>
                         <li>
                             <?php if ($logged) { ?>
                                 <a href="<?php echo $wishlist; ?>" id="wishlist-total" class="h-menu__item">
@@ -270,12 +269,19 @@
                 <a href="/"><img src="/image/catalog/logo.png" data-rjs="/image/theme/2x/logo.png" alt="Photodays" width="132" height="auto"></a>
             </div>
             <ul class="h-fixed-menu right">
-                <li class="h-fixed-menu__item">
+                <li class="dropdown" style="margin-top: 10px">
                     <?php if ($logged) { ?>
-                        <a href="<?php echo $account; ?>"><?php echo $customer_name;?></a>
+                        <button class="dropdown-toggle n-dropdown-button" type="button" data-toggle="dropdown"><?php echo $customer_name;?></button>
                     <?php } else { ?>
-                        <a href="javascript: void(0);" data-toggle="modal" data-target="#modalSignIn">Вход</a>
+                        <a href="javascript: void(0);" data-toggle="modal" data-target="#modalSignIn" class="h-menu__item">Вход</a>
                     <?php } ?>
+                    <ul class="dropdown-menu dropdown-wrap">
+                        <li><a href="index.php?route=account/edit">Изменить данные</a></li>
+                        <li><a href="index.php?route=account/password">Изменить пароль</a></li>
+                        <li><a href="index.php?route=account/order">Мои заказы</a></li>
+                        <li><a href="index.php?route=account/download">Мои фото</a></li>
+                        <li><a href="index.php?route=account/logout">Выход</a></li>
+                    </ul>
                 </li>
                 <li class="h-fixed-menu__item">
                     <?php if ($logged) { ?>

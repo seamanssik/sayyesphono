@@ -13,7 +13,7 @@
         <?php if($already_approve == false) {?>
         <div class="account-mobile-confirm">Внимание, <a href="<?php echo $action_phone;?>">подтвердите Ваш номер телефона.</a></div>
         <?php };?>
-        <div class="h3"><span>Изменить персональные данные</span></div>
+<!--        <div class="h3"><span>Изменить персональные данные</span></div>-->
         <br>
         <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" class="account-form form-horizontal">
           <div class="form-group account-form__group required">

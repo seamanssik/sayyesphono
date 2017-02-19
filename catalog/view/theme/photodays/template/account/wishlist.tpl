@@ -22,7 +22,7 @@
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
     <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
-      <h3 class="h3"><span><?php echo $heading_title; ?></span></h3>
+<!--      <h3 class="h3"><span>--><?php //echo $heading_title; ?><!--</span></h3>-->
       <?php if ($products) { ?>
       <div class="table-responsive">
         <table class="table table-bordered table-hover wishlist-table">

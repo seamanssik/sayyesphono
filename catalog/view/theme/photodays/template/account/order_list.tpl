@@ -10,7 +10,7 @@
     </div>
     <div class="row row-account">
       <div class="col-ed-8 col-lg-9 col-md-9 col-sm-9">
-        <div class="h3"><span>Мои заказы</span></div>
+<!--        <div class="h3"><span>Мои заказы</span></div>-->
         <br>
         <?php if ($orders) { ?>
           <div class="order-group" id="accordion" role="tablist" aria-multiselectable="true">
