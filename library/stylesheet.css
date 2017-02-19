@@ -16089,7 +16089,7 @@ body.news-article .h1, body.news-article h1 {
 
 #d_quickcheckout .checkout-cart__delete:before {
     content: '';
-    /*background: url("/image/theme/sprite.png") no-repeat -180px -181px;*/
+    background: url("/image/theme/sprite.png") no-repeat -180px -181px;
     width: 12px;
     height: 12px;
     position: absolute;
@@ -16100,7 +16100,7 @@ body.news-article .h1, body.news-article h1 {
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
     #d_quickcheckout .checkout-cart__delete:before {
-        /*background: url("/image/theme/sprite-retina.png") no-repeat -180px -181px;*/
+        background: url("/image/theme/sprite-retina.png") no-repeat -180px -181px;
         background-size: 600px 600px
     }
 }
