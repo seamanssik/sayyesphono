@@ -54,8 +54,8 @@
                   <?php } ?>
                 </div>
                 <?php } ?></td>
-              <td class="text-center"><a href="<?php echo $product['href'];?>" class="btn btn-primary"><i class="fa fa-shopping-cart"></i></a>
-                <a href="<?php echo $product['remove']; ?>" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger remove"><i class="fa fa-times"></i></a></td>
+              <td class="text-center"><a href="<?php echo $product['href'];?>" class="btn btn-primary action-btn"><i class="fa fa-shopping-cart"></i></a>
+                <a href="<?php echo $product['remove']; ?>" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger action-btn"><i class="fa fa-times"></i></a></td>
             </tr>
             <?php } ?>
           </tbody>

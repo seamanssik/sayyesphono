@@ -362,13 +362,7 @@
   width: 100%;
 }
 
-.wishlist-table .remove {
-  position: absolute;
-  top: 0;
-  right: 5px;
-}
-
-.wishlist-table button[type="button"] {
+.wishlist-table .action-btn {
   -webkit-transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
           transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
   background-color: #bd9d53;
@@ -376,9 +370,25 @@
   border-radius: 50%;
   width: 30px;
   height: 30px;
+  display: inline-block;
+  color: #222;
+  position: relative;
 }
 
-.wishlist-table button[type="button"]:hover {
+.wishlist-table .action-btn:hover {
+  color: #222;
+}
+
+.wishlist-table .action-btn i {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.wishlist-table .action-btn:hover {
   -webkit-transform: translateY(-2px);
       -ms-transform: translateY(-2px);
           transform: translateY(-2px);
