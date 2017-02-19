@@ -144,9 +144,8 @@
                                 <a href="account/login" class="h-menu__item">
                             <?php } ?>
                                 <img src="image/catalog/icons/wishlist.png" alt="" width="40px" height="40px">
-                                    <?php if($wishlist_total_count > 0 ){;?>
-                                <span class="wish-count"><?php echo $wishlist_total_count; ?></span>
-                                    <?php };?>
+
+                                <span class="wish-count <?php if(empty($wishlist_total_count)){ echo ' hidden'; }; ?>" ><?php echo $wishlist_total_count; ?></span>
                             </a>
                         </li>
                         <li>
@@ -285,9 +284,7 @@
                         <a href="account/login" class="h-menu__item">
                             <?php } ?>
                             <img src="image/catalog/icons/wishlist.png" alt="" width="40px" height="40px">
-                            <?php if($wishlist_total_count > 0 ){;?>
-                                <span class="wish-count"><?php echo $wishlist_total_count; ?></span>
-                            <?php };?>
+                            <span class="wish-count <?php if(empty($wishlist_total_count)){ echo ' hidden'; }; ?>" ><?php echo $wishlist_total_count; ?></span>
                         </a>
                 </li>
                 <li class="h-fixed-menu__item">

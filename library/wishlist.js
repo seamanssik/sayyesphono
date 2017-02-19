@@ -15,6 +15,7 @@ var wishlist = {
 
                 wishCount = json['total'].replace( /[^\d.]/g, '' );
                 $('#wishlist-total span').html(wishCount);
+                $('#wishlist-total span').removeClass('hidden');
             },
             error: function(xhr, ajaxOptions, thrownError) {
                 alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
