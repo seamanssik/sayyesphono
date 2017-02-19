@@ -6497,7 +6497,7 @@ select.form-control, textarea.form-control, input[type="text"].form-control, inp
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    background: #222 url("/image/theme/heading-bg.jpg") no-repeat 50% 50%;
+    /*background: #222 url("/image/theme/heading-bg.jpg") no-repeat 50% 50%;*/
     height: 330px;
     margin-bottom: 70px
 }
@@ -6513,11 +6513,11 @@ select.form-control, textarea.form-control, input[type="text"].form-control, inp
 }
 
 .heading-background .h1 {
-    color: #fff
+    color: #000
 }
 
 .heading-background .h1:before, .heading-background .h1 span:before {
-    color: #fff
+    color: #000
 }
 
 .heading-background .breadcrumb {
@@ -6525,7 +6525,7 @@ select.form-control, textarea.form-control, input[type="text"].form-control, inp
 }
 
 .heading-background .breadcrumb > li a {
-    color: #eee
+    color: #000
 }
 
 .heading-background .breadcrumb > li + li:before {
@@ -13188,7 +13188,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
     left: 0;
     right: 0;
     height: 530px;
-    background: #222 url("/image/theme/heading-bg.jpg") repeat 50% 50%;
+    /*background: #222 url("/image/theme/heading-bg.jpg") repeat 50% 50%;*/
     margin: -265px 0 0
 }
 
@@ -13918,7 +13918,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 @media (min-width: 768px) and (max-width: 991px) {
     .about-welcome {
         margin-bottom: 80px;
-        background: #222 url(/image/theme/heading-bg.jpg) repeat 50% 50%
+        /*background: #222 url(/image/theme/heading-bg.jpg) repeat 50% 50%*/
     }
 
     .about-welcome__container {
@@ -14078,7 +14078,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
     .about-welcome {
         padding: 15px 0;
         margin: 0 0 30px;
-        background: #222 url(/image/theme/heading-bg.jpg) repeat 50% 50%
+        /*background: #222 url(/image/theme/heading-bg.jpg) repeat 50% 50%*/
     }
 
     .about-welcome__title {
