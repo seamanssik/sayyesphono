@@ -9283,9 +9283,10 @@ body:not(.common-home) .n-container {
     -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
@@ -9320,7 +9321,11 @@ body:not(.common-home) .n-container {
 }
 
 .h-fixed-menu.left > li {
-    width: 50%;
+    margin-right: 15px;
+}
+
+.h-fixed-menu.left > li:last-child {
+    margin-right: 0;
 }
 
 .h-fixed-menu.right > li {
@@ -9409,6 +9414,9 @@ body:not(.common-home) .n-container {
     .h-fixed-menu.left {
         width: calc(50% - 139px);
         padding-right: 85px;
+    }
+    .h-fixed-menu.left > li {
+        margin-right: 30px;
     }
     .h-fixed-menu.right {
          padding-left: 85px;
