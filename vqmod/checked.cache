@@ -493,3 +493,7 @@ catalog\language\ru-ru\extension\module\faq_testimonial.php
 catalog\model\fido\faq_testimonial.php
 catalog\view\theme\photodays\template\extension\module\faq_testimonial.tpl
 catalog\view\theme\photodays\template\information\faq.tpl
+catalog\controller\account\password.php
+catalog\language\en-gb\account\password.php
+catalog\language\ru-ru\account\password.php
+catalog\view\theme\photodays\template\account\password.tpl
