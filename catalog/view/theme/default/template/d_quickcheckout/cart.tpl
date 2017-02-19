@@ -30,7 +30,7 @@
 					<div class="row">
 						<div class="col-sm-3 col-xs-4">
 							<div class="checkout-cart__figure qc-quantity">
-								<button class="delete checkout-cart__delete" data-product="<%= product.key %>"><i class="fa fa-times"></i></button>
+								<button class="delete checkout-cart__delete" data-product="<%= product.key %>"></button>
 								<a href="<%= product.href %>" data-container="body" data-toggle="popover" data-placement="top" data-content='<img src="<%= product.image %>" />' data-trigger="hover">
 									<img src="<%= product.thumb %>" class="img-responsive" alt="<%= product.name %>">
 								</a>

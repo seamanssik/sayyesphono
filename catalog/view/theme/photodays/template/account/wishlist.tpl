@@ -25,7 +25,7 @@
 <!--    --><?php //} else { ?>
 <!--    --><?php //$class = 'col-sm-12'; ?>
 <!--    --><?php //} ?>
-    <div id="content" class="col-sm-12"><?php echo $content_top; ?>
+    <div id="content" class="col-sm-9"><?php echo $content_top; ?>
 <!--      <h3 class="h3"><span>--><?php //echo $heading_title; ?><!--</span></h3>-->
       <?php if ($products) { ?>
       <div class="table-responsive">

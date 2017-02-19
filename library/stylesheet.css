@@ -16122,8 +16122,8 @@ body.news-article .h1, body.news-article h1 {
 }
 
 #d_quickcheckout .checkout-cart__delete:hover, #d_quickcheckout .checkout-cart__delete:focus {
-    background: #e44545;
-    border: 1px solid #bf2121
+    background: #bd9d53;
+    border: 1px solid #bd9d53
 }
 
 #d_quickcheckout .checkout-cart__delete:hover:before, #d_quickcheckout .checkout-cart__delete:focus:before {
