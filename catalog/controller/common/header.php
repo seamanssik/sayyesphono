@@ -189,7 +189,40 @@ class ControllerCommonHeader extends Controller {
 
 		$data['action_phone'] = $this->url->link('account/check_phone', '', true);
 
+		//cart
+		$data['cart_total_money'] = '';
+		foreach ($this->cart->getProducts() as $product) {
+			if ($product['image']) {
+				$image = $this->model_tool_image->cropsize($product['image'], 195, 280);
+			} else {
+				$image = '';
+			}
+			
+			
+			// Display prices
+			if ($this->customer->isLogged() || !$this->config->get('config_customer_price')) {
+				$unit_price = $this->tax->calculate($product['price'], $product['tax_class_id'], $this->config->get('config_tax'));
 
+				$price = $this->currency->format($unit_price, $this->session->data['currency']);
+				$total = $this->currency->format($unit_price * $product['quantity'], $this->session->data['currency']);
+			} else {
+				$price = false;
+				$total = false;
+			}
+			$data['cart_total_money'] += $total;
+			$data['cart_products'][] = array(
+				'cart_id'   => $product['cart_id'],
+				'thumb'     => $image,
+				'name'      => $product['name'],
+				'model'     => $product['model'],
+				'quantity'  => $product['quantity'],
+				'price'     => $price,
+				'total'     => $total,
+				'href'      => $this->url->link('product/product', 'product_id=' . $product['product_id'])
+			);
+		}
+
+		$data['cart_total_money'] = $this->currency->format($data['cart_total_money'], $this->session->data['currency']);
 
 		// Wishlist
 		$this->load->model('account/wishlist');

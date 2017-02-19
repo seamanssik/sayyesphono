@@ -30,6 +30,10 @@ $( document ).ready(function() {
    $( ".account-dropdown-init" ).on( "click", function() {
         $( ".account-dropdown-init" ).parent().toggleClass('active');
     });
+
+    $('#modalSuccess').on('hidden.bs.modal', function () {
+        location.reload();
+    })
 });
 
 

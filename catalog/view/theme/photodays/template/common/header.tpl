@@ -155,50 +155,27 @@
                                 <span class="<?php if (!$total_cart_count) { ?> hidden<?php } ?> cart-count" data-toggle="cart-total-count"><?php echo $total_cart_count; ?></span>
                             </button>
                             <ul class="dropdown-menu checkout-drop">
-                                <li>
-                                    <a href="#">
-                                        <div class="cart-item">
-                                            <div class="img-holder">
-                                                <img src="/image/cache/catalog/showroom/bloomy/LEO_4638-cr-195x280.jpg" alt="image description">
+                                <?php if(isset($cart_products)) { ?>
+                                    <?php foreach ($cart_products as $item) { ?>
+                                    <li>
+                                        <a href="<?php echo $item['href']; ?>">
+                                            <div class="cart-item">
+                                                <div class="img-holder">
+                                                    <img src="<?php echo $item['thumb']; ?>" alt="image description">
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <strong><?php echo $item['name']; ?></strong>
+                                                    <div class="price text-right"><?php echo $item['quantity']; ?>шт x <?php echo $item['price']; ?></div>
+                                                </div>
                                             </div>
-                                            <div class="text-wrap">
-                                                <strong>Item name</strong>
-                                                <span>Description</span>
-                                                <div class="price text-right">1 item 999uah</div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="cart-item">
-                                            <div class="img-holder">
-                                                <img src="/image/cache/catalog/showroom/bloomy/LEO_4638-cr-195x280.jpg" alt="image description">
-                                            </div>
-                                            <div class="text-wrap">
-                                                <strong>Item name</strong>
-                                                <span>Description</span>
-                                                <div class="price text-right">1 item 999uah</div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="cart-item">
-                                            <div class="img-holder">
-                                                <img src="/image/cache/catalog/showroom/bloomy/LEO_4638-cr-195x280.jpg" alt="image description">
-                                            </div>
-                                            <div class="text-wrap">
-                                                <strong>Item name</strong>
-                                                <span>Description</span>
-                                                <div class="price text-right">1 item 999uah</div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="result text-right"><span>Итого: 12345uah</span></li>
-                                <li class="confirm"><button class="btn">Оформить заказ</button></li>
+                                        </a>
+                                    </li>
+                                    <?php };?>
+                                <li class="result text-right"><span>Итого: <?php if(!empty($cart_total_money)) { echo $cart_total_money ;};?></span></li>
+                                <li class="confirm"><a href="/checkout" class="btn">Оформить заказ</a></li>
+                                <?php }else{ ?>
+                                    <li>Корзина пуста</li>
+                                <?php };?>
                             </ul>
                             <span class="cart-total<?php if (!$total_cart) { ?> hidden<?php } ?>" data-toggle="cart-total"><?php echo $total_cart; ?></span>
                         </li>
@@ -314,8 +291,33 @@
                         </a>
                 </li>
                 <li class="h-fixed-menu__item">
-                    <a href="<?php echo $checkout; ?>"  class="h-menu__item"><img src="image/catalog/icons/cart.png" alt="" width="40px" height="40px">
-                        <span class="<?php if (!$total_cart_count) { ?> hidden<?php } ?> cart-count" data-toggle="cart-total-count-2"><?php echo $total_cart_count; ?></span></a>
+                    <button class="btn btn-primary dropdown-toggle h-menu__item" type="button" data-toggle="dropdown">
+                        <img src="image/catalog/icons/cart.png" alt="" width="40px" height="40px">
+                        <span class="<?php if (!$total_cart_count) { ?> hidden<?php } ?> cart-count" data-toggle="cart-total-count-2"><?php echo $total_cart_count; ?></span>
+                    </button>
+                    <ul class="dropdown-menu checkout-drop">
+                        <?php if(isset($cart_products)) { ?>
+                            <?php foreach ($cart_products as $item) { ?>
+                                <li>
+                                    <a href="<?php echo $item['href']; ?>">
+                                        <div class="cart-item">
+                                            <div class="img-holder">
+                                                <img src="<?php echo $item['thumb']; ?>" alt="image description">
+                                            </div>
+                                            <div class="text-wrap">
+                                                <strong><?php echo $item['name']; ?></strong>
+                                                <div class="price text-right"><?php echo $item['quantity']; ?>шт x <?php echo $item['price']; ?></div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            <?php };?>
+                            <li class="result text-right"><span>Итого: <?php if(!empty($cart_total_money)) { echo $cart_total_money ;};?></span></li>
+                            <li class="confirm"><a href="/checkout" class="btn">Оформить заказ</a></li>
+                        <?php }else{ ?>
+                            <li>Корзина пуста</li>
+                        <?php };?>
+                    </ul>
                 </li>
             </ul>
         </div>
