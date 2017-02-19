@@ -29,10 +29,10 @@
               <div class="col-ed-<?php echo ($legend['image']) ? '5' : '12'; ?> col-lg-12">
                 <div class="cd-legend-description">
                   <div class="cd-legend-description__year"><span><?php echo $legend['year']; ?></span></div>
-                  <?php if(!$detect->isMobile()) {?>
-                  <div class="cd-legend-description__info"><?php echo $legend['description']; ?></div>
+                  <?php if($detect->isMobile()) {?>
+                    <div>zxcvzxczcxzczxczxc</div>
                   <?php } else {?>
-                      <div>zxcvzxczcxzczxczxc</div>
+                    <div class="cd-legend-description__info"><?php echo $legend['description']; ?></div>
                   <?php };?>
                 </div>
               </div>
