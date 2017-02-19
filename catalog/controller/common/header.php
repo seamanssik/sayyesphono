@@ -115,7 +115,7 @@ class ControllerCommonHeader extends Controller {
 		}
 
 
-		if(isset($this->request->get['route']) && $this->request->get['route'] != 'account/check_phone'){
+		if(!isset($this->request->get['route']) || $this->request->get['route'] != 'account/check_phone'){
 			unset($this->session->data['already_send']);
 		}
 
