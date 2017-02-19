@@ -54,7 +54,7 @@
                   <?php } ?>
                 </div>
                 <?php } ?></td>
-              <td class="text-center"><button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>');" data-toggle="tooltip" title="<?php echo $button_cart; ?>" class="btn btn-primary"><i class="fa fa-shopping-cart"></i></button>
+              <td class="text-center"><a href="<?php echo $product['href'];?>" class="btn btn-primary"><i class="fa fa-shopping-cart"></i></a>
                 <a href="<?php echo $product['remove']; ?>" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger remove"><i class="fa fa-times"></i></a></td>
             </tr>
             <?php } ?>
