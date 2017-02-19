@@ -89,6 +89,18 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="modalSuccessAccount" tabindex="-1" role="dialog" aria-labelledby="modalSuccessAccount">
+    <div class="modal-dialog modalSuccess-dialog" role="document">
+        <div class="modal-content">
+            <div class="modalSuccess-title">
+                <span>Поздравляем!</span>
+                <button type="button" class="modalSuccess-close close" data-dismiss="modal" aria-label="Close"></button></div>
+            <div class="modalSuccess-text">Ваш аккаунт создан</div>
+        </div>
+    </div>
+</div>
+
 <script src="/javascript/jquery/jquery-ui-accordion.min.js?v=0.0.9" type="text/javascript"></script>
 <script src="/javascript/skrollr.min.js?v=0.0.9" type="text/javascript"></script>
 <script src="/app/js/dropdown.js?v=0.0.9" type="text/javascript"></script>

@@ -19,8 +19,8 @@ class ControllerAccountCheckPhone extends Controller
         $data['short_code'] = $short_code;
 
         if(!isset($this->session->data['already_send'])){
-            $sms = new SMS();
-            $sms->send($customer_data['telephone'], $short_code);
+//            $sms = new SMS();
+//            $sms->send($customer_data['telephone'], $short_code);
         }
         $this->session->data['already_send'] = true;
 
@@ -42,12 +42,20 @@ class ControllerAccountCheckPhone extends Controller
         $this->load->model('account/customer');
         $customer_data = $this->model_account_customer->getCustomer($this->customer->getId());
         $sms_code = $customer_data['sms_code'];
-
         if($this->request->post['validation_code'] == $sms_code){
             $this->db->query("UPDATE " . DB_PREFIX . "customer SET phone_approved = '" . 1 . "' WHERE customer_id = '" . (int)$this->customer->getId() . "'");
-            $this->response->redirect($this->url->link('account/success'));
+            $respoonse = array(
+                'answer' => 'done'
+            );
+//            $this->response->redirect($this->url->link('common/home'));
         }else{
-            $this->response->redirect($this->url->link('account/edit'));
+            $respoonse = array(
+                'answer' => 'fail'
+            );
+//            $this->response->redirect($this->url->link('account/edit'));
         }
+
+        $this->response->addHeader('Content-Type: application/json');
+        $this->response->setOutput(json_encode($respoonse));
     }
 }
