@@ -1,5 +1,4 @@
 <?php echo $header; ?>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.9/jquery.mask.min.js"></script>
 <div class="heading-form">
   <div class="container heading-form__container">
     <?php if ($error_warning) { ?>

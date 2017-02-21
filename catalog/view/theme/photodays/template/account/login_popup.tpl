@@ -23,6 +23,11 @@
                                     if(theEvent.preventDefault) theEvent.preventDefault();
                                 }
                             }
+
+                            $('#input-email').mask('+7 (999) 999-99-99');
+                            $(document).ready(function(){
+                                $('#input-email').mask('+7 (999) 999-99-99');
+                            });
                         </script>
                     </div>
                     <div class="form-group popup-group">
