@@ -1,9 +1,9 @@
 <?php echo $header; ?>
 <div class="heading-form">
   <div class="container heading-form__container">
-    <?php if ($error_warning) { ?>
-      <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> <?php echo $error_warning; ?></div>
-    <?php } ?>
+<!--    --><?php //if ($error_warning) { ?>
+<!--      <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> --><?php //echo $error_warning; ?><!--</div>-->
+<!--    --><?php //} ?>
     <form action="<?php echo $action; ?>" id="form-register" autocomplete="off" method="post" enctype="multipart/form-data" class="form-horizontal">
 
       <legend>Заполните, пожалуйста Ваши данные:</legend>

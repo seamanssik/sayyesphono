@@ -220,6 +220,7 @@
                             <li><a href="/legend">Легенда</a></li>
                             <li><a href="/about_us">О нас</a></li>
                             <li><a href="/faq">FAQ</a></li>
+                            <li><a href="/reviews">Отзывы</a></li>
                         </ul>
                     </li>
                     <li class="n-menu__item">

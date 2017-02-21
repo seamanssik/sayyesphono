@@ -10,12 +10,12 @@
     </div>
     <div class="row row-account">
       <div class="col-lg-10 col-md-9 col-sm-8">
-        <?php if ($success) { ?>
-          <div class="alert alert-success"><i class="fa fa-check-circle"></i> <?php echo $success; ?></div>
-        <?php } ?>
-        <?php if ($error_warning) { ?>
-          <div class="alert alert-warning"><i class="fa fa-exclamation-circle"></i> <?php echo $error_warning; ?></div>
-        <?php } ?>
+<!--        --><?php //if ($success) { ?>
+<!--          <div class="alert alert-success"><i class="fa fa-check-circle"></i> --><?php //echo $success; ?><!--</div>-->
+<!--        --><?php //} ?>
+<!--        --><?php //if ($error_warning) { ?>
+<!--          <div class="alert alert-warning"><i class="fa fa-exclamation-circle"></i> --><?php //echo $error_warning; ?><!--</div>-->
+<!--        --><?php //} ?>
         <?php if ($addresses) { ?>
           <div class="table-responsive">
             <table class="table table-bordered table-hover">

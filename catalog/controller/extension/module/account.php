@@ -51,6 +51,7 @@ class ControllerExtensionModuleAccount extends Controller {
 			'address' 	=> ($this->request->get['route'] == 'account/address' || $this->request->get['route'] == 'account/address/edit') ? 'account-nav__active' : false,
 			'order' 	=> ($this->request->get['route'] == 'account/order') ? 'account-nav__active' : false,
 			'download' 	=> ($this->request->get['route'] == 'account/download') ? 'account-nav__active' : false,
+			'wishlist' 	=> ($this->request->get['route'] == 'account/wishlist') ? 'account-nav__active' : false,
 		);
 
 		return $this->load->view('extension/module/account', $data);

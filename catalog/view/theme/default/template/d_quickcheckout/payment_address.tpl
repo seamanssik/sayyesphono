@@ -34,8 +34,7 @@
 						<div class="radio">
 							<label for="payment_address_exists_<%= address.address_id %>">  
 				            	<input type="radio" name="payment_address[address_id]" class="payment-address" value="<%= address.address_id %>" id="payment_address_exists_<%= address.address_id %>" <%= address.address_id == model.payment_address.address_id ? 'checked="checked"' : '' %> data-refresh="2" autocomplete='off' /> 
-				                <span class="text"><%= address.firstname %> <%= address.lastname %>,
-				                <%= address.address_1 %>, <%= address.city %>, <%= address.zone %>, <%= address.country %></span>
+				                <span class="text"><%= address.firstname %> <%= address.lastname %>, <%= address.zone %>, <%= address.country %></span>
 				            </label>
 			            </div>
 			            <% }) %>
