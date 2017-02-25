@@ -473,6 +473,18 @@ class ControllerSettingSetting extends Controller {
 			$data['config_email'] = $this->config->get('config_email');
 		}
 
+		if (isset($this->request->post['config_reg_email'])) {
+			$data['config_reg_email'] = $this->request->post['config_reg_email'];
+		} else {
+			$data['config_reg_email'] = $this->config->get('config_reg_email');
+		}
+
+		if (isset($this->request->post['config_sale_email'])) {
+			$data['config_sale_email'] = $this->request->post['config_sale_email'];
+		} else {
+			$data['config_sale_email'] = $this->config->get('config_sale_email');
+		}
+
 		if (isset($this->request->post['config_telephone'])) {
 			$data['config_telephone'] = $this->request->post['config_telephone'];
 		} else {
