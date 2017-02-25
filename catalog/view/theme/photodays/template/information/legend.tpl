@@ -30,7 +30,8 @@
                 <div class="cd-legend-description">
                   <div class="cd-legend-description__year"><span><?php echo $legend['year']; ?></span></div>
                   <?php if($detect->isMobile() && !$detect->isTablet()) {?>
-                    <div>zxcvzxczcxzczxczxc</div>
+                    <div id="cd-legend-description__info-<?php echo $legend['legend_id']; ?>" class="cd-legend-description__info" style="height:300px;overflow:hidden;"><?php echo $legend['description']; ?></div>
+                    <span data-toggle="openCloseText" data-element="cd-legend-description__info-<?php echo $legend['legend_id']; ?>" data-short="Скрыть" data-action="Читать дальше" data-height="300"><span>Читать дальше</span></>
                   <?php } else {?>
                     <div class="cd-legend-description__info"><?php echo $legend['description']; ?></div>
                   <?php };?>
