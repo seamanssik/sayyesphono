@@ -43,7 +43,6 @@
                         <li class="f-contact__item"><a href="mailto:<?php echo trim(str_replace(' ', '', $email)); ?>"><?php echo $email; ?></a></li>
                     </ul>
                     <span class="f-copy">&copy; SAY YES! PHOTODAYS <?php echo date('Y'); ?></span>
-                    <span class="f-art">dev.saz-ART</span>
                 </div>
             </div>
         </div>

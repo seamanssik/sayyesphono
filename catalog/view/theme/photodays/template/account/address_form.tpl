@@ -16,14 +16,14 @@
 <!--            <div class="h3"><span>Изменить персональные данные</span></div>-->
             <br>
             <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" class="account-form form-horizontal">
-                <?php if ($success) { ?>
-                    <div class="alert alert-success"><i class="fa fa-check-circle"></i> <?php echo $success; ?></div>
-                    <br>
-                <?php } ?>
-                <?php if ($error_warning) { ?>
-                    <div class="alert alert-warning"><i class="fa fa-exclamation-circle"></i> <?php echo $error_warning; ?></div>
-                    <br>
-                <?php } ?>
+<!--                --><?php //if ($success) { ?>
+<!--                    <div class="alert alert-success"><i class="fa fa-check-circle"></i> --><?php //echo $success; ?><!--</div>-->
+<!--                    <br>-->
+<!--                --><?php //} ?>
+<!--                --><?php //if ($error_warning) { ?>
+<!--                    <div class="alert alert-warning"><i class="fa fa-exclamation-circle"></i> --><?php //echo $error_warning; ?><!--</div>-->
+<!--                    <br>-->
+<!--                --><?php //} ?>
                 <input type="hidden" name="current_zone_id" value="<?php echo $zone_id; ?>" />
                 <input type="hidden" name="company" value="<?php echo $company; ?>" />
                 <input type="hidden" name="address_2" value="<?php echo $address_2; ?>" />

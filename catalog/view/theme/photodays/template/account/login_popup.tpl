@@ -23,6 +23,11 @@
                                     if(theEvent.preventDefault) theEvent.preventDefault();
                                 }
                             }
+
+                            $('#input-email').mask('+38 (999) 999-99-99');
+                            $(document).ready(function(){
+                                $('#input-email').mask('+38 (999) 999-99-99');
+                            });
                         </script>
                     </div>
                     <div class="form-group popup-group">
@@ -34,7 +39,7 @@
                     <div class="buttons popup-buttons">
                         <button class="popup-button" type="submit"><span><?php echo $button_login; ?></span></button>
                     </div>
-                    <script src="//ulogin.ru/js/ulogin.js"></script><div id="uLogin_6ffbf874" data-uloginid="6ffbf874"></div>
+<!--                    <script src="//ulogin.ru/js/ulogin.js"></script><div id="uLogin_6ffbf874" data-uloginid="6ffbf874"></div>-->
                     <div class="links clearfix">
                         <div class="pull-left">
                             <a href="<?php echo $forgotten; ?>" class="popup-link">Забыли пароль?</a>

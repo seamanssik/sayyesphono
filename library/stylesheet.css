@@ -13198,7 +13198,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
     left: 0;
     right: 0;
     height: 530px;
-    /*background: #222 url("/image/theme/heading-bg.jpg") repeat 50% 50%;*/
+    background: #222 url("/image/theme/heading-bg.jpg") repeat 50% 50%;
     margin: -265px 0 0
 }
 
@@ -14319,16 +14319,16 @@ a.account-nav__link:hover, a.account-nav__link:focus {
 a.account-nav__active {
     color: #fff;
     background: #e3ca7e;
-    padding: 12px 15px 11px;
+    /*padding: 12px 15px 11px;*/
     margin: 0 0 -1px;
-    border-width: 0 1px;
+    border-width: 1px;
     position: relative;
     z-index: 9
 }
 
 a.account-nav__active:first-child {
     border-top-width: 1px;
-    padding: 11px 15px
+    /*padding: 11px 15px*/
 }
 
 a.account-nav__active:hover, a.account-nav__active:focus {

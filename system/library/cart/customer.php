@@ -73,6 +73,8 @@ class Customer {
 	}
 
 	public function loginByPhone($phone, $password, $override = false) {
+		$phone = preg_replace( '/[^0-9]/', '', $phone );
+
 		if ($override) {
 			$customer_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "customer WHERE LOWER(telephone) = '" . $this->db->escape($phone) . "' AND status = '1'");
 		} else {

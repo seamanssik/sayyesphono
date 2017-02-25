@@ -69,21 +69,21 @@
 
           <div class="form-group account-form__group required">
             <div class="col-sm-12">
-              <label class="control-label account-form__label" for="input-vk">Ваш профайл VKontakte</label>
+              <label class="control-label account-form__label" for="input-vk">VKontakte</label>
               <input type="text" name="vk" value="<?php echo $vk; ?>" placeholder="" id="input-vk" class="form-control account-form__control" />
             </div>
           </div>
 
           <div class="form-group account-form__group required">
             <div class="col-sm-12">
-              <label class="control-label account-form__label" for="input-fb">Ваш профайл Facebook</label>
+              <label class="control-label account-form__label" for="input-fb">Facebook</label>
               <input type="text" name="fb" value="<?php echo $fb; ?>" placeholder="" id="input-fb" class="form-control account-form__control" />
             </div>
           </div>
 
           <div class="form-group account-form__group required">
             <div class="col-sm-12">
-              <label class="control-label account-form__label" for="input-insta">Ваш профайл Instagram</label>
+              <label class="control-label account-form__label" for="input-insta">Instagram</label>
               <input type="text" name="insta" value="<?php echo $insta; ?>" placeholder="" id="input-insta" class="form-control account-form__control" />
             </div>
           </div>

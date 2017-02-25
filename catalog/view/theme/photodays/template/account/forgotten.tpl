@@ -1,9 +1,9 @@
 <?php echo $header; ?>
   <div class="heading-form">
     <div class="container heading-form__container">
-      <?php if ($error_warning) { ?>
-        <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> <?php echo $error_warning; ?></div>
-      <?php } ?>
+<!--      --><?php //if ($error_warning) { ?>
+<!--        <div>--><?php //echo $error_warning; ?><!--</div>-->
+<!--      --><?php //} ?>
       <form action="<?php echo $action; ?>" id="form-login" method="post" enctype="multipart/form-data" class="form-horizontal" autocomplete="off">
         <legend><?php echo $text_email; ?></legend>
         <div class="form-group js-animate">

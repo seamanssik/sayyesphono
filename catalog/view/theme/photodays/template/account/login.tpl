@@ -14,7 +14,7 @@
             <div class="form-group js-animate">
               <label class="col-sm-12 control-label" for="input-email">Телефон:</label>
               <div class="col-sm-12">
-                <input type="text" name="email" value="<?php echo $email; ?>" placeholder="+7XXXXXXXXX" id="input-email" onkeypress='validate(event)'/>
+                <input type="text" name="email" value="<?php echo $email; ?>" placeholder="+7XXXXXXXXX" id="input-email" class="classForMask" onkeypress='validate(event)'/>
                 <script>
                   function validate(evt) {
                     var theEvent = evt || window.event;
@@ -26,6 +26,11 @@
                       if(theEvent.preventDefault) theEvent.preventDefault();
                     }
                   }
+                  
+                  $('.classForMask').mask('+38 (999) 999-99-99');
+                  $(document).ready(function(){
+                    $('.classForMask').mask('+38 (999) 999-99-99');
+                  });
                 </script>
               </div>
             </div>

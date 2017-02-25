@@ -1,10 +1,9 @@
 <?php echo $header; ?>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.9/jquery.mask.min.js"></script>
 <div class="heading-form">
   <div class="container heading-form__container">
-    <?php if ($error_warning) { ?>
-      <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> <?php echo $error_warning; ?></div>
-    <?php } ?>
+<!--    --><?php //if ($error_warning) { ?>
+<!--      <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> --><?php //echo $error_warning; ?><!--</div>-->
+<!--    --><?php //} ?>
     <form action="<?php echo $action; ?>" id="form-register" autocomplete="off" method="post" enctype="multipart/form-data" class="form-horizontal">
 
       <legend>Заполните, пожалуйста Ваши данные:</legend>
@@ -49,10 +48,10 @@
             </div>
           </div>
           <script>
-//            $('#input-telephone').mask('+7 (999) 999-99-99');
-//            $(document).ready(function(){
-//              $('#input-telephone').mask('+7 (999) 999-99-99');
-//            });
+            $('#input-telephone').mask('+7 (999) 999-99-99');
+            $(document).ready(function(){
+              $('#input-telephone').mask('+7 (999) 999-99-99');
+            });
           </script>
         </div>
       </div>
@@ -149,7 +148,7 @@
         <button type="submit" class="btn__primary"><span>Зарегистрироваться</span></button>
       </div>
     </form>
-    <script src="//ulogin.ru/js/ulogin.js"></script><div id="uLogin_41f9c13f" data-uloginid="41f9c13f"></div>
+<!--    <script src="//ulogin.ru/js/ulogin.js"></script><div id="uLogin_41f9c13f" data-uloginid="41f9c13f"></div>-->
   </div>
 </div>
 <?php echo $footer; ?>
