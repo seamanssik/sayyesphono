@@ -29,10 +29,10 @@
         <div class="contact-item">
           <div class="contact-item__title js-animate"><div class="c-text-masked"><span>— <?php echo $text_social; ?>:</span></div></div>
           <ul class="contact-item__social">
-            <?php if ($link_in) { ?><li><span><a href="<?php echo $link_in; ?>" target="_blank" class="contact-social__item contact-social__int">Photodays в Instagram</a></span></li><?php } ?>
-            <?php if ($link_vk) { ?><li><span><a href="<?php echo $link_vk; ?>" target="_blank" class="contact-social__item contact-social__vk">Photodays Вконтакте</a></span></li><?php } ?>
-            <?php if ($link_fb) { ?><li><span><a href="<?php echo $link_fb; ?>" target="_blank" class="contact-social__item contact-social__fb">Photodays в Facebook</a></span></li><?php } ?>
-            <?php if ($link_you) { ?><li><span><a href="<?php echo $link_you; ?>" target="_blank" class="contact-social__item contact-social__you">Смотрите Photodays на youtube</a></span></li><?php } ?>
+            <?php if ($link_in) { ?><li><a href="<?php echo $link_in; ?>" target="_blank" class="contact-social__item icon-instagram"></a></li><?php } ?>
+            <?php if ($link_vk) { ?><li><a href="<?php echo $link_vk; ?>" target="_blank" class="contact-social__item icon-vk"></a></li><?php } ?>
+            <?php if ($link_fb) { ?><li><a href="<?php echo $link_fb; ?>" target="_blank" class="contact-social__item icon-facebook"></a></li><?php } ?>
+            <?php if ($link_you) { ?><li><a href="<?php echo $link_you; ?>" target="_blank" class="contact-social__item icon-youtube"></a></li><?php } ?>
           </ul>
         </div>
       </div>
