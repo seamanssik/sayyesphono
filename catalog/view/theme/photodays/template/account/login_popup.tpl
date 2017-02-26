@@ -24,9 +24,9 @@
                                 }
                             }
 
-                            $('#input-email').mask('+38 (999) 999-99-99');
+                            $('#input-email').mask('+7 (999) 999-99-99');
                             $(document).ready(function(){
-                                $('#input-email').mask('+38 (999) 999-99-99');
+                                $('#input-email').mask('+7 (999) 999-99-99');
                             });
                         </script>
                     </div>
