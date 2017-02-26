@@ -105,6 +105,7 @@ class ModelAccountCustomer extends Model {
 
 		if(!empty($data['bday-year']) && !empty($data['bday-month']) && !empty($data['bday-day'])){
 			$bdate = $data['bday-year'] . '-' . $data['bday-month'] . '-' . $data['bday-day'];
+
 			$this->db->query("UPDATE " . DB_PREFIX . "customer SET bdate = '" . $bdate . "' WHERE customer_id = '" . (int)$customer_id . "'");
 		}
 

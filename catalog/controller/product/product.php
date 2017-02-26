@@ -41,7 +41,11 @@ class ControllerProductProduct extends Controller {
 				if ($path_true) {
 					$cat_path = $path_true;
 				} else {
-					$cat_path = $category_info['category_id'];
+					if(isset($category_info['category_id'])){
+						$cat_path = $category_info['category_id'];
+					}else{
+						$cat_path = '';
+					}
 				}
 
 				if ($category_info) {

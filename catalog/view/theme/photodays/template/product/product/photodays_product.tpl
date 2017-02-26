@@ -65,16 +65,15 @@
                 <div class="photodaysItem-description__description">
                     <div id="descriptionOverflow" style="height: 154px;overflow: hidden;">
                         <div>
-                            <?php $pos = strpos($photodays['description'], ' ', 500);
-                            echo substr($photodays['description'], 0, $pos ) ;?>
-<!--                            --><?php //echo $photodays['description']; ?>
+<!--                            --><?php //echo substr($photodays['description'], 0, 500 );?>
+                            <?php echo mb_substr($photodays['description'], 0, strpos($photodays['description'], ' ', 500));?>
                         </div>
                     </div>
                     <div class="clearfix">
                         <a href="javascript: void(0);" id="moreButton"><span id="hide-button-text">Показать больше</span></a>
 <!--                        <a href="javascript: void(0);" data-toggle="openCloseText" data-element="descriptionOverflow" data-short="Скрыть" data-action="Читать дальше" data-height="154"><span>Читать дальше</span></a>-->
                         <?php if ($attribute_groups): ?><div class="pull-right">
-                            <a href="javascript: void(0);" data-toggle="modal" data-target="#modalInfo"><span>Информация</span></a>
+<!--                            <a href="javascript: void(0);" data-toggle="modal" data-target="#modalInfo"><span>Информация</span></a>-->
                         </div><?php endif; ?>
 <!--                        <button id=moreButton>кнопочкеее</button>-->
                     </div>

@@ -36,11 +36,23 @@
                     collapsedHeight: 250,
                     embedCSS: false
                   });
+                  var _legendCarousel = _body.find('#legendCarousel'),
+                      _controls_container = _body.find('#legend-control');
+
                     setInterval(function(){
                       $(".owl-carousel").each(function(){
                         $(this).data('owlCarousel').updateVars();
                       });
-                    },100);
+
+                      $.each(_legendCarousel.find('*[data-toggle="legend-item"]'), function (index, value) {
+                        var _this = $(this),
+                            year = _this.attr('data-year'),
+                            i = index + 1;
+
+                        _controls_container.find('.owl-page:nth-child('+ i +') .owl-numbers').text(year);
+
+                      });
+                    },500);
                 });
               </script>
              <?php };?>

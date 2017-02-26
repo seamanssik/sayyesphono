@@ -168,11 +168,14 @@ class ControllerAccountEdit extends Controller {
 		}
 
 
-		if(!empty($customer_info) && $customer_info['bdate']){
+		if(!empty($customer_info) && isset($customer_info['bdate'])){
 			$data['birthday_date'] = explode('-', $customer_info['bdate']);
+		}elseif(!empty($customer_info)){
+			$data['birthday_date'] = explode('-', '1970-01-01');
 		}else{
 			$data['birthday_date'] = explode('-', '1970-01-01');
 		}
+
 
 		if (isset($this->request->post['middlename'])) {
 			$data['middlename'] = $this->request->post['middlename'];
