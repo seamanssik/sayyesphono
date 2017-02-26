@@ -87,6 +87,35 @@
               <input type="text" name="insta" value="<?php echo $insta; ?>" placeholder="" id="input-insta" class="form-control account-form__control" />
             </div>
           </div>
+          <span class="account-form__label" style="margin-bottom: 20px">Дата рождения</span>
+          <div class="form-group account-form__group">
+            <div class="col-sm-4">
+              <label class="control-label account-form__label" for="input-bday-year">Год</label>
+              <select name="bday-year" class="form-control account-form__control">
+                <?php for($year = 1970; $year <= 2017; $year++){;?>
+                  <option value="<?php echo $year;?>" <?php if($birthday_date[0] == $year) { echo 'selected'; };?>> <?php echo $year;?> </option>
+                <?php };?>
+              </select>
+            </div>
+
+            <div class="col-sm-4">
+              <label class="control-label account-form__label" for="input-bday-month">Месяц </label>
+              <select name="bday-month" id="input-bday-month" class="form-control account-form__control">
+                <?php foreach ($month as $item) { ?>
+                  <option value="<?php echo $item;?>" <?php if($birthday_date[1] == $item) { echo 'selected'; };?>><?php echo $item;?></option>
+                <?php };?>
+              </select>
+            </div>
+
+            <div class="col-sm-4">
+              <label class="control-label account-form__label" for="input-bday-day">День</label>
+              <select name="bday-day" id="input-bday-day" class="form-control account-form__control">
+                <?php for($day = 1; $day <= 31; $day++){;?>
+                  <option value="<?php echo $day;?>" <?php if($birthday_date[2] == $day) { echo 'selected'; };?>> <?php echo $day;?> </option>
+                <?php };?>
+              </select>
+            </div>
+          </div>
 
           <?php foreach ($custom_fields as $custom_field) { ?>
               <?php if ($custom_field['location'] == 'account') { ?>

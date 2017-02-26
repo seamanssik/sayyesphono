@@ -10,20 +10,20 @@
       <div class="row">
         <div class="col-sm-6">
           <div class="form-group required">
+            <label class="col-sm-12 control-label" for="input-telephone">*<?php echo $entry_telephone; ?>: (логин)</label>
+            <div class="col-sm-12">
+              <input type="tel" name="telephone" value="<?php echo $telephone; ?>" placeholder="<?php // echo $entry_telephone; ?>" id="input-telephone" class="form-control" />
+              <?php if ($error_telephone) { ?>
+                <div class="text-danger"><?php echo $error_telephone; ?></div>
+              <?php } ?>
+            </div>
+          </div>
+          <div class="form-group required">
             <label class="col-sm-12 control-label" for="input-firstname">*<?php echo $entry_firstname; ?>:</label>
             <div class="col-sm-12">
               <input type="text" name="firstname" value="<?php echo $firstname; ?>" placeholder="<?php // echo $entry_firstname; ?>" id="input-firstname" class="form-control" />
               <?php if ($error_firstname) { ?>
                 <div class="text-danger"><?php echo $error_firstname; ?></div>
-              <?php } ?>
-            </div>
-          </div>
-          <div class="form-group required">
-            <label class="col-sm-12 control-label" for="input-lastname">*<?php echo $entry_lastname; ?>:</label>
-            <div class="col-sm-12">
-              <input type="text" name="lastname" value="<?php echo $lastname; ?>" placeholder="<?php // echo $entry_lastname; ?>" id="input-lastname" class="form-control" />
-              <?php if ($error_lastname) { ?>
-                <div class="text-danger"><?php echo $error_lastname; ?></div>
               <?php } ?>
             </div>
           </div>
@@ -39,11 +39,11 @@
             </div>
           </div>
           <div class="form-group required">
-            <label class="col-sm-12 control-label" for="input-telephone">*<?php echo $entry_telephone; ?>: (логин)</label>
+            <label class="col-sm-12 control-label" for="input-lastname">*<?php echo $entry_lastname; ?>:</label>
             <div class="col-sm-12">
-              <input type="tel" name="telephone" value="<?php echo $telephone; ?>" placeholder="<?php // echo $entry_telephone; ?>" id="input-telephone" class="form-control" />
-              <?php if ($error_telephone) { ?>
-                <div class="text-danger"><?php echo $error_telephone; ?></div>
+              <input type="text" name="lastname" value="<?php echo $lastname; ?>" placeholder="<?php // echo $entry_lastname; ?>" id="input-lastname" class="form-control" />
+              <?php if ($error_lastname) { ?>
+                <div class="text-danger"><?php echo $error_lastname; ?></div>
               <?php } ?>
             </div>
           </div>
@@ -56,7 +56,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-6" style="display: none">
           <div class="form-group required">
             <label class="col-sm-12 control-label" for="input-address-1">*<?php echo $entry_address_1; ?>:</label>
             <div class="col-sm-12">
@@ -67,7 +67,7 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-6" style="display: none">
           <div class="form-group required">
             <label class="col-sm-12 control-label" for="input-city">*<?php echo $entry_city; ?>:</label>
             <div class="col-sm-12">
@@ -102,7 +102,7 @@
         </div>
         <div class="col-sm-6">
           <div class="form-group required">
-            <label class="col-sm-12 control-label" for="input-zone">*<?php echo $entry_zone; ?>:</label>
+            <label class="col-sm-12 control-label" for="input-zone">*Город:</label>
             <div class="col-sm-12">
               <select name="zone_id" id="input-zone" class="form-control">
               </select>

@@ -43,10 +43,17 @@ class ControllerProductCategory extends Controller {
 			$page = 1;
 		}
 
+		$detect = new Detect;
+
+
 		if (isset($this->request->get['limit'])) {
 			$limit = (int)$this->request->get['limit'];
 		} else {
-			$limit = $this->config->get($this->config->get('config_theme') . '_product_limit');
+			if($detect->isMobile()){
+				$limit = 6;
+			}else{
+				$limit = $this->config->get($this->config->get('config_theme') . '_product_limit');
+			}
 		}
 
 		// OCFilter start

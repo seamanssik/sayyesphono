@@ -470,6 +470,22 @@ class ControllerSettingStore extends Controller {
 			$data['config_email'] = '';
 		}
 
+		if (isset($this->request->post['config_reg_email'])) {
+			$data['config_reg_email'] = $this->request->post['config_reg_email'];
+		} elseif (isset($store_info['config_email'])) {
+			$data['config_reg_email'] = $store_info['config_reg_email'];
+		} else {
+			$data['config_reg_email'] = '';
+		}
+
+		if (isset($this->request->post['config_sale_email'])) {
+			$data['config_sale_email'] = $this->request->post['config_sale_email'];
+		} elseif (isset($store_info['config_email'])) {
+			$data['config_sale_email'] = $store_info['config_sale_email'];
+		} else {
+			$data['config_sale_email'] = '';
+		}
+
 		if (isset($this->request->post['config_telephone'])) {
 			$data['config_telephone'] = $this->request->post['config_telephone'];
 		} elseif (isset($store_info['config_telephone'])) {

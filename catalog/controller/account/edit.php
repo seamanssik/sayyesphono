@@ -46,6 +46,22 @@ class ControllerAccountEdit extends Controller {
 
 			$this->response->redirect($this->url->link('account/account', '', true));
 		}
+		
+		$data['month'] = [
+			'1' => 'Январь',
+			'2' => 'Февраль',
+			'3' => 'Март',
+			'4' => 'Апрель',
+			'5' => 'Май',
+			'6' => 'Июнь',
+			'7' => 'Июль',
+			'8' => 'Август',
+			'9' => 'Сентябрь',
+			'10' => 'Октябрь',
+			'11' => 'Ноябрь',
+			'12' => 'Декабрь',
+		];
+		
 		$data['breadcrumbs'] = array();
 
 		$data['breadcrumbs'][] = array(
@@ -135,7 +151,6 @@ class ControllerAccountEdit extends Controller {
 			}
 		}
 
-	
 		if (isset($this->request->post['firstname'])) {
 			$data['firstname'] = $this->request->post['firstname'];
 		} elseif (!empty($customer_info)) {
@@ -150,6 +165,11 @@ class ControllerAccountEdit extends Controller {
 			$data['lastname'] = $customer_info['lastname'];
 		} else {
 			$data['lastname'] = '';
+		}
+
+
+		if(!empty($customer_info) && $customer_info['bdate']){
+			$data['birthday_date'] = explode('-', $customer_info['bdate']);
 		}
 
 		if (isset($this->request->post['middlename'])) {

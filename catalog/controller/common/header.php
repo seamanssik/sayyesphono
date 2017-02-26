@@ -1,6 +1,13 @@
 <?php
 class ControllerCommonHeader extends Controller {
 	public function index() {
+//		$redirect_data = unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip='.$_SERVER['REMOTE_ADDR']));
+//		$countrycode = $redirect_data['geoplugin_countryCode'];
+//
+//		if ($countrycode == 'UA') {
+//			header( 'Location: http://ua.sayyesphoto.com' ) ;
+//		}
+
 		// Analytics
 		$this->load->model('extension/extension');
 		

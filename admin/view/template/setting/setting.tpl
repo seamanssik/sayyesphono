@@ -214,6 +214,21 @@
                   <?php } ?>
                 </div>
               </div>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-reg-email">Email для регестрации</label>
+                <div class="col-sm-10">
+                  <input type="text" name="config_reg_email" value="<?php echo $config_reg_email; ?>" placeholder="Email для регестрации" id="input-reg-email" class="form-control" />
+                </div>
+              </div> 
+              
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-sale-email">Email для заказов</label>
+                <div class="col-sm-10">
+                  <input type="text" name="config_sale_email" value="<?php echo $config_sale_email; ?>" placeholder="Email для заказов" id="input-sale-email" class="form-control" />
+                </div>
+              </div>
+
               <div class="form-group required">
                 <label class="col-sm-2 control-label" for="input-telephone"><?php echo $entry_telephone; ?></label>
                 <div class="col-sm-10">
