@@ -5021,7 +5021,7 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
 }
 
 .list-group {
-    padding: 60px 0 0;
+    padding: 20px 0 0;
 }
 
 .list-group-item {
@@ -14254,7 +14254,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 }
 
 .account-heading {
-    padding-top: 60px
+    padding-top: 20px
 }
 
 .account-breadcrumb {
