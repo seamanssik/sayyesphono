@@ -27,7 +27,8 @@
 <!--    --><?php //} ?>
     <div id="content" class="col-sm-9"><?php echo $content_top; ?>
 <!--      <h3 class="h3"><span>--><?php //echo $heading_title; ?><!--</span></h3>-->
-      <?php if ($products) { ?>
+      <?php if ($products_photodays) { ?>
+      <h2>PHOTODAYS</h2>
       <div class="table-responsive">
         <table class="table table-bordered table-hover wishlist-table">
           <thead>
@@ -41,15 +42,58 @@
             </tr>
           </thead>
           <tbody>
-            <?php foreach ($products as $product) { ?>
+            <?php foreach ($products_photodays as $product) { ?>
             <tr>
               <td class="text-center image-column"><?php if ($product['thumb']) { ?>
                 <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" /></a>
                 <?php } ?></td>
-              <td class="text-left"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></td>
-              <td class="text-left"><?php echo $product['model']; ?></td>
-              <td class="text-right"><?php echo $product['stock']; ?></td>
-              <td class="text-right"><?php if ($product['price']) { ?>
+              <td class="text-center"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></td>
+              <td class="text-center"><?php echo $product['model']; ?></td>
+              <td class="text-center"><?php echo $product['stock']; ?></td>
+              <td class="text-center"><?php if ($product['price']) { ?>
+                <div class="price">
+                  <?php if (!$product['special']) { ?>
+                  <?php echo $product['price']; ?>
+                  <?php } else { ?>
+                  <b><?php echo $product['special']; ?></b> <s><?php echo $product['price']; ?></s>
+                  <?php } ?>
+                </div>
+                <?php } ?></td>
+              <td class="text-center"><a href="<?php echo $product['href'];?>" class="btn btn-primary action-btn"><i class="fa fa-shopping-cart"></i></a>
+                <a href="<?php echo $product['remove']; ?>" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger action-btn"><i class="fa fa-times"></i></a></td>
+            </tr>
+            <?php } ?>
+          </tbody>
+        </table>
+      </div>
+      <?php } else { ?>
+      <p class="text-message heading-left"><?php echo $text_empty; ?></p>
+      <?php } ?>
+
+      <?php if ($products_showrooms) { ?>
+      <div class="table-responsive">
+        <h2>SHOWROOM</h2>
+        <table class="table table-bordered table-hover wishlist-table">
+          <thead>
+            <tr>
+              <td class="text-center"><?php echo $column_image; ?></td>
+              <td class="text-left"><?php echo $column_name; ?></td>
+              <td class="text-left"><?php echo $column_model; ?></td>
+              <td class="text-right"><?php echo $column_stock; ?></td>
+              <td class="text-right"><?php echo $column_price; ?></td>
+              <td class="text-right"><?php echo $column_action; ?></td>
+            </tr>
+          </thead>
+          <tbody>
+            <?php foreach ($products_showrooms as $product) { ?>
+            <tr>
+              <td class="text-center image-column"><?php if ($product['thumb']) { ?>
+                <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" /></a>
+                <?php } ?></td>
+              <td class="text-center"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></td>
+              <td class="text-center"><?php echo $product['model']; ?></td>
+              <td class="text-center"><?php echo $product['stock']; ?></td>
+              <td class="text-center"><?php if ($product['price']) { ?>
                 <div class="price">
                   <?php if (!$product['special']) { ?>
                   <?php echo $product['price']; ?>
