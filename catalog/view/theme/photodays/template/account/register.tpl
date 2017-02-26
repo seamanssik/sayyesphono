@@ -84,7 +84,7 @@
           <div class="form-group required">
             <label class="col-sm-12 control-label" for="input-country">*<?php echo $entry_country; ?>:</label>
             <div class="col-sm-12">
-              <select name="country_id" id="input-country" class="form-control">
+              <select name="country_id" id="input-country" class="form-control adttional-select-item">
                 <option value=""><?php echo $text_select; ?></option>
                 <?php foreach ($countries as $country) { ?>
                   <?php if ($country['country_id'] == $country_id) { ?>
@@ -104,7 +104,7 @@
           <div class="form-group required">
             <label class="col-sm-12 control-label" for="input-zone">*Город:</label>
             <div class="col-sm-12">
-              <select name="zone_id" id="input-zone" class="form-control">
+              <select name="zone_id" id="input-zone" class="form-control adttional-select-item">
               </select>
               <?php if ($error_zone) { ?>
                 <div class="text-danger"><?php echo $error_zone; ?></div>
