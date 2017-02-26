@@ -22451,6 +22451,24 @@ body.error-not_found .f-copy {
     align-items: center
 }
 
+.photodaysItem-overlay-hidden {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: flex-start;
+}
+
 .photodaysItem-overlay .product-thumb__mask .product-thumb__info {
     padding: 17px 10px;
     margin: 0
@@ -22598,6 +22616,21 @@ body.error-not_found .f-copy {
     position: relative
 }
 
+.photodaysItem-hide-text {
+    width: calc(100% - 468px);
+    padding-left: 58px;
+    position: relative;
+}
+
+.item-text-phodotay {
+    color: #444;
+    font-size: 16px;
+    font-family: 'ttdrugs-light', sans-serif;
+    border-right: 2px dashed grey;
+    margin-bottom: 40px;
+    padding-right: 10px;
+}
+
 .photodaysItem-image {
     overflow: hidden;
     position: relative
@@ -22624,6 +22657,14 @@ body.error-not_found .f-copy {
     width: 438px;
     position: relative;
     padding: 0 0 0 40px
+}
+
+.photodaysItem-attr {
+    width: 438px;
+    padding: 0 0 0 40px;
+    color: #444;
+    font-size: 16px;
+    font-family: 'ttdrugs-light', sans-serif;
 }
 
 .photodaysItem-description__logo {

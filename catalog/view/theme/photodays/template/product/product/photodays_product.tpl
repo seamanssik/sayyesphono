@@ -65,14 +65,18 @@
                 <div class="photodaysItem-description__description">
                     <div id="descriptionOverflow" style="height: 154px;overflow: hidden;">
                         <div>
-                            <?php echo $photodays['description']; ?>
+                            <?php $pos = strpos($photodays['description'], ' ', 500);
+                            echo substr($photodays['description'], 0, $pos ) ;?>
+<!--                            --><?php //echo $photodays['description']; ?>
                         </div>
                     </div>
                     <div class="clearfix">
-                        <a href="javascript: void(0);" data-toggle="openCloseText" data-element="descriptionOverflow" data-short="Скрыть" data-action="Читать дальше" data-height="154"><span>Читать дальше</span></a>
+                        <a href="javascript: void(0);" id="moreButton"><span id="hide-button-text">Читать дальше</span></a>
+<!--                        <a href="javascript: void(0);" data-toggle="openCloseText" data-element="descriptionOverflow" data-short="Скрыть" data-action="Читать дальше" data-height="154"><span>Читать дальше</span></a>-->
                         <?php if ($attribute_groups): ?><div class="pull-right">
                             <a href="javascript: void(0);" data-toggle="modal" data-target="#modalInfo"><span>Информация</span></a>
                         </div><?php endif; ?>
+<!--                        <button id=moreButton>кнопочкеее</button>-->
                     </div>
                 </div>
                 <div class="showroom-total photodaysTotal">
@@ -84,6 +88,45 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <script>
+        $('#moreButton').click(function() {
+            if($('#hide-button-text').text() == 'Читать далее'){
+                $('#hide-button-text').text('Читать далее');
+            }else{
+                $('#hide-button-text').text('Свернуть');
+            }
+
+            top.$('#panel').toggle(function () {
+                    $(this).animate({
+                        // style change
+                    }, 500);
+                },
+                function () {
+                    $(this).animate({
+                        // style change back
+                    }, 500);
+                });
+        });
+    </script>
+    <div style="display: none;" id="panel" class="photodaysItem-overlay-hidden">
+        <div class="photodaysItem-hide-text">
+            <div class="item-text-phodotay">
+                <?php echo $photodays['description'] ;?>
+            </div>
+        </div>
+        <div class="photodaysItem-attr">
+            <?php foreach ($attribute_groups as $attribute_group) { ?>
+                <table width="100%" class="table-hover table-striped">
+                    <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
+                        <tr>
+                        <td><?php echo $attribute['name']; ?></td>
+                        <td><?php echo $attribute['text']; ?></td>
+                        </tr>
+                    <?php } ?>
+                </table>
+            <?php } ?>
         </div>
     </div>
     <div class="photoday-images__overlay">
