@@ -549,6 +549,11 @@
             transform: translateY(-50%);
 }
 
-.jcf-scrollable-wrapper, .jcf-list-content {
-    height: 120px !important;
+.jcf-select-adttional-select-item {
+    height: 50px!important;
 }
+
+/*.jcf-scrollable-wrapper, .jcf-list-content {*/
+    /*height: 120px !important;*/
+/*}*/
+
