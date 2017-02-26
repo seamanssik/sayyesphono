@@ -9966,7 +9966,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 .jcf-list .jcf-option {
     white-space: nowrap;
     cursor: default;
-    padding: 5px 9px;
+    padding: 3px 9px;
     color: #656565;
     min-height: 14px;
     height: 1%

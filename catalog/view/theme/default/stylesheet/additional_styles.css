@@ -524,3 +524,31 @@
         transform-origin: 0 100%;
     }
 }
+
+.jcf-select-adttional-select-item {
+    border-width: 0 0 1px 0;
+    border-color: #999;
+}
+
+.jcf-select-adttional-select-item .jcf-select-text {
+    color: #999;
+    padding-left: 0;
+}
+
+.jcf-select-adttional-select-item .jcf-select-opener:before {
+    content: '\e900';
+    position: absolute;
+    font-family: 'icomoon';
+    color: #999;
+    font-size: 20px;
+    width: auto;
+    height: auto;
+    margin: 0;
+    background: none;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+
+.jcf-scrollable-wrapper, .jcf-list-content {
+    height: 120px !important;
+}

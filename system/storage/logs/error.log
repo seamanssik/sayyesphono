@@ -380,3 +380,7 @@
 2017-02-18 15:35:45 - PHP Notice:  Undefined index: vk_profile in C:\OpenServer\OpenServer\domains\sayyesphono\catalog\controller\account\edit.php on line 166
 2017-02-18 15:35:45 - PHP Notice:  Undefined index: facebook_profile in C:\OpenServer\OpenServer\domains\sayyesphono\catalog\controller\account\edit.php on line 174
 2017-02-18 15:35:45 - PHP Notice:  Undefined index: insta_profile in C:\OpenServer\OpenServer\domains\sayyesphono\catalog\controller\account\edit.php on line 182
+2017-02-26 19:00:53 - PHP Notice:  Undefined index: bdate in C:\OpenServer\OpenServer\domains\sayyesphono\catalog\controller\account\edit.php on line 171
+2017-02-26 19:00:58 - PHP Notice:  Undefined index: bdate in C:\OpenServer\OpenServer\domains\sayyesphono\catalog\controller\account\edit.php on line 171
+2017-02-26 19:01:16 - PHP Notice:  Undefined index: bdate in C:\OpenServer\OpenServer\domains\sayyesphono\catalog\controller\account\edit.php on line 171
+2017-02-26 19:01:21 - PHP Notice:  Undefined index: bdate in C:\OpenServer\OpenServer\domains\sayyesphono\catalog\controller\account\edit.php on line 171
