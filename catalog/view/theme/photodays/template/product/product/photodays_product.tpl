@@ -71,7 +71,7 @@
                         </div>
                     </div>
                     <div class="clearfix">
-                        <a href="javascript: void(0);" id="moreButton"><span id="hide-button-text">Читать дальше</span></a>
+                        <a href="javascript: void(0);" id="moreButton"><span id="hide-button-text">Показать больше</span></a>
 <!--                        <a href="javascript: void(0);" data-toggle="openCloseText" data-element="descriptionOverflow" data-short="Скрыть" data-action="Читать дальше" data-height="154"><span>Читать дальше</span></a>-->
                         <?php if ($attribute_groups): ?><div class="pull-right">
                             <a href="javascript: void(0);" data-toggle="modal" data-target="#modalInfo"><span>Информация</span></a>
@@ -92,21 +92,21 @@
     </div>
     <script>
         $('#moreButton').click(function() {
-            if($('#hide-button-text').text() == 'Читать далее'){
-                $('#hide-button-text').text('Читать далее');
+            if($('#hide-button-text').text() == 'Показать больше'){
+                $('#hide-button-text').text('Скрыть описание');
             }else{
-                $('#hide-button-text').text('Свернуть');
+                $('#hide-button-text').text('Показать больше');
             }
 
             top.$('#panel').toggle(function () {
                     $(this).animate({
                         // style change
-                    }, 500);
+                    }, 100);
                 },
                 function () {
                     $(this).animate({
                         // style change back
-                    }, 500);
+                    }, 100);
                 });
         });
     </script>

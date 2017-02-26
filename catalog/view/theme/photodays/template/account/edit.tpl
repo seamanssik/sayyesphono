@@ -108,7 +108,7 @@
             </div>
 
             <div class="col-sm-4">
-              <label class="control-label account-form__label" for="input-bday-day">День</label>
+              <label class="control-label account-form__label" for="input-bday-day">Число</label>
               <select name="bday-day" id="input-bday-day" class="form-control account-form__control">
                 <?php for($day = 1; $day <= 31; $day++){;?>
                   <option value="<?php echo $day;?>" <?php if($birthday_date[2] == $day) { echo 'selected'; };?>> <?php echo $day;?> </option>

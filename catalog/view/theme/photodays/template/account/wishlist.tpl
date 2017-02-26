@@ -29,7 +29,7 @@
 <!--      <h3 class="h3"><span>--><?php //echo $heading_title; ?><!--</span></h3>-->
       <?php if ($products_photodays) { ?>
       <h2>PHOTODAYS</h2>
-      <div class="table-responsive">
+      <div class="table-responsive" style="margin-bottom: 20px!important;">
         <table class="table table-bordered table-hover wishlist-table">
           <thead>
             <tr>
