@@ -10,7 +10,7 @@
                     <div class="form-group popup-group">
                         <label class="popup-label" for="input-email">Телефон:</label>
                         <div class="col-sm-12">
-                            <input class="popup-control" type="text" name="email" value="<?php echo $email; ?>" id="input-email" onkeypress='validate(event)'/>
+                            <input class="popup-control" type="text" name="email" value="<?php echo $email; ?>" id="input-email" onkeypress='validate(event)' style="color: #bd9d53"/>
                         </div>
                         <script>
                             function validate(evt) {

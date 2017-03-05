@@ -67,7 +67,7 @@
   <div class="about-welcome before-welcome">
     <div class="about-welcome__container">
       <div class="about-welcome__title js-animate">
-        <div class="c-text-masked">
+        <div class="c-text-masked" style="color: #bd9d53;">
           <span>Ты достойна<br> самого лучшего!</span>
 <!--          <span>--><?php //echo html_entity_decode($custom_field['welcome_text_1'], ENT_QUOTES, 'UTF-8'); ?><!--</span>-->
         </div>

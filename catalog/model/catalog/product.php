@@ -351,9 +351,9 @@ class ModelCatalogProduct extends Model {
 	}
 
 	public function getProductAttributes($product_id) {
-		$product_attribute_group_data = $this->cache->get('product.getProductAttributes.' . (int)$this->config->get('config_language_id') . '.' . (int)$this->config->get('config_store_id') . '.' . $this->config->get('config_customer_group_id') . '.' . (int)$product_id);
+//		$product_attribute_group_data = $this->cache->get('product.getProductAttributes.' . (int)$this->config->get('config_language_id') . '.' . (int)$this->config->get('config_store_id') . '.' . $this->config->get('config_customer_group_id') . '.' . (int)$product_id);
 
-		if (!$product_attribute_group_data) {
+//		if (!$product_attribute_group_data) {
 			$product_attribute_group_data = array();
 
 			$product_attribute_group_query = $this->db->query("SELECT ag.attribute_group_id, agd.name FROM " . DB_PREFIX . "product_attribute pa LEFT JOIN " . DB_PREFIX . "attribute a ON (pa.attribute_id = a.attribute_id) LEFT JOIN " . DB_PREFIX . "attribute_group ag ON (a.attribute_group_id = ag.attribute_group_id) LEFT JOIN " . DB_PREFIX . "attribute_group_description agd ON (ag.attribute_group_id = agd.attribute_group_id) WHERE pa.product_id = '" . (int)$product_id . "' AND agd.language_id = '" . (int)$this->config->get('config_language_id') . "' GROUP BY ag.attribute_group_id ORDER BY ag.sort_order, agd.name");
@@ -377,8 +377,8 @@ class ModelCatalogProduct extends Model {
 					'attribute'          => $product_attribute_data
 				);
 			}
-			$this->cache->set('product.getProductAttributes.' . (int)$this->config->get('config_language_id') . '.' . (int)$this->config->get('config_store_id') . '.' . $this->config->get('config_customer_group_id') . '.' . (int)$product_id, $product_attribute_group_data);
-		}
+//			$this->cache->set('product.getProductAttributes.' . (int)$this->config->get('config_language_id') . '.' . (int)$this->config->get('config_store_id') . '.' . $this->config->get('config_customer_group_id') . '.' . (int)$product_id, $product_attribute_group_data);
+//		}
 
 		return $product_attribute_group_data;
 	}

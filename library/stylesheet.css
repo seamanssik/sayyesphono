@@ -9808,7 +9808,7 @@ body:not(.common-home) .n-container {
     width: 100%;
     height: 60px;
     position: relative;
-    border: 1px solid #e3ca7e
+    border: 1px solid #bd9d53;
 }
 
 .jcf-select select {
@@ -14315,7 +14315,7 @@ a.account-nav__link:hover, a.account-nav__link:focus {
 
 a.account-nav__active {
     color: #fff;
-    background: #e3ca7e;
+    background: #bd9d53;
     /*padding: 12px 15px 11px;*/
     margin: 0 0 -1px;
     border-width: 1px;
@@ -20999,7 +20999,7 @@ body.error-not_found .f-copy {
 }
 
 .photoday-form .photoday-order__title {
-    margin: 0 0 60px
+    margin: 90px 0 60px
 }
 
 .photoday-form.has-error .photoday-order__title p {

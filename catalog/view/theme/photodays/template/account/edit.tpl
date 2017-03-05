@@ -93,7 +93,7 @@
               <label class="control-label account-form__label" for="input-bday-year">Год</label>
               <select name="bday-year" class="form-control account-form__control">
                 <?php for($year = 1970; $year <= 2017; $year++){;?>
-                  <option value="<?php echo $year;?>" <?php if($birthday_date[0] == $year) { echo 'selected'; };?>> <?php echo $year;?> </option>
+                  <option value="<?php echo $year;?>" <?php if(isset($birthday_date[0]) && $birthday_date[0] == $year) { echo 'selected'; };?>> <?php echo $year;?> </option>
                 <?php };?>
               </select>
             </div>
@@ -102,7 +102,7 @@
               <label class="control-label account-form__label" for="input-bday-month">Месяц </label>
               <select name="bday-month" id="input-bday-month" class="form-control account-form__control">
                 <?php foreach ($month as $item) { ?>
-                  <option value="<?php echo $item;?>" <?php if($birthday_date[1] == $item) { echo 'selected'; };?>><?php echo $item;?></option>
+                  <option value="<?php echo $item;?>" <?php if(isset($birthday_date[1]) && $birthday_date[1] == $item) { echo 'selected'; };?>><?php echo $item;?></option>
                 <?php };?>
               </select>
             </div>
@@ -111,7 +111,7 @@
               <label class="control-label account-form__label" for="input-bday-day">Число</label>
               <select name="bday-day" id="input-bday-day" class="form-control account-form__control">
                 <?php for($day = 1; $day <= 31; $day++){;?>
-                  <option value="<?php echo $day;?>" <?php if($birthday_date[2] == $day) { echo 'selected'; };?>> <?php echo $day;?> </option>
+                  <option value="<?php echo $day;?>" <?php if(isset($birthday_date[2]) && $birthday_date[2] == $day) { echo 'selected'; };?>> <?php echo $day;?> </option>
                 <?php };?>
               </select>
             </div>

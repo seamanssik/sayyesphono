@@ -821,7 +821,7 @@ class ControllerProductProduct extends Controller {
 					}
 
 					$images[] = array(
-						'popup' => 'image/' . $result['image'],
+						'popup' => 'http://sayyesphoto.com/image/' . $result['image'],
 						'thumb' => ($data['detect']->isMobile()) ? $this->model_tool_image->cropsize($result['image'], 391, 673) : $this->model_tool_image->cropsize($result['image'], $additional_width, $additional_height)
 					);
 
@@ -849,6 +849,9 @@ class ControllerProductProduct extends Controller {
 
 			$data['attribute_groups'] = $this->model_catalog_product->getProductAttributes($this->request->get['product_id']);
 
+
+//			$data['desc_parts'] = mb_substr($product_info['description'], 500);
+			
 			$data['photodays'] = array(
 				'symbol_left'	=> $this->currency->getSymbolLeft($this->session->data['currency']),
 				'symbol_right'	=> $this->currency->getSymbolRight($this->session->data['currency']),
@@ -863,6 +866,7 @@ class ControllerProductProduct extends Controller {
 				'description' 	=> html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8'),
 				'images' 		=> $images
 			);
+
 
 			$data['images'] = array();
 

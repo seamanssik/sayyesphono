@@ -66,7 +66,7 @@
                     <div id="descriptionOverflow" style="height: 154px;overflow: hidden;">
                         <div>
 <!--                            --><?php //echo substr($photodays['description'], 0, 500 );?>
-                            <?php echo mb_substr($photodays['description'], 0, strpos($photodays['description'], ' ', 500));?>
+<!--                            --><?php //echo mb_substr($photodays['description'], 0, 500);?>
                         </div>
                     </div>
                     <div class="clearfix">
@@ -90,23 +90,37 @@
         </div>
     </div>
     <script>
+        $( document ).ready(function() {
+            var firstParagraf = $('.item-text-phodotay').find("p").first().html();
+
+            $('#descriptionOverflow').html(firstParagraf);
+            $('.item-text-phodotay').find("p").first().remove();
+//             photodaysTotal
+
+        });
+
+
         $('#moreButton').click(function() {
             if($('#hide-button-text').text() == 'Показать больше'){
                 $('#hide-button-text').text('Скрыть описание');
+                $(".showroom-total").prependTo(".photodaysItem-attr");
             }else{
                 $('#hide-button-text').text('Показать больше');
+                $(".showroom-total").appendTo(".photodaysItem-description");
             }
 
-            top.$('#panel').toggle(function () {
-                    $(this).animate({
-                        // style change
-                    }, 100);
-                },
-                function () {
-                    $(this).animate({
-                        // style change back
-                    }, 100);
-                });
+            $('#panel').toggle("slide", {direction: "right" }, 1000);
+
+//            top.$('#panel').toggle(function () {
+//                    $(this).animate({
+//                        // style change
+//                    }, 100);
+//                },
+//                function () {
+//                    $(this).animate({
+//                        // style change back
+//                    }, 100);
+//                });
         });
     </script>
     <div style="display: none;" id="panel" class="photodaysItem-overlay-hidden">

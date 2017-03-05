@@ -97,11 +97,20 @@
                         <td class="text-right" style="width: 10%;">
                           <input type="text" name="banner_image[<?php echo $language['language_id']; ?>][<?php echo $image_row; ?>][sort_order]" value="<?php echo $banner_image['sort_order']; ?>" placeholder="<?php echo $entry_sort_order; ?>" class="form-control" />
                         </td>
+                        <td class="text-left">
+                          <button type="button" onclick="$('#image-row<?php echo $image_row; ?>, .tooltip').remove();" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button>
+                        </td>
                       </tr>
                       <?php $image_row++; ?>
                     <?php } ?>
                   <?php } ?>
                   </tbody>
+                  <tfoot>
+                  <tr>
+                    <td colspan="3"></td>
+                    <td class="text-left"><button type="button" onclick="addImage('<?php echo $language['language_id']; ?>');" data-toggle="tooltip" title="<?php echo $button_banner_add; ?>" class="btn btn-primary"><i class="fa fa-plus-circle"></i></button></td>
+                  </tr>
+                  </tfoot>
                 </table>
               </div>
             <?php } ?>

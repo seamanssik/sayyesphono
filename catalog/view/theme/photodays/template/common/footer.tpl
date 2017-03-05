@@ -93,7 +93,7 @@
     <div class="modal-dialog modalSuccess-dialog" role="document">
         <div class="modal-content">
             <div class="modalSuccess-title">
-                <span>Поздравляем!</span>
+                <span style="color: #bd9d53;">Поздравляем!</span>
                 <button type="button" class="modalSuccess-close close" data-dismiss="modal" aria-label="Close"></button></div>
             <div class="modalSuccess-text">Ваш аккаунт создан</div>
         </div>

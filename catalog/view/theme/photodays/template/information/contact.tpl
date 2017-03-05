@@ -83,7 +83,7 @@
         <?php echo $captcha; ?>
       </fieldset>
       <div class="buttons text-center">
-        <button type="submit" class="js-animate"><span><?php echo $button_submit; ?></span></button>
+        <button type="submit" class="js-animate"><span style="color: #bd9d53;"><?php echo $button_submit; ?></span></button>
       </div>
     </form>
   </div>
