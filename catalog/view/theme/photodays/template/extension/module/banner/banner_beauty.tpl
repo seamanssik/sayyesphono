@@ -9,7 +9,7 @@
                 </div>
                 <div class="beauty-figure js-animate -show-from-top o-animate-img -animate-gold c-parallax cd-inline">
                     <div class="c-wrap-img-anim">
-                        <img src="<?php echo $banners[0]['thumb']; ?>" alt="<?php echo strip_tags($banners[0]['field_1']); ?>" class="img-responsive">
+                        <a href="<?php echo $banners[0]['link']; ?>"><img src="<?php echo $banners[0]['thumb']; ?>" alt="<?php echo strip_tags($banners[0]['field_1']); ?>" class="img-responsive"></a>
                     </div>
                 </div>
                 <div class="beauty-description js-animate">
@@ -28,7 +28,7 @@
                     <span>— <?php echo $banners[1]['field_1']; ?></span>
                     <div class="js-animate -show-from-right c-parallax is-black-n-white o-animate-img -animate-beige cd-inline">
                         <div class="c-wrap-img-anim">
-                            <img src="<?php echo $banners[1]['thumb']; ?>" alt="<?php echo strip_tags($banners[1]['field_1']); ?>" width="361" height="562" class="img-responsive">
+                            <a href="<?php echo $banners[1]['link']; ?>"><img src="<?php echo $banners[1]['thumb']; ?>" alt="<?php echo strip_tags($banners[1]['field_1']); ?>" width="361" height="562" class="img-responsive"></a>
                         </div>
                     </div>
                 </div>
@@ -40,7 +40,7 @@
                 <div class="beauty-figure">
                     <div class="js-animate -show-from-top o-animate-img -animate-gold c-parallax cd-inline">
                         <div class="c-wrap-img-anim">
-                            <img src="<?php echo $banners[2]['thumb']; ?>" alt="<?php echo strip_tags($banners[2]['field_1']); ?>" class="img-responsive">
+                            <a href="<?php echo $banners[2]['link']; ?>"><img src="<?php echo $banners[2]['thumb']; ?>" alt="<?php echo strip_tags($banners[2]['field_1']); ?>" class="img-responsive"></a>
                         </div>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="beauty-link js-animate">
                     <div class="c-text-masked">
-                        <p><a href="<?php echo $banners[2]['link']; ?>"><span>Подобрать платье</span></a></p>
+                        <p><a href="<?php echo $banners[2]['link']; ?>"><span>Выбрать платье</span></a></p>
                     </div>
                 </div>
             </div>

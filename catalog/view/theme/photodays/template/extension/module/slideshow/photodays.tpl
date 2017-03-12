@@ -7,6 +7,7 @@
     </div>
     <div class="photodays-items" id="photodaysSlideShow">
         <?php foreach ($banners as $banner) { ?>
+        <a href="<?php echo $banner['link']; ?>">
         <div class="photodays-item">
             <div class="photodays-item__thumb" style="background-image: url('<?php echo $banner['image']; ?>');">
                 <img src="<?php echo $banner['image']; ?>">
@@ -33,6 +34,7 @@
                 </div>
             </div>
         </div>
+            </a>
         <?php } ?>
     </div>
 </div>

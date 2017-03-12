@@ -260,6 +260,15 @@
                   <input type="text" name="price" value="<?php echo $price; ?>" placeholder="<?php echo $entry_price; ?>" id="input-price" class="form-control" />
                 </div>
               </div>
+
+              <div class="form-group hidden">
+                <label class="col-sm-2 control-label" for="input-price-2"><?php echo $entry_price; ?> грн</label>
+                <div class="col-sm-10">
+                  <input type="text" name="price_2" value="<?php echo $price_2; ?>" placeholder="<?php echo $entry_price; ?> грн" id="input-price-2" class="form-control" />
+                </div>
+              </div>
+
+
               <div class="form-group hidden">
                 <label class="col-sm-2 control-label" for="input-tax-class"><?php echo $entry_tax_class; ?></label>
                 <div class="col-sm-10">
