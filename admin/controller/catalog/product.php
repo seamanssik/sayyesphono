@@ -233,6 +233,37 @@ class ControllerCatalogProduct extends Controller {
 			$filter_name = null;
 		}
 
+		if (isset($this->request->get['filter_category_id'])) {
+			$filter_category_id = $this->request->get['filter_category_id'];
+
+			$this->load->model('catalog/category');
+			$data['filter_category_name'] = $this->db->query("SELECT name FROM " . DB_PREFIX . "category_description WHERE category_id = '" . $filter_category_id . "' LIMIT 1")->row['name'];
+
+
+
+			$data['product_categories'] = array();
+
+			$category_info = $this->model_catalog_category->getCategory($filter_category_id);
+
+			if ($category_info) {
+				$data['product_categories'][] = array(
+					'category_id' => $category_info['category_id'],
+					'name' => ($category_info['path']) ? $category_info['path'] . ' &gt; ' . $category_info['name'] : $category_info['name']
+				);
+			}else{
+				$data['product_categories'] = "";
+			}
+			
+		} else {
+			$filter_category_id = null;
+			$data['filter_category_name'] = '';
+			$data['product_categories'][] = array(
+				'category_id' => '',
+				'name' => ''
+			);
+		}
+
+
 		if (isset($this->request->get['filter_model'])) {
 			$filter_model = $this->request->get['filter_model'];
 		} else {
@@ -307,6 +338,10 @@ class ControllerCatalogProduct extends Controller {
 			$url .= '&filter_image=' . $this->request->get['filter_image'];
 		}
 
+		if (isset($this->request->get['filter_category_id'])) {
+			$url .= '&filter_category_id=' . urlencode(html_entity_decode($this->request->get['filter_category_id'], ENT_QUOTES, 'UTF-8'));
+		}
+
 		if (isset($this->request->get['sort'])) {
 			$url .= '&sort=' . $this->request->get['sort'];
 		}
@@ -343,6 +378,7 @@ class ControllerCatalogProduct extends Controller {
 			'filter_model'	  => $filter_model,
 			'filter_price'	  => $filter_price,
 			'filter_quantity' => $filter_quantity,
+			'filter_category_id' => $filter_category_id,
 			'filter_status'   => $filter_status,
 			'filter_image'    => $filter_image,
 			'sort'            => $sort,
@@ -469,6 +505,10 @@ class ControllerCatalogProduct extends Controller {
 			$url .= '&filter_status=' . $this->request->get['filter_status'];
 		}
 
+		if (isset($this->request->get['filter_category_id'])) {
+			$url .= '&filter_category_id=' . urlencode(html_entity_decode($this->request->get['filter_category_id'], ENT_QUOTES, 'UTF-8'));
+		}
+
 		if (isset($this->request->get['filter_image'])) {
 			$url .= '&filter_image=' . $this->request->get['filter_image'];
 		}
@@ -512,6 +552,10 @@ class ControllerCatalogProduct extends Controller {
 			$url .= '&filter_status=' . $this->request->get['filter_status'];
 		}
 
+		if (isset($this->request->get['filter_category_id'])) {
+			$url .= '&filter_category_id=' . urlencode(html_entity_decode($this->request->get['filter_category_id'], ENT_QUOTES, 'UTF-8'));
+		}
+
 		if (isset($this->request->get['filter_image'])) {
 			$url .= '&filter_image=' . $this->request->get['filter_image'];
 		}
@@ -538,6 +582,7 @@ class ControllerCatalogProduct extends Controller {
 		$data['filter_model'] = $filter_model;
 		$data['filter_price'] = $filter_price;
 		$data['filter_quantity'] = $filter_quantity;
+		$data['filter_category_id'] = $filter_category_id;
 		$data['filter_status'] = $filter_status;
 		$data['filter_image'] = $filter_image;
 
@@ -1556,6 +1601,44 @@ class ControllerCatalogProduct extends Controller {
 		}
 
 		return !$this->error;
+	}
+
+	public function autocomplete_categories() {
+		$json = array();
+
+		if (isset($this->request->get['filter_category'])) {
+			$this->load->model('catalog/category');
+
+			if (isset($this->request->get['filter_category'])) {
+				$filter_category = $this->request->get['filter_category'];
+			} else {
+				$filter_category = '';
+			}
+
+			if (isset($this->request->get['limit'])) {
+				$limit = $this->request->get['limit'];
+			} else {
+				$limit = 100;
+			}
+
+			$filter_data = array(
+				'filter_name' => $filter_category,
+				'start'        => 0,
+				'limit'        => $limit
+			);
+
+			$results = $this->model_catalog_category->getCategories($filter_data);
+
+			foreach ($results as $result) {
+				$json[] = array(
+					'category_id' => $result['category_id'],
+					'name'       => strip_tags(html_entity_decode($result['name'], ENT_QUOTES, 'UTF-8'))
+				);
+			}
+		}
+
+		$this->response->addHeader('Content-Type: application/json');
+		$this->response->setOutput(json_encode($json));
 	}
 
 	public function autocomplete() {

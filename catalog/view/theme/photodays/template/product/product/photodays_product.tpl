@@ -109,7 +109,7 @@
                 $(".showroom-total").appendTo(".photodaysItem-description");
             }
 
-            $('#panel').toggle("slide", {direction: "right" }, 1000);
+            $('#panel').toggle("slide", {direction: "right" }, 2000);
 
 //            top.$('#panel').toggle(function () {
 //                    $(this).animate({
@@ -224,7 +224,7 @@
                     <?php } ?>
                     <?php } ?>
             </div>
-            <div class="photoday-order__title js-animate">
+            <div class="photoday-order__title js-animate hidden">
                 <div class="c-text-masked">
                     <span>Ждем Вас!</span>
                 </div>

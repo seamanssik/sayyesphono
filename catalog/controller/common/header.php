@@ -15,17 +15,6 @@ class ControllerCommonHeader extends Controller {
 
 		$data['menusLeft'] = array();
 
-		$menus_informationLeft = $this->model_common_header->getInformationsLeft();
-
-		if ($menus_informationLeft) {
-			foreach ($menus_informationLeft as $menu_informationLeft) {
-				$data['menusLeft'][] = array(
-					'href' 			=> $this->url->link('information/information', 'information_id=' . $menu_informationLeft['information_id'], true),
-					'name' 			=> $menu_informationLeft['title'],
-					'sort_order' 	=> $menu_informationLeft['sort_order']
-				);
-			}
-		}
 
 		$menus_categoriesLeft = $this->model_common_header->getCategoriesLeft();
 
@@ -50,6 +39,21 @@ class ControllerCommonHeader extends Controller {
 				);
 			}
 		}
+
+		$menus_informationLeft = $this->model_common_header->getInformationsLeft();
+
+
+		if ($menus_informationLeft) {
+			foreach ($menus_informationLeft as $menu_informationLeft) {
+				$data['menusLeft'][] = array(
+					'href' 			=> $this->url->link('information/information', 'information_id=' . $menu_informationLeft['information_id'], true),
+					'name' 			=> $menu_informationLeft['title'],
+					'sort_order' 	=> $menu_informationLeft['sort_order']
+				);
+			}
+		}
+
+
 
 		$data['menus'] = array();
 

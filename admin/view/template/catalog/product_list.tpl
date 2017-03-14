@@ -32,7 +32,7 @@
       <div class="panel-body">
         <div class="well">
           <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-3">
               <div class="form-group">
                 <label class="control-label" for="input-name"><?php echo $entry_name; ?></label>
                 <input type="text" name="filter_name" value="<?php echo $filter_name; ?>" placeholder="<?php echo $entry_name; ?>" id="input-name" class="form-control" />
@@ -42,7 +42,7 @@
                 <input type="text" name="filter_model" value="<?php echo $filter_model; ?>" placeholder="<?php echo $entry_model; ?>" id="input-model" class="form-control" />
               </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
               <div class="form-group">
                 <label class="control-label" for="input-price"><?php echo $entry_price; ?></label>
                 <input type="text" name="filter_price" value="<?php echo $filter_price; ?>" placeholder="<?php echo $entry_price; ?>" id="input-price" class="form-control" />
@@ -52,7 +52,7 @@
                 <input type="text" name="filter_quantity" value="<?php echo $filter_quantity; ?>" placeholder="<?php echo $entry_quantity; ?>" id="input-quantity" class="form-control" />
               </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
               <div class="form-group">
                 <label class="control-label" for="input-status"><?php echo $entry_status; ?></label>
                 <select name="filter_status" id="input-status" class="form-control">
@@ -85,8 +85,15 @@
                   <?php } ?>
                 </select>
               </div>
-              <button type="button" id="button-filter" class="btn btn-primary pull-right"><i class="fa fa-filter"></i> <?php echo $button_filter; ?></button>
             </div>
+          <div class="col-sm-3">
+              <div class="form-group">
+                  <label class="control-label" for="input-category">Категории</label>
+                  <input type="text" data-cat-id="2" name="filter_category" value="<?php  echo $product_categories[0]['name']; ?>" placeholder="Категории" id="input-category" class="form-control" />
+                  <input type="hidden" name="filter_category_id" value="<?php echo $filter_category_id; ?>" />
+              </div>
+            <button type="button" id="button-filter" class="btn btn-primary pull-right"><i class="fa fa-filter"></i> <?php echo $button_filter; ?></button>
+          </div>
           </div>
         </div>
         <form action="<?php echo $delete; ?>" method="post" enctype="multipart/form-data" id="form-product">
@@ -206,6 +213,13 @@ $('#button-filter').on('click', function() {
 		url += '&filter_price=' + encodeURIComponent(filter_price);
 	}
 
+    var filter_category_id = $('input[name=\'filter_category_id\']').val();
+    var filter_category = $('input[name=\'filter_category\']').val();
+
+    if (filter_category_id && filter_category) {
+        url += '&filter_category_id=' + encodeURIComponent(filter_category_id);
+    }
+    
 	var filter_quantity = $('input[name=\'filter_quantity\']').val();
 
 	if (filter_quantity) {
@@ -247,6 +261,33 @@ $('input[name=\'filter_name\']').autocomplete({
 		$('input[name=\'filter_name\']').val(item['label']);
 	}
 });
+
+$('input[name=\'filter_category\']').autocomplete({
+          'source': function(request, response) {
+              $.ajax({
+                  url: 'index.php?route=catalog/product/autocomplete_categories&token=<?php echo $token; ?>&filter_category=' +  encodeURIComponent(request),
+                  dataType: 'json',
+                  success: function(json) {
+                      console.log(123);
+                      json.unshift({
+                          manufacturer_id: 0,
+                          name: 'Ничего не выбрано'
+                      });
+                      response($.map(json, function(item) {
+                          return {
+                              label: item['name'],
+                              value: item['category_id']
+                          }
+                      }));
+                  }
+              });
+          },
+          'select': function(item) {
+              $('input[name=\'filter_category\']').val(item['label']);
+              $('input[name=\'filter_category_id\']').val(item['value']);
+//              $('input[name=\'filter_category\']').attr('data-cat-id',item['value']);
+          }
+      });
 
 $('input[name=\'filter_model\']').autocomplete({
 	'source': function(request, response) {

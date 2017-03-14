@@ -23,7 +23,7 @@
                 <div class="col-lg-8 col-md-8">
                     <div class="best-image">
                         <span></span>
-                        <img src="<?php echo $banner['image']; ?>" alt="<?php echo $banner['title']; ?>" width="1130" height="776" data-300-bottom="transform: translate3d(0,-10%,0)" data-bottom="transform: translate3d(0,0%,0)" data-top="transform: translate3d(0,0%,0)" data--300-top="transform: translate3d(0,10%,0)">
+                        <a href="<?php echo $banner['link']; ?>"><img src="<?php echo $banner['image']; ?>" alt="<?php echo $banner['title']; ?>" width="1130" height="776" data-300-bottom="transform: translate3d(0,-10%,0)" data-bottom="transform: translate3d(0,0%,0)" data-top="transform: translate3d(0,0%,0)" data--300-top="transform: translate3d(0,10%,0)"></a>
                         <div class="best-image__controls"></div>
                     </div>
                 </div>

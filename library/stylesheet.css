@@ -20995,7 +20995,7 @@ body.error-not_found .f-copy {
 
 .photoday-form {
     padding: 0;
-    margin: 0 0 80px
+    margin: 0 0 40px
 }
 
 .photoday-form .photoday-order__title {
@@ -22496,6 +22496,7 @@ body.error-not_found .f-copy {
 .photodaysItem-date__item .date {
     font-size: 46px;
     line-height: 1.2;
+    color: #bd9d53;
     font-family: 'bodonicregular', sans-serif
 }
 
@@ -23429,7 +23430,8 @@ body.error-not_found .f-copy {
     .photodaysItem-date__item .date {
         font-size: 18px;
         font-family: 'ttdrugs-light', sans-serif;
-        padding-left: 10px
+        padding-left: 10px;
+        color: #bd9d53;
     }
 
     .photodaysItem-date__item .date br {
