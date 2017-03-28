@@ -4,7 +4,7 @@
 	Dreamvention.com 
 	d_quickcheckout/payment_method.tpl 
 -->
-<div id="payment_method" class="qc-step hidden" data-col="<?php echo $col; ?>" data-row="<?php echo $row; ?>"></div>
+<div id="payment_method" class="qc-step" data-col="<?php echo $col; ?>" data-row="<?php echo $row; ?>"></div>
 <script type="text/html" id="payment_method_template" >
 <form id="payment_method_form" <%= parseInt(model.config.display) ? '' : 'class="hidden"' %>>
 	<% if (model.error_warning) { %>

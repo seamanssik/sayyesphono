@@ -20,7 +20,7 @@ class ControllerAccountCheckPhone extends Controller
 
         if(!isset($this->session->data['already_send'])){
             $sms = new SMS();
-            $sms->send($customer_data['telephone'], $short_code);
+            $sms->send($customer_data['telephone'], 'Ваш код регистрации на сайте: ' . $short_code . ' sayyesphoto.com');
         }
         $this->session->data['already_send'] = true;
 

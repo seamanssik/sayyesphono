@@ -59,7 +59,15 @@
                                         </div>
                                     </div>
                                     <div class="product-title">
-                                        <a href="<?php echo $product['href']; ?>" class="product-title__link"><span><?php echo $product['name']; ?></span></a>
+                                        <a href="<?php echo $product['href']; ?>" class="product-title__link"><span><?php
+                                                if(mb_strlen($product['name']) > 38){
+                                                    $s = html_entity_decode($product['name']);
+                                                    $sub = substr($s, 0, 38);
+                                                    echo htmlentities($sub) . ' ...';
+                                                }else{
+                                                    echo $product['name'];
+                                                }
+                                                ?></span></a>
                                     </div>
                                     <div class="product-info hidden">
                                         <div class="product-info__rent"><?php echo $product['price']; ?><span>аренда</span></div>

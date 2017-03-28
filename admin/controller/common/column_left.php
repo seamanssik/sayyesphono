@@ -102,6 +102,14 @@ class ControllerCommonColumnLeft extends Controller {
 					'children' => array()		
 				);
 			}
+
+
+			$catalog[] = array(
+				'name'	   => 'OC Фильтр',
+				'href'     => $this->url->link('catalog/ocfilter', 'token=' . $this->session->data['token'], true),
+				'children' => array()
+			);
+
 			
 			if ($this->user->hasPermission('access', 'catalog/filter')) {
 				$catalog[] = array(

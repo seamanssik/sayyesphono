@@ -1,7 +1,8 @@
 <?php
 class ModelCatalogOCFilter extends Model {
   public function getOCFilterOptionsByCategoryId($category_id) {
-    $options_data = $this->cache->get('ocfilter.option.' . $category_id . '.' . $this->config->get('config_language_id'));
+    $options_data = false;
+//    $options_data = $this->cache->get('ocfilter.option.' . $category_id . '.' . $this->config->get('config_language_id'));
 
 		if (false !== $options_data) {
 			return $options_data;

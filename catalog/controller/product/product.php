@@ -724,7 +724,7 @@ class ControllerProductProduct extends Controller {
 							'option_value_id' => $option_value['option_value_id'],
 							'name' 			=> $option_value['name'],
 							'image' 		=> $this->model_tool_image->cropsize($option_value['image'], 130, 130),
-							'product_option_image' => $this->model_tool_image->cropsize($option_value['product_option_image'], 194, 300),
+							'product_option_image' => $this->model_tool_image->cropsize($option_value['product_option_image'], 198, 300),
 							'product_option_image_popup' => $this->model_tool_image->cropsize($option_value['product_option_image'], 194, 300),
 							'price' 		=> $price,
 							'price_prefix' 	=> $option_value['price_prefix']

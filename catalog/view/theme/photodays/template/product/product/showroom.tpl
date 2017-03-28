@@ -24,12 +24,12 @@
                                 <?php if ($option['type'] == 'radio') { ?>
                                 <div class="product-info showroom-info">
                                     <?php foreach ($option['product_option_value'] as $key => $option_value) { ?>
-                                        <?php if ($key == 0) { ?>
-                                            <div class="product-info__rent"><?php echo $price; ?><span>аренда</span></div>
-                                            <div class="product-info__currency"><span style="text-transform: uppercase"><?php echo $symbol; ?></span></div>
-                                        <?php } ?>
-                                        <?php if ($key == 1 && $option_value['price']) { ?>
+                                        <?php if ($key == 0 && $option_value['price']) { ?>
                                             <div class="product-info__price"><b id="price-buy" data-price="<?php echo $price; ?>" data-prefix="<?php echo $option_value['price_prefix']; ?>" data-new-price="<?php echo $option_value['price']; ?>"><?php echo $price; ?></b><span>выкуп</span></div>
+                                        <?php } ?>
+                                        <?php if ($key == 1) { ?>
+                                            <div class="product-info__currency"><span style="text-transform: uppercase"><?php echo $symbol; ?></span></div>
+                                            <div class="product-info__rent"><?php echo $price; ?><span>аренда</span></div>
                                         <?php } ?>
                                     <?php } ?>
                                 </div>

@@ -4,7 +4,7 @@
 	Dreamvention.com 
 	d_quickcheckout/payment_address.tpl 
 -->
-<div id="payment_address" class="qc-step hidden" data-col="<?php echo $col; ?>" data-row="<?php echo $row; ?>"></div>
+<div id="payment_address" class="qc-step" data-col="<?php echo $col; ?>" data-row="<?php echo $row; ?>"></div>
 <script type="text/html" id="payment_address_template">
 <div class="<%= parseInt(model.config.display) ? '' : 'hidden' %>">
 	<div class="panel panel-default checkout-panel">

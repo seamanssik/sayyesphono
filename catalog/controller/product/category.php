@@ -32,8 +32,8 @@ class ControllerProductCategory extends Controller {
 		if (isset($this->request->get['path'])) {
 			$_path = explode('_', $this->request->get['path']);
 			if (in_array(68, $_path)) {
-				$sort = 'p.date_action';
-				$order = 'DESC';
+				$sort = 'p.sort_order';
+				$order = 'ASC';
 			}
 		}
 
@@ -52,7 +52,8 @@ class ControllerProductCategory extends Controller {
 			if($detect->isMobile()){
 				$limit = 6;
 			}else{
-				$limit = $this->config->get($this->config->get('config_theme') . '_product_limit');
+				$limit = 9;
+//				$limit = $this->config->get($this->config->get('config_theme') . '_product_limit');
 			}
 		}
 
@@ -257,7 +258,8 @@ class ControllerProductCategory extends Controller {
 				}
 
 				if ($result['image']) {
-					$image = $this->model_tool_image->cropsize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
+					$image = $this->model_tool_image->cropsize($result['image'], 350, 600);
+//					$image = $this->model_tool_image->cropsize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
 				} else {
 					$image = $this->model_tool_image->resize('placeholder.png', $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
 				}
@@ -308,7 +310,7 @@ class ControllerProductCategory extends Controller {
 				$images_results = $this->model_catalog_product->getProductImages($result['product_id']);
 
 				foreach ($images_results as $image_result) {
-					$images[] = $this->model_tool_image->cropsize($image_result['image'], $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
+					$images[] = $this->model_tool_image->cropsize($image_result['image'], 350, 600);
 				}
 
 				$data['products'][] = array(

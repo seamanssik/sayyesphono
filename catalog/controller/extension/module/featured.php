@@ -43,7 +43,7 @@ class ControllerExtensionModuleFeatured extends Controller {
 					}
 
 					if (isset($product_info['image']) && is_file(DIR_IMAGE . $product_info['image'])) {
-						$image = $this->model_tool_image->cropsize($product_info['image'], $setting['width'], $setting['height']);
+						$image = $this->model_tool_image->cropsize($product_info['image'], 350, 600);
 					} else {
 						$image = $this->model_tool_image->resize('placeholder.png', $setting['width'], $setting['height']);
 					}

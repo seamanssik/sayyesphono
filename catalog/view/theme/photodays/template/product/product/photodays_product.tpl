@@ -70,7 +70,7 @@
                         </div>
                     </div>
                     <div class="clearfix">
-                        <a href="javascript: void(0);" id="moreButton"><span id="hide-button-text">Показать больше</span></a>
+                        <a href="javascript: void(0);" id="moreButton"><span id="hide-button-text">Подробнее</span></a>
 <!--                        <a href="javascript: void(0);" data-toggle="openCloseText" data-element="descriptionOverflow" data-short="Скрыть" data-action="Читать дальше" data-height="154"><span>Читать дальше</span></a>-->
                         <?php if ($attribute_groups): ?><div class="pull-right">
 <!--                            <a href="javascript: void(0);" data-toggle="modal" data-target="#modalInfo"><span>Информация</span></a>-->
@@ -101,11 +101,11 @@
 
 
         $('#moreButton').click(function() {
-            if($('#hide-button-text').text() == 'Показать больше'){
+            if($('#hide-button-text').text() == 'Подробнее'){
                 $('#hide-button-text').text('Скрыть описание');
                 $(".showroom-total").prependTo(".photodaysItem-attr");
             }else{
-                $('#hide-button-text').text('Показать больше');
+                $('#hide-button-text').text('Подробнее');
                 $(".showroom-total").appendTo(".photodaysItem-description");
             }
 
